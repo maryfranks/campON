@@ -1,7 +1,9 @@
 class Trip < ApplicationRecord
 
-belongs_to :park
-belongs_to :user
-has_many :messages
+  has_many :users
+  belongs_to :park
+
+  has_many :messages, through: :users
+
 
 end
