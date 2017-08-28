@@ -1,1 +1,3 @@
 css class buttons
+
+submit new trip button has class of button and class of submit
