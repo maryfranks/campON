@@ -7,6 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
+
+
+
+
+
+
+
+
 jason_string = File.read("#{Rails.root}/db/ontarioparks.json")
 
 hash = JSON.parse jason_string
