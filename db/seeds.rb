@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Park.delete_all
 User.delete_all
+Trip.delete_all 
 
 jason_string = File.read("#{Rails.root}/db/ontarioparks.json")
 
