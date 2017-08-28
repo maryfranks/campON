@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170828183335) do
+ActiveRecord::Schema.define(version: 20170828191919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,9 @@ ActiveRecord::Schema.define(version: 20170828183335) do
     t.boolean "walk_in_camping", default: false
     t.boolean "winter_activities", default: false
     t.boolean "yurt", default: false
+    t.boolean "trailer_equipped_campsite", default: false
+    t.boolean "rustic_cabin", default: false
+    t.boolean "soft_sided_shelter", default: false
   end
 
   create_table "trips", force: :cascade do |t|
