@@ -8,7 +8,23 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header>
+    <h3>Camp ON</h3>
+    <ul>
+      <li><a href="/parks"></a>Parks</li>
+      <li><a href="/user"></a>My Trips</li>
+      <li><a href="#"></a>Login/Logout</li>
+    </ul>
+  </header>
+
   <body>
     <%= yield %>
   </body>
+
+  <footer>
+    <ul>
+      <li><a href="/static_pageshome/about"></a>About</li>
+      <li><a href="/static_pageshome/contact"></a>Contat Us</li>
+    </ul>
+  </footer>
 </html>
