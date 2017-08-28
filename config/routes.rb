@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
 
-  resources :activities, :messages, :parks, :trips, :users
+  get 'static_pageshome/contact'
 
-root 'parks#index'
+  get 'static_pageshome/about'
 
+  resources :trips do
+    resources :comments
+  end
+
+  resources :parks, only: [:index, :show]
+  resource :user 
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 end
