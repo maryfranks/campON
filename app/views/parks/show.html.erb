@@ -1,4 +1,79 @@
 <h1> <%= @parks.name %></h1>
 
+  <!-- <% if @parks.backcountry_cabin == true %>
+<div class="activity-icon">
+    <p>Backcountry Cabin</p>
+</div>
+    <% end %>
 
-<h3></h3>
+  <% if @parks.backcountry_camping == true %>
+<div class="activity-icon">
+    <p>Backcountry Camping</p>
+</div>
+    <% end %>
+
+  <% if @parks.barrier_free == true %>
+<div class="activity-icon">
+    <p>Barrier Free</p>
+</div>
+    <% end %>
+
+  <% if @parks.biking == true %>
+<div class="activity-icon">
+    <p>Biking</p>
+</div>
+    <% end %>
+
+  <% if @parks.birding == true %>
+<div class="activity-icon">
+    <p>Birding</p>
+</div>
+    <% end %>
+
+  <% if @parks.boating == true %>
+<div class="activity-icon">
+    <p>Boating</p>
+</div>
+    <% end %>
+
+  <% if @parks.boat_launch == true %>
+<div class="activity-icon">
+    <p>Boat Launch</p>
+</div>
+    <% end %>
+
+  <% if @parks.canoeing == true %>
+<div class="activity-icon">
+    <p>Canoeing</p>
+</div>
+    <% end %>
+
+  <% if @parks.car_camping == true %>
+<div class="activity-icon">
+    <p>Car Camping</p>
+</div>
+    <% end %>
+
+  <% if @parks.comfort_station == true %>
+<div class="activity-icon">
+    <p>Comfort Station</p>
+</div>
+    <% end %>
+
+  <% if @parks.cottage == true %>
+<div class="activity-icon">
+    <p>Cottage</p>
+</div>
+    <% end %>
+
+  <% if @parks.boat_launch == true %>
+<div class="activity-icon">
+    <p>Boat Launch</p>
+</div>
+    <% end %> -->
+
+    <% @parks.attributes.each do |k, v| %>
+      <%if v == true %>
+        <p><%=k%></p>
+      <% end %>
+    <% end %>
