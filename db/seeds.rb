@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Park.delete_all
+User.delete_all
+
 Park.create(name: "Bitmaker Woods", birding: true, day_use: true, canoeing: true)
 Park.create(name: "CamelCase Beach", birding: true, yurt: true, comfort_station: true, pet_exercise_area: true)
 Park.create(name: "GitHub Harbor", birding: true, rentals: true, walk_in_camping: true, winter_activities: true)
