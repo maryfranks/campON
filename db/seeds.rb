@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+jason_string = File.read("#{Rails.root}/db/ontarioparks.json")
+
+hash = JSON.parse jason_string
+
+hash['ontarioParks'].each_slice(3) do |hash1, hash2, hash3|
+
+  park_hash = hash1.merge(hash2).merge(hash3)
+
+  Park.create(park_hash)
+
+end
