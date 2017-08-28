@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   end
 
   resources :parks, only: [:index, :show]
-  resource :user 
+  resource :user
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
