@@ -2,10 +2,20 @@ class TripsController < ApplicationController
 
   def new
     @trip = Trip.new
-    @parks = Park.all 
   end
 
   def create
+    @trip = Trip.new(trip_params)
+    @trip.park = Park.first
+
+    if @trip.save
+      redirect_to parks_path
+    else
+      render new_trip_path
+    end
+
+    flash[:notice] = "You have successfully created a new trip!"
+
   end
 
   def update
@@ -17,6 +27,7 @@ class TripsController < ApplicationController
 private
 
 def trip_params
+  params.require(:trip).permit(:name, :park_id, :booked, :start_date, :end_date)
 end
 
 end
