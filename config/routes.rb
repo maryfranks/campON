@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'static_pageshome/contact'
 
+  get 'static_pageshome/contact'
   get 'static_pageshome/about'
 
   resources :trips do
