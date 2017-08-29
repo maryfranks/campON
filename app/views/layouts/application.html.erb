@@ -14,7 +14,12 @@
       <li><a href="/parks">Parks</a></li>
       <li><a href="/user">My Trips</a></li>
       <li><a href="/trips/new">Plan a Trip!</a></li>
+
+      <% if current_user %>
+      <li><%= link_to "Logout", session_path(current_user), method: :delete %></li>
+      <% else %>
       <li><%= link_to "Login", new_session_path %></li>
+      <% end %>
 
     </ul>
   </header>
