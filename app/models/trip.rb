@@ -4,6 +4,6 @@ class Trip < ApplicationRecord
   belongs_to :park
   has_many :messages
 
-  validates :trip_name, :user_id, presence: true
+  validates :name, presence: true
 
 end
