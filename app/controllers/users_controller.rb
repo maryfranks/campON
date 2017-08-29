@@ -18,8 +18,8 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit
-    current_user 
+  def update
+    current_user
   end
 
   def destroy
