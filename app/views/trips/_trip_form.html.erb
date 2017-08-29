@@ -17,6 +17,11 @@
     </p>
 
     <p>
+      <%= f.label :park %>
+      <%= f.collection_select(:park_id, Park.all, :id, :name)  %>
+    </p>
+
+    <p>
       <%= f.label :start_date %><br />
       <%= f.date_field :start_date %>
     </p>

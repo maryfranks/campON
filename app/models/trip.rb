@@ -6,4 +6,8 @@ class Trip < ApplicationRecord
 
   validates :name, presence: true
 
+  # park_names = Park.all.map do | park |
+  #   park.name
+  # end
+
 end
