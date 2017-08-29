@@ -18,11 +18,16 @@ class TripsController < ApplicationController
 
   end
 
+  def show
+    @trip =Trip.find(params[:id])
+  end
+
   def update
   end
 
   def destroy
   end
+
 
 private
 
