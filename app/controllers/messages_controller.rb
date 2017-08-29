@@ -7,12 +7,15 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new
+    trip_id = params[:trip_id], params[:user_id]
+    @user = User.find(user_id)
+    @messages = @trip.messages
 
     if @message.save
       flash[:success] = "Message successfully added"
       redirect_to trips_path
     else
-      render_new_message_form_path
+      render 'new_message_form_path'
   end
 
   # def show
