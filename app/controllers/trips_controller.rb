@@ -6,7 +6,6 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(trip_params)
-    @trip.park = Park.first
 
     if @trip.save
       redirect_to parks_path
