@@ -10,8 +10,14 @@ class ParksController < ApplicationController
 
   def search
 
-      @parks = Park.where(params[:data])
+      @parks = Park.where(searchparams)
+
       render partial: 'parkList'
+  end
+
+  private
+  def searchparams
+    params.require(:data).permit(:biking,:birding,:boating,:canoeing,:fishing,:hiking,:hunting,:swimming)
   end
 
 end

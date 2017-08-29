@@ -16,7 +16,6 @@ for (var i = 0; i < activityCheck.length; i++) {
       data: $(activitiesForm).serialize(),
       dataType: 'html',
     }).done(function(data) {
-
       activityResults.innerHTML = data
 
     })
