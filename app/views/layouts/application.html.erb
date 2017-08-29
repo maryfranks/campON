@@ -11,12 +11,12 @@
   <header class="header">
     <h3 class="camp-on-title">Camp ON</h3>
     <ul class="header-nav-bar">
-      <li class="links"><a href="/parks">Parks</a> | <a href="/user">My Trips</a> |
+      <li class="links"><a href="/parks">Parks</a> | <a href="/trips/new">Plan a Trip</a> | <a href="/user">My Trips</a> |
 
       <% if current_user %>
       <%= link_to "Logout", session_path(current_user), method: :delete %>
       <% else %>
-      <%= link_to "Login", new_session_path %>
+      <%= link_to "Login", new_session_path %> | <%= link_to 'Sign Up', new_user_path %>
       <% end %></li>
 
     </ul>

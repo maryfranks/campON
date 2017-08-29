@@ -43,6 +43,7 @@
 }
 
 .footer-nav-bar {
+  position: relative;
   list-style: none;
   padding: 20px;
   font-family: futura;
