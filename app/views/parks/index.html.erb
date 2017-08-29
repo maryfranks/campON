@@ -10,36 +10,37 @@
         <div class="activities-filter-block">
 
           <form class="activities-filter-form" action="">
-            <div class="checkbox">
-              <label> <input type="checkbox" rel="biking" />Biking</label>
+            <div class="activity_checkbox">
+              <label> <input class='activity' type="checkbox" rel="biking" />Biking</label>
             </div>
 
-            <div class="checkbox">
-              <label> <input type="checkbox" rel="birding" />Birding</label>
+            <div class="activity_checkbox">
+              <label> <input class='activity' type="checkbox" rel="birding" />Birding</label>
             </div>
 
-            <div class="checkbox">
-              <label> <input type="checkbox" rel="boating" />Boating</label>
+            <div class="activity_checkbox">
+              <label> <input class='activity' type="checkbox" rel="boating" />Boating</label>
             </div>
 
-            <div class="checkbox">
-              <label> <input type="checkbox" rel="canoeing" />Canoeing</label>
+            <div class="activity_checkbox">
+              <label> <input class='activity' type="checkbox" rel="canoeing" />Canoeing</label>
             </div>
 
-            <div class="checkbox">
-              <label> <input type="checkbox" rel="fishing" />Fishing</label>
+            <div class="activity_checkbox">
+              <label> <input class='activity'
+                type="checkbox" rel="fishing" />Fishing</label>
             </div>
 
-            <div class="checkbox">
-              <label> <input type="checkbox" rel="hiking" />Hiking</label>
+            <div class="activity_checkbox">
+              <label> <input class='activity' type="checkbox" rel="hiking" />Hiking</label>
             </div>
 
-            <div class="checkbox">
-              <label> <input type="checkbox" rel="Hunting" />Hunting</label>
+            <div class="activity_checkbox">
+              <label> <input class='activity' type="checkbox" rel="Hunting" />Hunting</label>
             </div>
 
-            <div class="checkbox">
-              <label> <input type="checkbox" rel="swimming" />Swimming</label>
+            <div class="activity_checkbox">
+              <label> <input class='activity' type="checkbox" rel="swimming" />Swimming</label>
             </div>
 
           </form>
@@ -196,10 +197,4 @@
   </section>
 </div>
 
-<ul>
-  <% @parks.each do |r| %>
-    <li>
-    <p> <%= link_to "#{r.name}", park_path(r.id) %> </p>
-    <% end %>
-  </li>
-</ul>
+<%= render partial: 'parkList' %>
