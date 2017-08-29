@@ -2,7 +2,6 @@
   <% @parks.each do |r| %>
     <li class = 'parks'>
     <p> <%= link_to "#{r.name}", park_path(r.id) %> </p>
-    <input type="hidden" name="attributes" value=" <%= r.attributes %>">
     <% end %>
   </li>
 </ul>

@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 var activityCheck = document.querySelectorAll('.activity')
 var parks = document.querySelectorAll('.parks')
-var activityBlock = document.querySelector('.activities-filter-block')
+var activityResults = document.querySelector('#parkPartialList')
+var activitiesForm = document.querySelector('.activities-filter-form')
+
 
 for (var i = 0; i < activityCheck.length; i++) {
   activityCheck[i].addEventListener('change', function (event) {
@@ -11,12 +13,13 @@ for (var i = 0; i < activityCheck.length; i++) {
     $.ajax({
       url: 'http://localhost:3000/parks/search',
       method: 'get',
-      data: {data: this.attributes['rel'].value},
+      data: $(activitiesForm).serialize(),
       dataType: 'html',
     }).done(function(data) {
 
-    }
-    )
+      activityResults.innerHTML = data
+
+    })
     })
   }
 })

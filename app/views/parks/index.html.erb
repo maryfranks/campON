@@ -10,39 +10,13 @@
         <div class="activities-filter-block">
 
           <form class="activities-filter-form" action="">
-            <div class="activity_checkbox">
-              <label> <input class='activity' type="checkbox" rel="biking" />Biking</label>
-            </div>
 
-            <div class="activity_checkbox">
-              <label> <input class='activity' type="checkbox" rel="birding" />Birding</label>
-            </div>
+          <% Park.activity_list.each do |activity| %>
 
-            <div class="activity_checkbox">
-              <label> <input class='activity' type="checkbox" rel="boating" />Boating</label>
+             <div class="activity_checkbox">
+              <label> <input name= 'data[<%= activity %>]' class='activity' type="checkbox" rel='<%= activity %>' value="true" /><%= activity %></label>
             </div>
-
-            <div class="activity_checkbox">
-              <label> <input class='activity' type="checkbox" rel="canoeing" />Canoeing</label>
-            </div>
-
-            <div class="activity_checkbox">
-              <label> <input class='activity'
-                type="checkbox" rel="fishing" />Fishing</label>
-            </div>
-
-            <div class="activity_checkbox">
-              <label> <input class='activity' type="checkbox" rel="hiking" />Hiking</label>
-            </div>
-
-            <div class="activity_checkbox">
-              <label> <input class='activity' type="checkbox" rel="Hunting" />Hunting</label>
-            </div>
-
-            <div class="activity_checkbox">
-              <label> <input class='activity' type="checkbox" rel="swimming" />Swimming</label>
-            </div>
-
+          <% end %>
           </form>
         </div>
     </div>
@@ -197,4 +171,7 @@
   </section>
 </div>
 
+<div id = 'parkPartialList'>
+
 <%= render partial: 'parkList' %>
+</div>

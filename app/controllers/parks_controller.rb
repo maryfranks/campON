@@ -9,6 +9,7 @@ class ParksController < ApplicationController
   end
 
   def search
+
       @parks = Park.where(params[:data])
       render partial: 'parkList'
   end
