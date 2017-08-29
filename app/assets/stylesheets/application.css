@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+.header {
+  background-color: #F78D2A;
+  position: relative;
+  width: 100%;
+}
+
+.application_footer {
+  background-color: #F78D2A;
+  position: relative;
+}
+
+.camp-on-title {
+  color: white;
+  font-family: futura;
+  font-size: 30px;
+  padding: 10px
+}
+
+.header-nav-bar {
+  list-style: none;
+  color: white;
+  font-family: futura;
+  position: absolute;
+  display: block;
+  right: 20px;
+  top: 2px;
+}
+
+.footer-nav-bar {
+  list-style: none;
+  padding: 20px;
+  font-family: futura;
+  color: white;
+  right: 20px;
+  background-color: #F78D2A;
+  width: 100%;
+}
