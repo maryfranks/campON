@@ -8,6 +8,7 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
 
     if @trip.save
+      @trip.users << current_user
       redirect_to parks_path
     else
       render new_trip_path
