@@ -18,8 +18,14 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
+  def edit
+    current_user 
+  end
 
+  def destroy
+  end
+
+  def show
   end
 
   private
