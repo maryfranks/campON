@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
 
-
-  get 'static_pageshome/contact'
-  get 'static_pageshome/about'
-
   resources :trips do
-    resources :comments
+  resources :comments
   end
 
   resources :parks, only: [:index, :show]
   resource :user
-  resource :sessions
-  
+  resources :sessions, only: [:new, :create, :destroy]
+
+  root 'parks#index'
+
+  # get 'login' => 'session#new', :as => :login
+  # get '/login' => 'session#create'
+  get 'static_pageshome/contact'
+  get 'static_pageshome/about'
 end
