@@ -10,8 +10,6 @@ Rails.application.routes.draw do
 
   root 'parks#index'
 
-  # get 'login' => 'session#new', :as => :login
-  # get '/login' => 'session#create'
   get 'static_pageshome/contact'
   get 'static_pageshome/about'
 end
