@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
 
   get 'homepage' => 'static_pageshome#landing'
-  root homepage_path
+
+
 
 end

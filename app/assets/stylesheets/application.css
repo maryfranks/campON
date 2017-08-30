@@ -76,7 +76,7 @@ table {
 
 .camp-on-title {
   color: white;
-  font-family: futura;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size: 30px;
   padding: 10px;
   padding-top: 20px;
@@ -87,7 +87,7 @@ table {
 .header-nav-bar {
   list-style: none;
   color: white;
-  font-family: futura;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   position: absolute;
   display: block;
   right: 20px;
@@ -98,7 +98,7 @@ table {
   position: relative;
   list-style: none;
   padding: 20px;
-  font-family: futura;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   color: white;
   right: 20px;
   background-color: #F78D2A;
@@ -113,23 +113,36 @@ table {
 }
 
 .what-is-campon {
-  font-family: futura;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   text-align: center;
   color: #F78D2A;
   font-size: -webkit-xxx-large;
 }
 
 .discription-question {
-  font-family: futura;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   text-align: center;
   color: #F78D2A;
   font-size: larger
 }
 
 .discription {
-  font-family: futura;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   text-align: center;
   color: black;
   font-size: medium;
-  font-weight: lighter;
+  font-weight: normal;
+  margin: 10px;
+  line-height: 20px
+}
+
+.footer-img {
+  right: 0px;
+  bottom: 10px;
+  float:
+}
+
+.login-to-plan-trip {
+  background-color: #319796;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
