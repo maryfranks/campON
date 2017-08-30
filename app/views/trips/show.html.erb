@@ -1,1 +1,12 @@
-<%= render 'new_message_form', message: @message %>
+<h1>Trip Planner</h1>
+
+<%= @trip.name %>
+
+<h2>Messages</h2>
+<% @messages.each do |message| %>
+  <p><%= message.comment %></p>
+  <p><%= message.created_at %></p>
+  <p><%= link_to 'Edit', '/messages/edit'(@trip.id, user.id)%></p>
+  <p><%= link_to 'Delete', '/messages/delete'(@trip.id, user.id), method: :delete, data: {confirm: "Are you sure you want to delete this review?"} %></p>
+<% end %>
+<%= render 'new_message_form' %>

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'static_pageshome/contact'
+  get 'static_pageshome/about'
+
+  get 'parks/search'
+
   resources :trips do
   resources :comments
   end
@@ -10,6 +15,4 @@ Rails.application.routes.draw do
 
   root 'parks#index'
 
-  get 'static_pageshome/contact'
-  get 'static_pageshome/about'
 end

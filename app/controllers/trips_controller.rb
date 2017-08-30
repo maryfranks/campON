@@ -8,6 +8,7 @@ class TripsController < ApplicationController
     @trip = Trip.new(trip_params)
 
     if @trip.save
+      @trip.users << current_user
       redirect_to parks_path
     else
       render new_trip_path
@@ -17,11 +18,16 @@ class TripsController < ApplicationController
 
   end
 
+  def show
+    @trip =Trip.find(params[:id])
+  end
+
   def update
   end
 
   def destroy
   end
+
 
 private
 

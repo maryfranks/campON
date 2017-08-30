@@ -1,6 +1,5 @@
 class MessagesController < ApplicationController
 
-
   def new
     @message = Message.new
   end
@@ -16,7 +15,7 @@ class MessagesController < ApplicationController
       redirect_to trips_path
     else
       render 'new_message_form_path'
-  end
+    end
 
   # def show
   #   @message = Message.find(params[:id])
