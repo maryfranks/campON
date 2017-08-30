@@ -1,177 +1,45 @@
-<h1>Here are all the parks</h1>
-
+<h1>Ontario Parks</h1>
 <div class="container">
   <section class="box-filter">
-    <p class="instructions">"Filter Parks by Activity or Facility!"</p>
+    <p class="instructions">"Filter Parks by Activity and Facility!"</p>
+      <div class="activities-search">
 
-    <div class="activities-search">
-      <h1>Activities</h1>
+  <h1>Activities</h1>
 
-        <div class="activities-filter-block">
+    <div class="activities-filter-block">
 
-          <form class="activities-filter-form" action="">
+<form class="activities-filter-form" action="">
 
-          <% Park.activity_list.each do |activity| %>
+<% Park.activity_list.each do |activity| %>
 
-             <div class="activity_checkbox">
-              <label> <input name= 'data[<%= activity %>]' class='activity' type="checkbox" rel='<%= activity %>' value="true" /><%= activity %></label>
-            </div>
-          <% end %>
-          </form>
-        </div>
-    </div>
+<div class="activity_checkbox">
+<label> <input name= 'data[<%= activity %>]' class='activity' type="checkbox" rel='<%= activity %>' value="true" /><%= activity %></label>
+</div>
+<% end %>
+</form>
+</div>
+</div>
 
 <div class="facilities-search">
-  <h1>Facilities</h1>
+<h1>Facilities</h1>
 
-  <div class="facilities-filter-block">
-    <form class="facilities-filter-form" action="">
+<div class="facilities-filter-block">
+<form class="facilities-filter-form" action="">
+<% Park.facilities_list.each do |facilities| %>
 
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="backcountry_cabin" />Backcountry Cabin</label>
-      </div>
+<div class="activity_checkbox">
+<label> <input name= 'data[<%= facilities %>]' class='facilities' type="checkbox" rel='<%= facilities %>' value="true" /><%= facilities %></label>
+</div>
+<% end %>
 
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="backcountry_camping" />Backcountry Camping</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="backcountry_cabin" />Backcountry Cabin</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="barrier_free" />Barrier Free</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="boat_launch" />Boat Launch</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="car_camping" />Car Camping</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="comfort_station" />Comfort Station</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="cottage" />Cottage</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="camp_cabin" />Camp Cabin</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="day_use" />Day Use</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="dog_free_camping" />Dog Free Camping</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="flush_toilets" />Flush Toilets</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="group_camping" />Group Camping</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="laundromat" />Laundromat</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="natural_heritage_education" />Natural Heritage Education</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="park_store" />Park Store</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="pet_exercise_area" />Pet Exercise Area</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="picnic_shelters" />Picnic Shelters</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="radio_free_camping" />Radio Free Camping</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="rentals" />Rentals</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="roofed_accommodation" />Roofed Accomodation</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="trailer_storage" />Trailer Storage</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="visitor_centre" />Visitor Centre</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="walk_in_camping" />Walk-in Camping</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="winter_activities" />Winter Activities</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="yurt" />Yurt</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="trailer_equipped_campsite" />Trailer Equipped Campsite</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="rustic_cabin" />Rustic Cabin</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="soft_sided_shelter" />Soft Sided Shelter</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="winter_camping" />Winter Camping</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="shuttle_service" />Shuttle Service</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="Parking" />Parking</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="lodge" />Lodge</label>
-      </div>
-
-      <div class="checkbox">
-        <label> <input type="checkbox" rel="seasonal_campsite_program" />Seasonal Campsite Program</label>
-      </div>
-
-    </form>
-  </div>
+</form>
+</div>
 
 </div>
 
-  </section>
+</section>
 </div>
 
 <div id = 'parkPartialList'>
-
 <%= render partial: 'parkList' %>
 </div>
