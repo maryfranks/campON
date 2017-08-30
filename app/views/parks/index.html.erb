@@ -2,44 +2,42 @@
 <div class="container">
   <section class="box-filter">
     <p class="instructions">"Filter Parks by Activity and Facility!"</p>
+
       <div class="activities-search">
 
-  <h1>Activities</h1>
+        <h1>Activities</h1>
 
-    <div class="activities-filter-block">
+        <div class="activities-filter-block">
 
-<form class="activities-filter-form" action="">
+          <form class="activities-filter-form" action="">
 
-<% Park.activity_list.each do |activity| %>
+            <% Park.activity_list.each do |activity| %>
+              <div class="activity_checkbox">
+                <label> <input name= 'data[<%= activity %>]' class='activity' type="checkbox" rel='<%= activity %>' value="true" /><%= activity %>
+                </label>
+              </div>
+            <% end %>
+          </form>
+        </div>
+      </div>
 
-<div class="activity_checkbox">
-<label> <input name= 'data[<%= activity %>]' class='activity' type="checkbox" rel='<%= activity %>' value="true" /><%= activity %></label>
-</div>
-<% end %>
-</form>
-</div>
-</div>
+      <div class="facilities-search">
+        <h1>Facilities</h1>
 
-<div class="facilities-search">
-<h1>Facilities</h1>
-
-<div class="facilities-filter-block">
-<form class="facilities-filter-form" action="">
-<% Park.facilities_list.each do |facilities| %>
-
-<div class="activity_checkbox">
-<label> <input name= 'data[<%= facilities %>]' class='facilities' type="checkbox" rel='<%= facilities %>' value="true" /><%= facilities %></label>
-</div>
-<% end %>
-
-</form>
-</div>
-
-</div>
-
-</section>
+        <div class="facilities-filter-block">
+          <form class="facilities-filter-form" action="">
+            <% Park.facilities_list.each do |facilities| %>
+              <div class="activity_checkbox">
+              <label> <input name= 'data[<%= facilities %>]' class='facilities' type="checkbox" rel='<%= facilities %>' value="true" /><%= facilities %>
+              </label>
+            </div>
+            <% end %>
+          </form>
+        </div>
+      </div>
+  </section>
 </div>
 
 <div id = 'parkPartialList'>
-<%= render partial: 'parkList' %>
+  <%= render partial: 'parkList' %>
 </div>
