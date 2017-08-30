@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  test "the truth" do
-    assert true
+  test "user fixtures" do
+    assert_equal 4, User.count
   end
 end

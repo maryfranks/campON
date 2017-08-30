@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class MessageTest < ActiveSupport::TestCase
-  test "the truth" do
-    assert true
+  test "message fixtures" do
+    assert_equal 2, Message.count 
   end
 end

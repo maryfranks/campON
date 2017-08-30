@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class TripTest < ActiveSupport::TestCase
-  test "the truth" do
-    assert true
+  test "trip fixtures" do
+    assert_equal 3, Trip.count 
   end
 end
