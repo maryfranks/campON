@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   get 'static_pageshome/about'
 
   get 'parks/search'
+  get 'message/search'
 
   resources :trips do
-  resources :comments
+  resources :messages
   end
 
   resources :parks, only: [:index, :show]

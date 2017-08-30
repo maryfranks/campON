@@ -1,0 +1,22 @@
+No one works in master
+
+At merge into master time:
+
+** owner of branch to be merge handle merge conflicts
+
+** after creating pull request pull request owner needs to comment on the request
+  to alert other group members (no github email generated when pull request happens)
+
+** any migrations or budle install things need to be noted in pull request comments
+
+1. look at pull request online
+2. comment either with an okay OR if there is an issue
+3. once everyone has commented merge branch
+
+After the merge into master
+
+1. (commit changes on current branch)
+2. go to master and pull
+3. go back to your branch and merge master into your branch
+
+** IF you can't get to a pull request quickly you can slack us to check in about it

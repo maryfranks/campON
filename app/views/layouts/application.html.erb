@@ -9,17 +9,15 @@
   </head>
 
   <header class="header">
-    <h3 class="camp-on-tile">Camp ON</h3>
+    <h3 class="camp-on-title">Camp ON</h3>
     <ul class="header-nav-bar">
-      <li><a href="/parks">Parks</a></li>
-      <li><a href="/user">My Trips</a></li>
-      <li><a href="/trips/new">Plan a Trip!</a></li>
 
-    <% if current_user %>
-   <li><%= link_to "Logout", session_path(current_user), method: :delete %></li>
-   <% else %>
-   <li><%= link_to "Login", new_session_path %></li>
-    <% end %>
+      <li class="links"><a href="/parks">Parks</a> | <a href="/trips/new">Plan a Trip</a> | <a href="/user">My Trips</a>
+      <% if current_user %>
+      <%= link_to "Logout", session_path(current_user), method: :delete %>
+      <% else %>
+      <%= link_to "Login", new_session_path %> | <%= link_to 'Sign Up', new_user_path %>
+      <% end %></li>
 
     </ul>
   </header>
@@ -33,8 +31,8 @@
 
   <footer class="application_footer">
     <ul class="footer-nav-bar">
-      <li><a href="/static_pageshome/about">About</a></li>
-      <li><a href="/static_pageshome/contact">Contat Us</a></li>
+      <li class="footer-list-item"><a href="/static_pageshome/about">About</a> |
+      <a href="/static_pageshome/contact">Contat Us</a></li>
     </ul>
   </footer>
 </html>
