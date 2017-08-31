@@ -26,14 +26,14 @@ class TripTest < ActiveSupport::TestCase
   test "add start date to trip" do
     trip = trips(:one)
     trip.start_date = Date.today + 10
-    assert_equal Date.today + 10, trip.start_date
+    assert trip.start_date
 
   end
 
   test "add end date to trip" do
     trip = trips(:one)
     trip.end_date = Date.today + 10
-    assert_equal Date.today + 10, trip.end_date
+    assert trip.end_date
 
   end
 
