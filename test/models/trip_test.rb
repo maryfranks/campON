@@ -29,26 +29,26 @@ class TripTest < ActiveSupport::TestCase
   end
 
   test "add park to trip" do
-
+    # how to change code and make test fail?
     trip = trips(:one)
     trip.park = Park.first
-    assert_equal trip.park.name, Park.first.name
+    assert_equal Park.first.name, trip.park.name
 
   end
 
   test "add start date to trip" do
-
+    # how to change code and make test fail?
     trip = trips(:one)
     trip.start_date = Date.today + 10
-    assert_equal trip.start_date, Date.today + 10
+    assert_equal Date.today + 10, trip.start_date
 
   end
 
   test "add end date to trip" do
-
+    # how to change code and make test fail?
     trip = trips(:one)
     trip.end_date = Date.today + 10
-    assert_equal trip.end_date, Date.today + 10
+    assert_equal Date.today + 10, trip.end_date
 
   end
 
@@ -57,7 +57,9 @@ class TripTest < ActiveSupport::TestCase
   end
 
   test "user can change booked to true" do
-    skip
+    trip = trips(:one)
+    trip.booked = true
+    assert_equal true, trip.booked
   end
 
   test "trip displays users" do
