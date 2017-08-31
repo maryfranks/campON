@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }).done(function(data) {
     console.log(data);
     displayMessage.innterHTML = data
+
+    displayForm.reset()
+
     });
   });
 });
