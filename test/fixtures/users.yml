@@ -7,23 +7,19 @@
 martine:
   name: "Martine"
   email: "martine@bitmaker.co"
-  password: "1234"
-  password_confirmation: "1234"
+  password_digest: <%= BCrypt::Password.create('1234', cost: 5) %>
 
 abby:
   name: "Abby"
   email: "abby@bitmaker.co"
-  password: "1234"
-  password_confirmation: "1234"
+  password_digest: <%= BCrypt::Password.create('1234', cost: 5) %>
 
 mary:
   name: "Mary"
   email: "mary@bitmaker.co"
-  password: "1234"
-  password_confirmation: "1234"
+  password_digest: <%= BCrypt::Password.create('1234', cost: 5) %>
 
 nadia:
   name: "Nadia"
   email: "nadia@bitmaker.co"
-  password: "1234"
-  password_confirmation: "1234"
+  password_digest: <%= BCrypt::Password.create('1234', cost: 5) %>
