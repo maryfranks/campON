@@ -5,14 +5,18 @@ Rails.application.routes.draw do
 
   get 'parks/search'
   
+  get 'message/search'
+
+
   resources :trips do
-  resources :comments
+  resources :messages
   end
 
   resources :parks, only: [:index, :show]
   resource :user
   resources :sessions, only: [:new, :create, :destroy]
-  
-  root 'parks#index'
+
+  get 'homepage' => 'static_pageshome#landing'
+
 
 end
