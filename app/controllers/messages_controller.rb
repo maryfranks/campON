@@ -16,7 +16,7 @@ class MessagesController < ApplicationController
 
     if @message.save
       flash[:success] = "Message successfully added"
-      redirect_to '/trips/:id'
+      redirect_to "/trips/#{params[:trip_id]}"
 
     end
 

@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get 'static_pageshome/about'
 
   get 'parks/search'
-  
-  get 'message/search'
+
+  get 'messages/search'
 
 
   resources :trips do
