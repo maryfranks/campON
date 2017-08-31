@@ -30,13 +30,16 @@ class TripTest < ActiveSupport::TestCase
 
     trip = trips(:one)
     trip.park = Park.first
-    # assert_equal "Fishing and Canoeing Park", Park.first.name
     assert_equal trip.park.name, Park.first.name
 
   end
 
   test "add start date to trip" do
-    
+
+    trip = trips(:one)
+    trip.start_date = Date.today + 10
+    assert_equal trip.start_date, Date.today + 10
+
   end
 
   test "add end date to trip" do
