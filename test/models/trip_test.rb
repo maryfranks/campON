@@ -14,7 +14,7 @@ class TripTest < ActiveSupport::TestCase
     # When you save a trip with a name the test passes
   end
 
-  test "trip name validation"
+  test "trip name validation" do
   # when you save a trip without a name it fails and the test passes
   end
 
@@ -28,10 +28,15 @@ class TripTest < ActiveSupport::TestCase
 
   test "add park to trip" do
 
+    trip = trips(:one)
+    trip.park = Park.first
+    # assert_equal "Fishing and Canoeing Park", Park.first.name
+    assert_equal trip.park.name, Park.first.name
+
   end
 
   test "add start date to trip" do
-
+    
   end
 
   test "add end date to trip" do
@@ -59,8 +64,11 @@ class TripTest < ActiveSupport::TestCase
   end
 
   test "trip displays park" do
-    
+
   end
+
+  # user can invite ---> should be on trip?
+  # user can join trip ---> should be on trip?
 
 
 end
