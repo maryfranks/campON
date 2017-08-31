@@ -16,11 +16,12 @@ class MessagesController < ApplicationController
 
     if @message.save
       flash[:success] = "Message successfully added"
+      redirect_to '/trips/:id'
 
     end
 
     def search
-      @messages = Message.where(params[:trip_id])
+      @messages = Message.where(search_params)
       render partial: 'message_display'
     end
   end
@@ -51,6 +52,10 @@ class MessagesController < ApplicationController
   private
     def message_params
       params.require(:message).permit(:user_id, :trip_id, :message)
+    end
+
+    def search_params
+      params.require(:trip_id)
     end
 
 end

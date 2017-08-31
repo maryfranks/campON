@@ -1,7 +1,0 @@
-<% all_messages = Message.all  %>
-<%all_messages.each do |message| %>
-  <% if message.trip_id = @trip %>
-    <%= message.message %>
-    <%= message.user_id %>
-    <% end %>
-<% end %>
