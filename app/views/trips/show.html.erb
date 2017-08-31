@@ -1,6 +1,10 @@
 <h1>Trip Planner</h1>
 
 <h2>Trip Name: <%= @trip.name %><h2>
+<%= @trip.park.name %>
+<%= @trip.booked %>
+<%= @trip.start_date %>
+<%= @trip.end_date %>
 
 <%= render 'new_message_form', message: @message, trip: @trip %>
 
