@@ -1,1 +1,11 @@
-<h1>This is a user</h1>
+<h1>Hello <%= @user.name %>!</h1>
+
+<% @trips.each do |trip| %>
+<ul>
+  <li><%= trip.name %></li>
+  <li><%= trip.booked %></li>
+  <li><%= trip.park.name %></li>
+  <li><%= trip.start_date %></li>
+  <li><%= trip.end_date %></li>
+</ul>
+  <% end %>

@@ -26,6 +26,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = current_user
+    @trips = @user.trips
   end
 
   private

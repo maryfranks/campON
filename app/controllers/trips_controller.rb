@@ -20,6 +20,8 @@ class TripsController < ApplicationController
 
   def show
     @trip =Trip.find(params[:id])
+    @messages = Message.where(trip_id: @trip.id)
+    @message = Message.new
   end
 
   def update
