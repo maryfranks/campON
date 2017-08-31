@@ -5,3 +5,5 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 4, User.count
   end
 end
+
+user
