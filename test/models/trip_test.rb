@@ -2,13 +2,13 @@ require 'test_helper'
 
 class TripTest < ActiveSupport::TestCase
 
-  test "trip must have name" do
-    # When you save a trip with a name the test passes
-    skip
+  test "trip saves with name" do
+    trip = Trip.new
+    trip.name = "New Trip"
+    assert trip.save
   end
 
-  test "trip name validation" do
-  # when you save a trip without a name it fails and the test passes
+  test "trip does not save without name" do
     trip = Trip.new()
     refute trip.save
   end
