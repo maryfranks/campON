@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   resource  :user
   resources :sessions, only: [:new, :create, :destroy]
 
-  root 'parks#index'
+
+  get 'homepage' => 'static_pageshome#landing'
+
+
 
 end
