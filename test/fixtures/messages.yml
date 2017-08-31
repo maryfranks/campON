@@ -13,3 +13,8 @@ two:
   message: "Is there a beach?"
   user: two
   trip: three
+
+three:
+  message: "I love fishing!"
+  user: three 
+  trip: two
