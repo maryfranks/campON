@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get 'static_pageshome/about'
 
   get 'parks/search'
-  
-  get 'message/search'
+
+  get 'messages/search'
 
 
   resources :trips do
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :parks, only: [:index, :show]
-  resource :user
+  resource  :user
   resources :sessions, only: [:new, :create, :destroy]
 
   get 'homepage' => 'static_pageshome#landing'

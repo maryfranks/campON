@@ -15,7 +15,8 @@ class MessagesController < ApplicationController
     @message.message = params[:message][:message]
 
     if @message.save
-      redirect_to '/trips/:id'
+      redirect_to "/trips/#{params[:trip_id]}"
+
     end
 
     def search
