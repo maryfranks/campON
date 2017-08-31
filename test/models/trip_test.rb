@@ -64,6 +64,9 @@ class TripTest < ActiveSupport::TestCase
 
   test "trip displays users" do
     skip
+    trip = trip(:one)
+    trip.users << users(:one)
+    assert_equal ["Abby"], trip.users.name
   end
 
   test "trip displays dates" do
