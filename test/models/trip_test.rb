@@ -9,7 +9,8 @@ class TripTest < ActiveSupport::TestCase
 
   test "trip name validation" do
   # when you save a trip without a name it fails and the test passes
-  skip
+    trip = Trip.new()
+    refute trip.save
   end
 
   test "trip displays associated comments" do
@@ -20,7 +21,6 @@ class TripTest < ActiveSupport::TestCase
     trip = trips(:one)
     trip.park = Park.first
     assert_equal Park.first.name, trip.park.name
-
   end
 
   test "add start date to trip" do
