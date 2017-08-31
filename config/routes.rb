@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :parks, only: [:index, :show]
-  resource :user
+  resource  :user
   resources :sessions, only: [:new, :create, :destroy]
 
   get 'homepage' => 'static_pageshome#landing'
