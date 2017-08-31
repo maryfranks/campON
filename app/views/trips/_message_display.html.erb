@@ -1,0 +1,9 @@
+<div class=display_message</div>
+  <% all_messages = Message.all  %>
+
+  <% all_messages.each do |message| %>
+    <% if message.trip_id = @trip %>
+      <p><%= message.message %></p>
+      <p><%= message.user.name %></p>
+      <% end %>
+  <% end %>
