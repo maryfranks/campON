@@ -13,8 +13,9 @@ class TripTest < ActiveSupport::TestCase
     refute trip.save
   end
 
-  test "trip displays associated comments" do
-    skip
+  test "trip displays associated messages" do
+    trip = trips(:three)
+    assert_equal 2, trip.messages.count 
   end
 
   test "add park to trip" do
