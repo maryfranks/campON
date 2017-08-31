@@ -13,11 +13,60 @@
  *= require_tree .
  *= require_self
  */
+ /* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 .header {
   background-color: #F78D2A;
   position: relative;
   width: 100%;
+  margin: 0%
 }
 
 .application_footer {
@@ -27,28 +76,73 @@
 
 .camp-on-title {
   color: white;
-  font-family: futura;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size: 30px;
-  padding: 10px
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0%
 }
 
 .header-nav-bar {
   list-style: none;
   color: white;
-  font-family: futura;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   position: absolute;
   display: block;
   right: 20px;
-  top: 2px;
+  top: 27px;
 }
 
 .footer-nav-bar {
   position: relative;
   list-style: none;
   padding: 20px;
-  font-family: futura;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   color: white;
   right: 20px;
   background-color: #F78D2A;
   width: 100%;
+  margin: 0px;
+}
+
+.header-img {
+  width: 100%;
+  position: relative;
+  background-color: none;
+}
+
+.what-is-campon {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  text-align: center;
+  color: #F78D2A;
+  font-size: -webkit-xxx-large;
+}
+
+.discription-question {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  text-align: center;
+  color: #F78D2A;
+  font-size: larger
+}
+
+.discription {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  text-align: center;
+  color: black;
+  font-size: medium;
+  font-weight: normal;
+  margin: 10px;
+  line-height: 20px
+}
+
+.footer-img {
+  right: 0px;
+  bottom: 10px;
+  float:
+}
+
+.login-to-plan-trip {
+  background-color: #319796;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
