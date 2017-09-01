@@ -1,26 +1,26 @@
 require 'test_helper'
 
 class MessageTest < ActiveSupport::TestCase
-  test "message fixtures" do
-<<<<<<< HEAD
-    assert_equal 2, Message.count
-=======
-    assert_equal 3, Message.count 
->>>>>>> master
+
+  test "message is saved with a trip_id" do
+    message = Message.new
+    message.trip_id = 1
+    assert message.save
   end
 
-  #test message is displayed
-  #end
+  test "message does not save without a trip_id" do
+  end
 
-  #test message is saved
-  #end
+  test "message is saved with a user_id" do
+  end
 
-  #test username of message is displayed
-  #end
+  test "message does not save without a user_id" do
+  end
 
-  #test user can edit their message
-  #end
+  test "message can be edited" do
+  end
 
-  #test user can delete their message
-  #end
+  test "message cannot be deleted" do
+  end
+
 end
