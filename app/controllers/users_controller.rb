@@ -26,8 +26,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
-    @trips = @user.trips
+    if @user = current_user
+      @trips = @user.trips
+    else
+    flash.now[:notice] = "Please Login"
+    redirect_to new_user_path
+  end
   end
 
   private
