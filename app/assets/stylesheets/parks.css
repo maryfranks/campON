@@ -1,6 +1,140 @@
-.parks-index-header {
+/*.parks-index-header {
   text-align: center;
-  font-family: futura;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;;
   font-size: larger;
-  
+
+}
+
+.box-filter {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  background-color: #319796;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%
+}
+
+.instructions {
+  text-align: center;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: normal;
+  color: white;
+  position: relative;
+  top: 8px;
+
+}
+
+.activities {
+  text-align: left;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 24px;
+  position: relative;
+  right: -3px;
+  text-decoration: underline;
+}
+
+.facilities {
+  text-align: left;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  position: relative;
+  text-decoration: underline;
+  font-size: 24px;
+}
+
+.activities-search {
+  display: inline-block;
+  position: relative;
+  left: 30px;
+  top: 20px;
+  color: white;
+}
+/**/
+.facilities-search {
+  column-count: 4;
+  column-width: 10%;
+  float: right;
+  position: relative;
+  top: 86px;
+  right: 38px;
+  text-transform: capitalize
+
+}
+
+.activities-search {
+  text-transform: capitalize;
+  display: inline-block;
+  position: relative;
+  top: 69px;
+}
+
+.container {
+  display: block;
+  color: white;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: normal;
+  padding-bottom: 5px;
+}
+
+.activity-title {
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+.facility-title {
+  text-decoration: underline;
+  font-size: 25px;
+  position: absolute;
+  top: -17px;
+}
+
+.activities-search {
+  margin-left: 56px
+}
+
+.instructions {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  padding: 5px
+  bottom: 35px;
+}
+
+.parks-img {
+  background: url('index-banner.png') no-repeat;
+  background-size: cover;
+
+}
+
+.box-filter {
+  position: relative;
+  top: -511px;
+  font-size: 20px;
+}
+
+.activity-checkbox {
+  padding: 2px
+}
+
+.parkList {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  position: relative;
+  margin-right: 20px;
+  margin-left: 20px;
+  column-count: 3;
+  column-width: 25%;
+  bottom: 120px;
+  left: 170px;
+}
+
+
+.parks-title {
+  color: black;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  display: block;
+  position: relative;
+  bottom: 210px;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 30px;
+
 }
