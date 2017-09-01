@@ -7,7 +7,7 @@ if (displayForm){
   displayForm.addEventListener('submit', function(event){
     event.preventDefault()
     $.ajax({
-      url: 'http://localhost:3000/message/search',
+      url: '/message/search',
       method: 'get',
       dataType: 'html',
     }).done(function(data) {

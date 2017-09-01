@@ -12,7 +12,7 @@ var filterResults   = document.querySelector('#parkPartialList')
   activityCheck[i].addEventListener('change', function (event) {
 
     $.ajax({
-      url: 'http://localhost:3000/parks/search',
+      url: '/parks/search',
       method: 'get',
       data: $(activitiesForm).serialize(),
       dataType: 'html',
@@ -26,7 +26,7 @@ var filterResults   = document.querySelector('#parkPartialList')
       facilitiesCheck[i].addEventListener('change', function (event) {
 
       $.ajax({
-        url: 'http://localhost:3000/parks/search',
+        url: '/parks/search',
         method: 'get',
         data: $(activitiesForm).serialize(),
         dataType: 'html',

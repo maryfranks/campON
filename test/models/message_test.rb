@@ -1,13 +1,7 @@
 require 'test_helper'
 
 class MessageTest < ActiveSupport::TestCase
-  test "message fixtures" do
-<<<<<<< HEAD
-    assert_equal 2, Message.count
-=======
-    assert_equal 3, Message.count 
->>>>>>> master
-  end
+
 
   #test message is displayed
   #end
