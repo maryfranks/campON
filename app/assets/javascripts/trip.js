@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
     $.ajax({
       url: 'http://localhost:3000/message/search',
       method: 'get',
-      data:
       dataType: 'html',
     }).done(function(data) {
     console.log(data);
