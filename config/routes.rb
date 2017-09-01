@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get 'static_pageshome/contact'
   get 'static_pageshome/about'
 
+  get 'trips/:trip_id/messages/:id/edit' => 'messages#edit'
+  get 'trips/:trip_id/messages/:id' => 'messages#destroy'
+
   get 'parks/search'
 
   get 'messages/search'
