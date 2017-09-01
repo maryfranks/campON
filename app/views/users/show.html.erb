@@ -1,8 +1,8 @@
 <h1>Hello <%= @user.name %>!</h1>
 
 <% @trips.each do |trip| %>
-<ul>
-  <li><%= trip.name %></li>
+<ul class="trip_list">
+  <li><a href="/trips/<%=trip.id%>"><%= trip.name %></a></li>
   <li><%= trip.booked %></li>
   <li><%= trip.park.name %></li>
   <li><%= trip.start_date %></li>
