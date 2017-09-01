@@ -33,6 +33,7 @@ var filterResults   = document.querySelector('#parkPartialList')
         dataType: 'html',
       }).done(function(data) {
         filterResults.innerHTML = data
+
       })
     })
   }

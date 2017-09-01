@@ -1,5 +1,8 @@
 {
   "name": "campON",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "change-case": "^3.0.1",
+    "sentence-case": "^2.1.1"
+  }
 }
