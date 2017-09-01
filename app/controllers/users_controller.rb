@@ -30,7 +30,7 @@ class UsersController < ApplicationController
       @trips = @user.trips
     else
     flash.now[:notice] = "Please Login"
-    redirect_to new_user_path
+    redirect_to new_session_path
   end
   end
 
