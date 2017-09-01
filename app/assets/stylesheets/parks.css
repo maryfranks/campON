@@ -1,54 +1,4 @@
-/*.parks-index-header {
-  text-align: center;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;;
-  font-size: larger;
 
-}
-
-.box-filter {
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-  background-color: #319796;
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%
-}
-
-.instructions {
-  text-align: center;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-  font-size: normal;
-  color: white;
-  position: relative;
-  top: 8px;
-
-}
-
-.activities {
-  text-align: left;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-  font-size: 24px;
-  position: relative;
-  right: -3px;
-  text-decoration: underline;
-}
-
-.facilities {
-  text-align: left;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-  position: relative;
-  text-decoration: underline;
-  font-size: 24px;
-}
-
-.activities-search {
-  display: inline-block;
-  position: relative;
-  left: 30px;
-  top: 20px;
-  color: white;
-}
-/**/
 .facilities-search {
   column-count: 4;
   column-width: 10%;
@@ -115,14 +65,22 @@
   padding: 2px
 }
 
+.camponparks {
+  background-color: #4EBDD2;
+  display: block;
+  text-align: center;
+  /*position: relative;*/
+  top: -120px;
+  width: 100%
+}
+
 .parkList {
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-  position: relative;
-  margin-right: 20px;
-  margin-left: 20px;
-  column-count: 3;
-  column-width: 25%;
-  bottom: 120px;
+  margin: auto 0;
+  display:inline;
+
+
+  top: 20px;
   left: 170px;
 }
 
@@ -132,9 +90,25 @@
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   display: block;
   position: relative;
-  bottom: 210px;
   text-align: center;
   text-decoration: underline;
   font-size: 30px;
+  top: -150px;
+
+}
+
+.park-link a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border-style: solid;
+  border-color: white;
+  border-width: thin;
+  font-size: 22px
+}
+
+.parks {
+  display: inline-block;
+  margin: 0 15px ;
 
 }

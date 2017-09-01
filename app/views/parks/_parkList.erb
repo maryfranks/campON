@@ -1,11 +1,13 @@
-<h1 class="parks-title">Ontario Parks</h1>
+<section class="camponparks">
+  <h1 class="parks-title">Ontario Parks</h1>
 
-<ul class="parkList">
-  <% @parks.each do |r| %>
-    <li class = 'parks'>
-    <br>
-    <p> <%= link_to "#{r.name}", park_path(r.id) %> </p>
-    <br>
-    <% end %>
-  </li>
-</ul>
+  <ul class="parkList">
+    <% @parks.each do |r| %>
+      <li class = 'parks'>
+      <br>
+      <p class="park-link"> <%= link_to "#{r.name}", park_path(r.id) %> </p>
+      <br>
+      <% end %>
+    </li>
+  </ul>
+</section>
