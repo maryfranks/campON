@@ -1,14 +1,16 @@
 
-<h1 class="parks-index-header">Ontario Parks</h1>
 
 <div class="container">
+  <div class="parks-img">
+    <%= image_tag "banner-index.jpg" %>
+  </div>
   <section class="box-filter">
-    <p class="instructions">"Filter Parks by Activity and Facility!"</p>
-
+    <p class="instructions">Filter Parks by Activity or Facility</p>
+<br>
       <div class="activities-search">
 
-        <h1>Activities</h1>
-
+        <h1 class="activity-title">Activities</h1>
+<br>
         <div class="activities-filter-block">
 
           <form class="activities-filter-form" action="">
@@ -24,12 +26,12 @@
       </div>
 
       <div class="facilities-search">
-        <h1>Facilities</h1>
-
+        <h1 class="facility-title">Facilities</h1>
+<br>
         <div class="facilities-filter-block">
           <form class="facilities-filter-form" action="">
-            <% Park.facilities_list.each do |facilities| %>
-              <div class="activity_checkbox">
+            <% Park.facilities_view.each do |facilities| %>
+              <div class="facilities_checkbox">
               <label> <input name= 'data[<%= facilities %>]' class='facilities' type="checkbox" rel='<%= facilities %>' value="true" /><%= facilities %>
               </label>
             </div>

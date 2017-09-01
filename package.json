@@ -1,6 +1,7 @@
 {
   "name": "campON",
   "private": true,
+
   "dependencies": {},
   "repository": {
     "url": "https://gihub.com/maryfranks/campON",
@@ -9,5 +10,6 @@
   "devDependencies": {
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
+
   }
 }
