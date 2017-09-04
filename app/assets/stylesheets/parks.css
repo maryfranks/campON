@@ -49,9 +49,10 @@
   bottom: 35px;
 }
 
-.parks-img {
-  background: url('index-banner.png') no-repeat;
-  background-size: cover;
+.parks-img > img {
+  width: 100%;
+  position: relative;
+  /*background-size: cover;*/
 
 }
 

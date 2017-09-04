@@ -119,13 +119,15 @@ table {
   text-align: center;
   color: #F78D2A;
   font-size: -webkit-xxx-large;
+  margin-top: 40px;
 }
 
 .discription-question {
   font-family: 'Cabin', sans-serif;
   text-align: center;
   color: #F78D2A;
-  font-size: larger
+  font-size: 20px;
+  margin-top: 50px;
 }
 
 .discription {
@@ -142,19 +144,110 @@ table {
   right: 0px;
   bottom: 10px;
 }
+
 .landingpagefooter {
+  position: absolute;
+  clear: both;
+}
+
+#mug-img {
+  position: relative;
+  width: 33.3%;
+  height: 316.78px;
+  margin: 0 0;
+}
+
+#mug-img > img {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.parks-anchor {
+  font-family: 'Cabin', sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 158px;
+  width: 100%;
+  color: white;
+  font-size: 30px
+}
+
+#map-img {
+  position: relative;
+  width: 33.3%;
+  height: 316.78px;
+  margin: 0 0;
+}
+
+#map-img > img {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.map-anchor {
+  font-family: 'Cabin', sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 158px;
+  width: 100%;
+  color: white;
+  font-size: 30px
+}
+
+#stove-img {
+  position: relative;
+  width: 33.3%;
+  height: 316.78px;
+  margin: 0 0;
+}
+
+#stove-img > img {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.stove-anchor {
+  font-family: 'Cabin', sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 158px;
+  width: 100%;
+  color: white;
+  font-size: 30px
+}
+
+#mug-img, #map-img, #stove-img {
+  float: left;
+}
+/*.landingpagefooter {
+  position: absolute;
+}
+
+#mug-img, #stove-img, #map-img {
   position: relative;
 }
 
 #mug-img > img, #stove-img > img, #map-img >img {
   width: 33.33%;
   height: 500px;
-  display: inline;
-  /*position: relative;*/
+  display: inline-block;
   float: left;
   z-index: 10;
-  /*position: relative;*/
+  position: relative;
 }
+
+.parks-anchor {
+  width: 100%;
+  z-index: 20;
+  display: block
+}
+
+.parks-button {
+  text-align: center;
+}*/
 
 /*#mug-img, #stove-img, #map-img {*/
   /*#mug-img > a, #stove-img > a, #map-img > a {
@@ -166,14 +259,14 @@ table {
     display: inline-block;
     bottom: 30px;
   }*/
-.map-anchor {
+/*.map-anchor {
   position: absolute;
   z-index: 9999;
   max-width: 100%;
   box-align: center;
   display: block;
 
-}
+}*/
 
   /*bottom: -610px;
   left: 290px;

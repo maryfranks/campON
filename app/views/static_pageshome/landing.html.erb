@@ -18,24 +18,22 @@
 <br>
 
 <div class="ladingpagefooter">
+
   <div id="mug-img">
-  <%= image_tag "mug-img.png" %>
-    <p class="parks-anchor">
-      <a class="parks-button" href="#">Parks</a>
-    </p>
+    <%= image_tag ('mug-img.png') %>
+    <!-- <a class="parks-anchor" href="/index"></a> -->
+    <p class="parks-anchor">  <%= link_to "Parks", parks_path, :style=>'color: white; text-decoration: none;' %> </p>
+
   </div>
+
   <div id="map-img">
-    <%= image_tag "map-img.png" %>
-    <div class="map-anchor">
-      <p class="test">
-      <a class="map-button" href="#">Plan a Trip</a>
-      </p>
-    </div>
+    <%= image_tag ('map-img.png') %>
+    <p class="map-anchor">  <%= link_to "Plan a Trip", new_trip_path, :style=>'color: white; text-decoration: none;' %> </p>
   </div>
+
   <div id="stove-img">
-    <%= image_tag "stove.png" %>
-    <div class="stove-anchor">
-      <a class="stove-button" href="#">Your Trips</a>
-    </div>
+    <%= image_tag ("stove.png") %>
+    <p class="stove-anchor">  <%= link_to "Your Trips", user_path, :style=>'color: white; text-decoration: none;' %> </p>
   </div>
+
 </div>
