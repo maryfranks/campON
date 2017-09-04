@@ -20,7 +20,7 @@
 .container {
   display: block;
   color: white;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Cabin', sans-serif;
   font-size: normal;
   padding-bottom: 5px;
 }
@@ -75,7 +75,7 @@
 }
 
 .parkList {
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Cabin', sans-serif;
   margin: auto 0;
   display:inline;
 
@@ -87,7 +87,7 @@
 
 .parks-title {
   color: black;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Cabin', sans-serif;
   display: block;
   position: relative;
   text-align: center;
