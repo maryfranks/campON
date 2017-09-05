@@ -28,7 +28,7 @@ class TripsController < ApplicationController
     @trip = Trip.find(params[:id])
 
     if @trip.update(trip_params)
-      redirect_to parks_path
+      redirect_to trip_path(@trip.id)
     else
       render :edit
     end
