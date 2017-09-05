@@ -1,0 +1,11 @@
+
+<p> Invite a Friend  </p>
+
+  <div class="invite_form">
+    <%= form_tag(invite_path(params[:id]), method: "post") do  %>
+      <%= text_field_tag(:name) %>
+      <%= text_field_tag(:email) %>
+      <%= submit_tag("add a friend") %>
+    <% end %>
+
+</div>

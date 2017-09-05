@@ -36,6 +36,14 @@ class TripsController < ApplicationController
     flash[:notice] = "Trip successfully updated!"
   end
 
+  def invite_user
+    @trip   = Trip.find(params[:trip_id])
+    @url    = trip_url(@trip)
+    @guest  = params["name"]
+    @email  = params["email"]
+  end
+
+
   def edit
     @trip = Trip.find(params[:id])
   end
