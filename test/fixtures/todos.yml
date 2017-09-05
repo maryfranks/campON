@@ -6,15 +6,12 @@
 #
 one:
   text: "Get bigger tent"
-  user: one
   trip: three
 
 two:
   text: "bring the big BBQ?"
-  user: two
   trip: three
 
 three:
   text: "Buy new lures"
-  user: three
   trip: two
