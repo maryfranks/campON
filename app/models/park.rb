@@ -17,4 +17,28 @@ class Park < ApplicationRecord
     end
   end
 
+def activities
+  a = []
+
+  self.attributes.each do |k, v|
+    if v == true && Park.activity_list.include?(k)
+      a << k
+    end
+  end
+  return a
+
+end
+
+def facilities
+  f = []
+
+  self.attributes.each do |k, v|
+    if v == true && Park.facilities_list.include?(k)
+      f << k
+    end
+  end
+  return f
+
+end
+
 end
