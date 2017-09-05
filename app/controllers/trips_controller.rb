@@ -37,10 +37,10 @@ class TripsController < ApplicationController
   end
 
   def invite_user
-    @trip   = Trip.find(params[:trip_id])
-    @url    = trip_url(@trip)
-    @guest  = params["name"]
-    @email  = params["email"]
+    @trip         = Trip.find(params[:trip_id])
+    @guest_name   = params["name"]
+    @email        = params["email"]
+
   end
 
 
