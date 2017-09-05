@@ -10,11 +10,11 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new
-    @message.user_id = current_user.id
-    @message.trip_id = params[:trip_id]
-    @message.message = params[:message][:message]
+    # @message.user_id = current_user.id
+    # @message.trip_id = params[:trip_id]
+    # @message.message = params[:message][:message]
 
-    if @message.save
+    if @message.save(message_params)
       redirect_to "/trips/#{params[:trip_id]}"
     end
   end

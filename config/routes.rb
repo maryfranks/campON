@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
 
   resources :trips do
-  resources :messages
+    resources :messages
   end
 
   resources :parks, only: [:index, :show]
