@@ -12,4 +12,10 @@
 <h3>Trip Message<h3>
 <%= render 'messages/message_display', messages: @trip.messages, trip: @trip %>
 
+<h3>Add a To-Do<h3>
+<%= render 'todos/todo_partial', todo: @todo, trip: @trip %>
+
+<h3>Trip ToDos</h3>
+<%= render 'todos/todo_display', todo: @trip.todos, trip: @trip %>
+
 <p id="trip-id"><%= @trip.id %></p>

@@ -22,6 +22,8 @@ class TripsController < ApplicationController
     @trip =Trip.find(params[:id])
     @messages = Message.where(trip_id: @trip.id)
     @message = Message.new
+    @todo = Todo.new
+    @todos = Todo.where(trip_id: @trip.id)
   end
 
   def update
