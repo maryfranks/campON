@@ -4,8 +4,17 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+one:
+  text: "Get bigger tent"
+  user: one
+  trip: three
+
+two:
+  text: "bring the big BBQ?"
+  user: two
+  trip: three
+
+three:
+  text: "Buy new lures"
+  user: three
+  trip: two

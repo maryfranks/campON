@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class TodoTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "todo fixtures" do
+    assert_equal 3, Todo.count
+  end
 end
