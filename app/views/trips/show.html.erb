@@ -10,3 +10,6 @@
 
 <h3>Trip Message<h3>
 <%= render 'message_display', messages: @trip.messages, trip: @trip %>
+
+<h3>Trip To-Do<h3>
+<%= render 'todos/todo_partial', todo: @todo, trip: @trip %>
