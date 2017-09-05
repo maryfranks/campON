@@ -153,8 +153,7 @@ table {
 #mug-img {
   position: relative;
   width: 33.3%;
-  height: 316.78px;
-  margin: 0 0;
+  height: 320px;
 }
 
 #mug-img > img {
@@ -176,8 +175,7 @@ table {
 #map-img {
   position: relative;
   width: 33.3%;
-  height: 316.78px;
-  margin: 0 0;
+  max-height: 320px;
 }
 
 #map-img > img {
@@ -199,8 +197,6 @@ table {
 #stove-img {
   position: relative;
   width: 33.3%;
-  height: 316.78px;
-  margin: 0 0;
 }
 
 #stove-img > img {
