@@ -72,11 +72,12 @@ table {
 .application_footer {
   background-color: #F78D2A;
   position: relative;
+  clear: both;
 }
 
 .camp-on-title {
   color: white;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Cabin', sans-serif;
   font-size: 30px;
   padding: 10px;
   padding-top: 20px;
@@ -87,7 +88,7 @@ table {
 .header-nav-bar {
   list-style: none;
   color: white;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Cabin', sans-serif;
   position: absolute;
   display: block;
   right: 20px;
@@ -98,7 +99,7 @@ table {
   position: relative;
   list-style: none;
   padding: 20px;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Cabin', sans-serif;
   color: white;
   right: 20px;
   background-color: #F78D2A;
@@ -106,33 +107,36 @@ table {
   margin: 0px;
 }
 
-.header-img {
-  width: 100%;
-  position: relative;
-  background-color: none;
+#header-img > img {
+  width: 100%
+}
+.body-container {
+  max-width: 100%
 }
 
 .what-is-campon {
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Cabin', sans-serif;
   text-align: center;
   color: #F78D2A;
   font-size: -webkit-xxx-large;
+  margin-top: 40px;
 }
 
 .discription-question {
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Cabin', sans-serif;
   text-align: center;
   color: #F78D2A;
-  font-size: larger
+  font-size: 20px;
+  margin-top: 50px;
 }
 
 .discription {
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Cabin', sans-serif;
   text-align: center;
   color: black;
   font-size: medium;
   font-weight: normal;
-  margin: 10px;
+  margin: 5% ;
   line-height: 20px
 }
 
@@ -141,7 +145,76 @@ table {
   bottom: 10px;
 }
 
-.login-to-plan-trip {
-  background-color: #319796;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+.landingpagefooter {
+  position: absolute;
+  clear: both;
+}
+
+#mug-img {
+  position: relative;
+  width: 33.3%;
+  height: 320px;
+}
+
+#mug-img > img {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.parks-anchor {
+  font-family: 'Cabin', sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 158px;
+  width: 100%;
+  color: white;
+  font-size: 30px
+}
+
+#map-img {
+  position: relative;
+  width: 33.3%;
+  max-height: 320px;
+}
+
+#map-img > img {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.map-anchor {
+  font-family: 'Cabin', sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 158px;
+  width: 100%;
+  color: white;
+  font-size: 30px
+}
+
+#stove-img {
+  position: relative;
+  width: 33.3%;
+}
+
+#stove-img > img {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.stove-anchor {
+  font-family: 'Cabin', sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 158px;
+  width: 100%;
+  color: white;
+  font-size: 30px
+}
+
+#mug-img, #map-img, #stove-img {
+  float: left;
 }
