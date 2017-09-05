@@ -6,8 +6,8 @@ class UserInviteMailer < ApplicationMailer
     @name = guest_name
     @trip = trip
 
-    mail  to: email,
-          subjet: "Trip invite to #{@trip.name}"
+    mail to: email,
+        subject: "You've been invited to a camping trip called #{@trip.name}."
   end
 
 end
