@@ -15,10 +15,7 @@ Rails.application.routes.draw do
 
   resources :trips do
     resources :messages
-<<<<<<< HEAD
-=======
     resources :todos 
->>>>>>> master
   end
 
   resources :parks, only: [:index, :show]
