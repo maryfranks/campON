@@ -5,21 +5,25 @@ class TodoTest < ActiveSupport::TestCase
     assert_equal 3, Todo.count
   end
 
-  test "todo saves with only a name" do
+  test "todo saves with only text and user" do
     # test passes when the todo saves
-    # trip = Trip.new
-    # trip.name = "New Trip"
-    # assert trip.save
+    todo = Todo.new
+    todo.trip = trips(:one)
+    todo.text = "Do This!"
+    assert todo.save
   end
 
-  test "todo does not save without name" do
+  test "todo does not save without text" do
     # test passes when the save fails
-    # trip = Trip.new()
-    # refute trip.save
+    todo = Todo.new
+    todo.trip = trips(:one)
+    refute todo.save
   end
 
   test "can add user to todo" do
-
+    todo = todos(:one)
+    todo.user = users(:martine)
+    assert_equal "Martine", todo.user.name
   end
 
 end
