@@ -40,7 +40,7 @@ class TripsController < ApplicationController
     @trip         = Trip.find(params[:trip_id])
     @guest_name   = params["name"]
     @email        = params["email"]
-    ApplicationMailer.invite_email(@trip, @guest_name , @email).deliver_now
+    UserInviteMailer.invite_email(@trip, @guest_name , @email).deliver_now
   end
 
 
