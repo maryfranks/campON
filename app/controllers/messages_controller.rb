@@ -9,13 +9,17 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new
-    # @message.user_id = current_user.id
-    # @message.trip_id = params[:trip_id]
+    @trip =Trip.find(params[:trip_id])
+    @message = Message.new(message_params)
+    @message.user_id = current_user.id
+    @message.trip_id = params[:trip_id]
     # @message.message = params[:message][:message]
-
-    if @message.save(message_params)
+    if @message.save && !request.xhr?
       redirect_to "/trips/#{params[:trip_id]}"
+    elsif @message.save && request.xhr?
+      render json: {message: @message.message, user: current_user.name}
+    else
+      render "trips/show"
     end
   end
 
@@ -52,7 +56,7 @@ class MessagesController < ApplicationController
 
   private
     def message_params
-      params.require(:message).permit(:user_id, :trip_id, :message)
+      params.require(:message).permit(:message)
     end
 
     def search_params

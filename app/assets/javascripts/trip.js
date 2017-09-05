@@ -1,21 +1,30 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//   var displayMessage = document.querySelector('.display_message');
-//   var displayForm = document.querySelector('.message_form');
+document.addEventListener("DOMContentLoaded", function() {
+  var displayMessage = document.querySelector('.display_message');
+  var displayForm = document.querySelector('.message_form');
 
-// if (displayForm){
-//
-//   displayForm.addEventListener('submit', function(event){
-//     event.preventDefault()
-//     $.ajax({
-//       url: '/message/search',
-//       method: 'get',
-//       dataType: 'html',
-//     }).done(function(data) {
-//     console.log(data);
-//     displayMessage.innterHTML = data
-//
-//     displayForm.reset()
-//
-//     });
-//   });}
-// });
+if (displayForm){
+
+  var tripId = document.querySelector('#trip-id').innerHTML
+  displayForm.addEventListener('submit', function(event){
+    event.preventDefault()
+    $.ajax({
+      url: '/trips/' + tripId + '/messages',
+      method: 'post',
+      data: $(displayForm).serialize(),
+      dataType: 'json',
+    }).done(function(data) {
+
+    var message = document.createElement('p');
+    message.innerHTML = data.message;
+
+    var name = document.createElement('p');
+    name.innerHTML = data.user;
+    
+    displayMessage.appendChild(message);
+    displayMessage.appendChild(name);
+
+    displayForm.reset()
+
+    });
+  });}
+});
