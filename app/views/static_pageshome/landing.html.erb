@@ -1,12 +1,9 @@
+<div class="body-container">
+  <div id="header-img">
+     <%= image_tag "header.png" %>
+  </div>
 
-<div class="header-img">
-  <%= image_tag "header.png" %>
 </div>
-<br>
-<br>
-<br>
-<br>
-
 <div class="discription-container">
 <h1 class="what-is-campon">What is Camp ON?</h1>
 <br>
@@ -20,11 +17,23 @@
 <br>
 <br>
 
+<div class="ladingpagefooter">
 
-<div class="footer-img">
-  <%= image_tag "mug-img.png" %>
+  <div id="mug-img">
+    <%= image_tag ('mug-img.png') %>
+    <!-- <a class="parks-anchor" href="/index"></a> -->
+    <p class="parks-anchor">  <%= link_to "Parks", parks_path, :style=>'color: white; text-decoration: none;' %> </p>
 
-  <a href="#" class="login-to-plan-trip"><font color= 'white'>Login to Plan a Trip!</font></a>
-</div>
+  </div>
+
+  <div id="map-img">
+    <%= image_tag ('map-img.png') %>
+    <p class="map-anchor">  <%= link_to "Plan a Trip", new_trip_path, :style=>'color: white; text-decoration: none;' %> </p>
+  </div>
+
+  <div id="stove-img">
+    <%= image_tag ("stove.png") %>
+    <p class="stove-anchor">  <%= link_to "Your Trips", user_path, :style=>'color: white; text-decoration: none;' %> </p>
+  </div>
 
 </div>
