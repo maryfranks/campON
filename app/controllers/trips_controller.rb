@@ -1,21 +1,18 @@
 class TripsController < ApplicationController
-
+before_action :authorize
   def new
     @trip = Trip.new
   end
 
   def create
     @trip = Trip.new(trip_params)
-
     if @trip.save
       @trip.users << current_user
       redirect_to user_path
     else
       render new_trip_path
     end
-
     flash[:notice] = "You have successfully created a new trip!"
-
   end
 
   def show
