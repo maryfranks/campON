@@ -3,7 +3,7 @@ class Park < ApplicationRecord
   has_many :trips
 
   def self.activity_list
-      return ['biking', 'birding', 'boating', 'canoeing', 'fishing', 'hiking', 'Hunting', 'swimming']
+      return ['biking', 'birding', 'boating', 'canoeing', 'fishing', 'hiking', 'hunting', 'swimming']
   end
 
   def self.facilities_list

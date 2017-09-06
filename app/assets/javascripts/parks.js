@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 var activitiesForm  = document.querySelector('.activities-filter-form')
 var activityCheck   = document.querySelectorAll('.activity')
-var facilitiesForm  = document.querySelector('.facilities-filter-form')
 var facilitiesCheck = document.querySelectorAll('.facilities')
 var parks           = document.querySelectorAll('.parks')
 var filterResults   = document.querySelector('#parkPartialList')
@@ -29,7 +28,7 @@ var filterResults   = document.querySelector('#parkPartialList')
       $.ajax({
         url: '/parks/search',
         method: 'get',
-        data: $(facilitiesForm).serialize(),
+        data: $(activitiesForm).serialize(),
         dataType: 'html',
       }).done(function(data) {
         filterResults.innerHTML = data

@@ -5,8 +5,21 @@
 <%= @trip.booked %>
 <%= @trip.start_date %>
 <%= @trip.end_date %>
+<p><%= link_to 'Edit', edit_trip_path(@trip.id) %></p>
 <%= link_to 'Delete', trip_path(@trip.id), method: :delete, data: {confirm: "Are you sure you want to delete this trip?"}%>
-<%= render 'new_message_form', message: @message, trip: @trip %>
+
+<%= render 'add_friend_form' %>
+
+<%= render 'messages/new_message_form', message: @message, trip: @trip %>
+
 
 <h3>Trip Message<h3>
-<%= render 'message_display', messages: @trip.messages, trip: @trip %>
+<%= render 'messages/message_display', messages: @trip.messages, trip: @trip %>
+
+<h3>Add a To-Do<h3>
+<%= render 'todos/todo_partial', todo: @todo, trip: @trip %>
+
+<h3>Trip ToDos</h3>
+<%= render 'todos/todo_display', todo: @trip.todos, trip: @trip %>
+
+<p id="trip-id"><%= @trip.id %></p>

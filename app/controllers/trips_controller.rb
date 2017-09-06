@@ -22,19 +22,30 @@ class TripsController < ApplicationController
     @trip =Trip.find(params[:id])
     @messages = Message.where(trip_id: @trip.id)
     @message = Message.new
+    @todo = Todo.new
+    @todos = Todo.where(trip_id: @trip.id)
   end
 
   def update
     @trip = Trip.find(params[:id])
 
     if @trip.update(trip_params)
-      redirect_to parks_path
+      redirect_to trip_path(@trip.id)
     else
       render :edit
     end
 
     flash[:notice] = "Trip successfully updated!"
   end
+
+  def invite_user
+    @trip         = Trip.find(params[:trip_id])
+    @guest_name   = params["name"]
+    @email        = params["email"]
+    UserInviteMailer.invite_email(@trip, @guest_name , @email).deliver_now
+    redirect_to trip_path(@trip.id)
+  end
+
 
   def edit
     @trip = Trip.find(params[:id])
