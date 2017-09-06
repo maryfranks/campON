@@ -1,12 +1,15 @@
 
 .facilities-search {
   column-count: 4;
-  column-width: 10%;
   float: right;
   position: relative;
-  top: 86px;
-  right: 38px;
-  text-transform: capitalize
+  top: 110px;
+  right: 5%;
+  /*right: 38px;*/
+  /*padding-right: 5%;*/
+  text-transform: capitalize;
+  text-align: left;
+  font-size: 18px;
 
 }
 
@@ -14,15 +17,29 @@
   text-transform: capitalize;
   display: inline-block;
   position: relative;
-  top: 69px;
+  top: 50%;
+  text-align: left;
+  font-size: 18px;
+  top: 110px;
+  left: 5%;
 }
 
 .container {
   display: block;
   color: white;
   font-family: 'Cabin', sans-serif;
-  font-size: normal;
+  /*font-size: normal;*/
   padding-bottom: 5px;
+  position: relative;
+}
+
+.box-filter {
+  position: relative;
+  font-size: 20px;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  bottom: 500px;
 }
 
 .activity-title {
@@ -33,12 +50,11 @@
 .facility-title {
   text-decoration: underline;
   font-size: 25px;
-  position: absolute;
-  top: -17px;
 }
 
 .activities-search {
-  margin-left: 56px
+  /*margin-left: 56px;*/
+  text-align: left;
 }
 
 .instructions {
@@ -56,11 +72,7 @@
 
 }
 
-.box-filter {
-  position: relative;
-  top: -511px;
-  font-size: 20px;
-}
+
 
 .activity-checkbox {
   padding: 2px
@@ -79,8 +91,6 @@
   font-family: 'Cabin', sans-serif;
   margin: auto 0;
   display:inline;
-
-
   top: 20px;
   left: 170px;
 }
