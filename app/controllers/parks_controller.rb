@@ -1,7 +1,7 @@
 class ParksController < ApplicationController
 
   def index
-    @parks = Park.all
+    @parks = Park.all.sort_by{ |park| park.name}
   end
 
   def show
