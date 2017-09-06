@@ -1,10 +1,15 @@
-<div class="show-body">
 
 
+<div class="header-parks-show">
   <div class="parks_show_header">
     <h1 class="park_name"> <%= @parks.name %></h1>
     <%= image_tag "light-forest-trees.png" %>
   </div>
+
+  <div class="google-maps-placeholder-img">
+    <%= image_tag "google-maps-placeholder-img.png" %>
+  </div>
+</div>
 
 <div class="attributes-display">
   <div class="activities-tag">
@@ -40,13 +45,13 @@
 </div>
   </div>
 
-</div>
-
 <div class="facilities-display">
+  <h3 class="park_facilities_heading">Park Facilities</h3>
   <% @parks.facilities.each do |k| %>
-    <%=k%>
+    <p class="facilities-tag"> <%=k.capitalize%> </p>
     <%end%>
 </div>
 
-</div>
+<div class="plan_trip_button_from_park">
+  <%= link_to "Plan Your Trip to #{@parks.name}", new_trip_path %>
 </div>

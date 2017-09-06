@@ -37,8 +37,9 @@ def facilities
       f << k
     end
   end
-  return f
-
+  return f.map do |k|
+    str = k
+    k.downcase.tr("_", " ")
 end
-
+end   
 end
