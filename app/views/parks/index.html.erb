@@ -17,11 +17,11 @@
 
             <% Park.activity_list.each do |activity| %>
               <div class="activity_checkbox">
-                <label> <input name= 'data[<%= activity %>]' class='activity' type="checkbox" rel='<%= activity %>' value="true" /><%= activity %>
+                <label> <input name= 'data[<%= activity.split(' ').join('_') %>]' class='activity' type="checkbox" rel='<%= activity %>' value="true" /><%= activity %>
                 </label>
               </div>
             <% end %>
-          </form>
+
         </div>
       </div>
 
@@ -29,10 +29,10 @@
         <h1 class="facility-title">Facilities</h1>
 <br>
         <div class="facilities-filter-block">
-          <form class="facilities-filter-form" action="">
+
             <% Park.facilities_view.each do |facilities| %>
               <div class="facilities_checkbox">
-              <label> <input name= 'data[<%= facilities %>]' class='facilities' type="checkbox" rel='<%= facilities %>' value="true" /><%= facilities %>
+              <label> <input name= 'data[<%= facilities.split(' ').join('_') %>]' class='facilities' type="checkbox" rel='<%= facilities %>' value="true" /><%= facilities %>
               </label>
             </div>
             <% end %>
@@ -42,6 +42,6 @@
   </section>
 </div>
 
-<div id = 'parkPartialList'>
-  <%= render partial: 'parkList' %>
-</div>
+ <div id="parkPartialList">
+     <%= render partial: 'parkList' %>
+ </div>

@@ -1,0 +1,21 @@
+<%= form_for [trip, todo], :html=> {class: 'todo_form'} do |f| %>
+  <% if todo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(todo.errors.count, "error") %> prohibited this To-Do from being saved:</h2>
+
+      <ul>
+      <% todo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "What needs to be done?" %><br />
+    <%= f.text_field :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
