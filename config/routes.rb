@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root to: 'static_pageshome#landing'
 
   get 'static_pageshome/contact'
@@ -14,11 +15,11 @@ Rails.application.routes.draw do
 
   get 'messages/search'
 
-
+  resources :invitations
 
   resources :trips do
     resources :messages
-    resources :todos 
+    resources :todos
   end
 
   resources :parks, only: [:index, :show]
