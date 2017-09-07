@@ -23,9 +23,6 @@ display: block;
   text-decoration: underline;
   font-size: 25px;
 }
-.activity_checkbox, .facility_checkbox {
-
-}
 
 .instructions {
   position: absolute;

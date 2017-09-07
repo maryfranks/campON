@@ -1,17 +1,11 @@
 
 
 <div class="container">
-  <!-- <div class="parks-img">
-    <%= image_tag "banner-index.png" %>
-  </div> -->
-
 
 <p class="instructions">Filter Parks by Activity or Facility</p>
   <section class="box-filter">
 
-    <!-- <div class="activities-search"> -->
           <h1 class="activity-title">Activities</h1> <br>
-      <!-- <div class="activities-filter-block"> -->
 
           <form class="activities-filter-form" action="">
             <% Park.activity_list.each do |activity| %>
@@ -20,23 +14,15 @@
               </div>
             <% end %>
           </form>
-        <!-- </div> -->
-      <!-- </div> -->
 
-      <!-- <div class="facilities-search"> -->
         <h1 class="facility-title">Facilities</h1>
 <br>
-        <!-- <div class="facilities-filter-block"> -->
-
-            <% Park.facilities_view.each do |facilities| %>
-              <div class="facilities_checkbox">
+        <% Park.facilities_view.each do |facilities| %>
+            <div class="facilities_checkbox">
               <label> <input name= 'data[<%= facilities.split(' ').join('_') %>]' class='facilities' type="checkbox" rel='<%= facilities %>' value="true" /><%= facilities %>
               </label>
             </div>
             <% end %>
-          <!-- </form> -->
-        <!-- </div> -->
-      <!-- </div> -->
   </section>
 </div>
 <br>

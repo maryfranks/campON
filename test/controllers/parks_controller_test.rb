@@ -1,7 +1,15 @@
 require 'test_helper'
 
 class ParksControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get index" do
+      get parks_url
+      assert_response :success
+    end
+
+    test "should get show" do
+      park = parks(:one)
+      get park_url(park)
+      assert_response :success
+    end
+
 end
