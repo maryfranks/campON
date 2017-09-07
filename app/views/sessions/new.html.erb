@@ -1,11 +1,31 @@
-<h1>Login</h1>
+<section class="login-background">
+    <%= image_tag "coffee-login.png" %>
 
-<%= form_tag sessions_path, :method => :post do %>
+  <div class="login-block">
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= check_box_tag :remember_me %>
-  <%= label_tag :remember_me %>
-  <%= submit_tag "Submit" %>
+      <h1 class="login-title">Log-In</h1>
 
+    <div class="login-fields">
+        <%= form_tag sessions_path, :method => :post do %>
+
+        <div class="login-email-input">
+          Email: <%= text_field_tag :email %>
+        </div>
+
+        <div class="login-password-input">
+          Password: <%= password_field_tag :password %>
+        </div>
+
+        <div class="login-rememberme-input">
+          <%= check_box_tag :remember_me %>
+          <%= label_tag :remember_me %>
+        </div>
+    </div>
+
+        <div class="login-submit-button">
+          <input id="login-submit" type="submit" name="commit" value="Log In" data-disable-with="Log In">
+        </div>
+
+  </div>
 <% end %>
+</section>
