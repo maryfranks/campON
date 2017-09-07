@@ -1,15 +1,13 @@
 class UsersController < ApplicationController
-
+before_action :authorize, except: [:new, :create]
   def new
     @user = User.new
   end
 
   def create
-
     @user = User.new(user_params)
-
     if @user.save
-      auto_login(@user )
+      # auto_login(@user)
     flash.now[:notice] = 'Account successfully created!'
     redirect_to user_path
     else
@@ -22,17 +20,11 @@ class UsersController < ApplicationController
     current_user
   end
 
-  def destroy
+  def show
+    @user = current_user
+    @trips = @user.trips
   end
 
-  def show
-    if @user = current_user
-      @trips = @user.trips
-    else
-    flash.now[:notice] = "Please Login"
-    redirect_to new_session_path
-  end
-  end
 
   private
 

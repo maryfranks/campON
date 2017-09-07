@@ -6,6 +6,8 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
 
   setup do
     @trip = trips(:one)
+    @trip.users << users(:martine)
+    sign_in_as users(:martine)
   end
 # tests routes (no index for trips)
   test "should get show" do
