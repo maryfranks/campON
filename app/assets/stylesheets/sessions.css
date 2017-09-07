@@ -2,24 +2,27 @@
 position: relative;
 display: block;
 max-width: 100%;
+background-image: url("coffee-login.png");
+background-size: auto;
 }
 
-.login-background > img {
+/*.login-background > img {
   position: relative  ;
   width: 100%;
-}
+  height: auto;
+}*/
 
 .login-block {
   border-radius: 50px;
-  width: 486px;
+  width: 400px;
   position: absolute;
+  height: 483px;
   top: 25%;
   margin: 0 9%;
   opacity: 0.5;
   background-color: white;
   margin-bottom: 3%;
-  display: block;
-  height: 483px;
+
 }
 
 .login-title {
@@ -37,12 +40,13 @@ max-width: 100%;
 .login-fields {
   text-align: right;
   margin-right: 20%;
+  overflow: hidden;
 }
 
 .login-email-input, .login-password-input {
   color: #2F4F4F;
   font-family: 'Cabin', sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   padding: 2%;
   margin-bottom: 30px;
 }
@@ -70,7 +74,6 @@ max-width: 100%;
   margin: 30px auto;
   display: block;
   margin-bottom: 30px;
-
   background-color: #2F4F4F;
   border-radius: 50px;
   border: none;
