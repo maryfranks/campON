@@ -16,6 +16,14 @@ before_action :authorize
   end
 
   def show
+
+    #check if they are trip user
+    #if not
+    #check if they have and invite
+    #if so
+    #shovel into trip user
+    #else redirect to user show
+
     @trip =Trip.find(params[:id])
     @messages = Message.where(trip_id: @trip.id)
     @message = Message.new
@@ -39,7 +47,6 @@ before_action :authorize
     @trip         = Trip.find(params[:trip_id])
     @guest_name   = params["name"]
     @email        = params["email"]
-
     UserInviteMailer.invite_email(@trip, @guest_name , @email).deliver_now
 
     redirect_to trip_path(@trip.id)

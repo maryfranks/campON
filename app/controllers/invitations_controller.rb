@@ -13,6 +13,7 @@ class InvitationsController < ApplicationController
 
   # GET /invitations/new
   def new
+    @invitation = Invitation.new
   end
 
   # GET /invitations/1/edit
@@ -22,6 +23,9 @@ class InvitationsController < ApplicationController
   # POST /invitations
   # POST /invitations.json
   def create
+    @invitations = Invitation.new(trip_id, email)
+    if @invitations.save
+    UserInviteMailer.invite_email(@trip, @guest_name , @email).deliver_now
   end
 
   # PATCH/PUT /invitations/1
