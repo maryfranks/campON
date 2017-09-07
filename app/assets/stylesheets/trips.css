@@ -32,7 +32,7 @@
   margin-top: 40px;
 }
 
-input[type=text] {
+#trip_name {
   width: 15%;
   border: 3px solid #555;
   height: 30px;
