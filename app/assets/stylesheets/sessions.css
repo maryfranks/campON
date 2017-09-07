@@ -5,18 +5,21 @@ max-width: 100%;
 }
 
 .login-background > img {
-  position: relative;
+  position: relative  ;
   width: 100%;
 }
 
 .login-block {
   border-radius: 50px;
-  width: 35%;
+  width: 486px;
   position: absolute;
   top: 25%;
   margin: 0 9%;
   opacity: 0.5;
   background-color: white;
+  margin-bottom: 3%;
+  display: block;
+  height: 483px;
 }
 
 .login-title {
@@ -28,6 +31,7 @@ max-width: 100%;
   opacity: none;
   margin-bottom: 30px;
   margin-top: 30px;
+
 }
 
 .login-fields {
