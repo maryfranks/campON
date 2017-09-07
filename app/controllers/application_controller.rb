@@ -9,7 +9,8 @@ class ApplicationController < ActionController::Base
     end
 
   def authorize
-    redirect to '/login' unless current_user
+    session[:redirect] = request.original_url
+    redirect_to new_session_path unless current_user
   end
 
   def user_id
