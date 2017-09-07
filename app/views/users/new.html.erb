@@ -1,4 +1,8 @@
-<h1>Sign Up!</h1>
+<section class="sign-up-background">
+
+<div class="signup-block">
+
+<h1 class="signup-title">Sign Up</h1>
 
 <% if @user.errors.any? %>
   <ul>
@@ -9,28 +13,34 @@
 <% end %>
 
 <%=form_for @user, url: {action: "create"} do |f| %>
+<div class="signup-fields">
 
-<div class="field">
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class='field'>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </div>
+
+    <div class='field'>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+
+    <div class='field'>
+
+      <%= f.label :confirmation %>
+      <%= f.password_field :password_confirmation %>
+    </div>
 </div>
 
-<div class='field'>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
-
-  <div class='field'>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-
-  <div class='field'>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-
-
-  <%= f.submit 'Sign Up' %>
-
+  <input id="signup-submit" type="submit" name="commit" value="Sign Up" data-disable-with="Sign Up">
+  <p class="login-redirect">Already a user? <a href="/sessions/new">Log in here!</a></p>
+</div>
 <% end %>
+
+
+</section>

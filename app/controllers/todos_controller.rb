@@ -9,8 +9,12 @@ class TodosController < ApplicationController
     @todo.trip_id = params[:trip_id]
     @todo.text = params[:todo][:text]
 
-    if @todo.save
+    if @todo.save && !request.xhr?
       redirect_to "/trips/#{params[:trip_id]}"
+    elsif @todo.save && request.xhr?
+      render json: {text: @todo.text}
+    else
+      render "trips/show"
     end
   end
 
