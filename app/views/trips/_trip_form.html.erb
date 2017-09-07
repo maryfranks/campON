@@ -12,12 +12,10 @@
       </div>
     <% end %>
 
-    <div class="trip-name-input">
+    <div class="trips-title">
       <p class="trip-name">Trip Name</p>
       <%= f.text_field :name %>
-    </div>
 
-    <div class="park-selection">
       <p class="pickapark">Pick a Park</p>
       <%= f.collection_select(:park_id, Park.all, :id, :name)  %>
     </div>
@@ -27,7 +25,7 @@
       <%= f.date_field :start_date %>
     </div>
 
-    <div class="trip-end-date">
+    <div class="trip-start-date">
       <p class="chooseenddate">End Date</p>
       <%= f.date_field :end_date %>
     </div>
@@ -36,9 +34,7 @@
       <p class="haveyoubooked">Have You Booked?</p>
         <p class="reservationlink">If not visit <a href="https://reservations.ontarioparks.com/"> The Ontario Parks Website</a> and then, come back!</p>
       <%= f.check_box :booked %>
-    </div>
 
-    <div class="button_submit">
-      <p id="trip-submit-button"> <%= f.submit %> </p>
+      <input id="trip-submit-button" type="submit" name="commit" value="Create Trip" data-disable-with="Create Trip">
     </div>
   <% end %>
