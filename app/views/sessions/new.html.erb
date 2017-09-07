@@ -1,11 +1,32 @@
-<h1>Login</h1>
+<section class="login-background">
+
+  <div class="login-block">
+
+  <img id="tree-icon" src="/assets/tree-icon-4ca40af6730d753f7a1d3bd73f7605087c7212ceb051db33c0eee5ba2321b75f.png" alt="Tree icon">
+  <img id="tent-icon" src="/assets/tree-icon-4ca40af6730d753f7a1d3bd73f7605087c7212ceb051db33c0eee5ba2321b75f.png" alt="Tree icon">
+
+<h1 class="login-title">Log-In</h1>
 
 <%= form_tag sessions_path, :method => :post do %>
 
+<div class="login-email-input">
   Email: <%= text_field_tag :email %>
+</div>
+
+<div class="login-password-input">
   Password: <%= password_field_tag :password %>
+</div>
+
+<div class="login-rememberme-input">
   <%= check_box_tag :remember_me %>
   <%= label_tag :remember_me %>
-  <%= submit_tag "Submit" %>
+</div>
+
+<div class="login-submit-button">
+    <%= submit_tag "Submit" %>
+</div>
+
+  </div>
 
 <% end %>
+</section>

@@ -1,0 +1,79 @@
+.login-background {
+
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  padding: 7% 0;
+  clear: both;
+  background-color: #4EBDD2;
+}
+
+/*.border-block {
+  border: solid 3px white;
+  border-radius: 70px;
+  margin: 0 3%;
+}*/
+
+#tree-icon {
+  display: inline-block;
+  position: absolute;
+  left: 4%;
+  width: 15%;
+  top: 35%
+}
+
+#tent-icon {
+  display: inline-block;
+  position: absolute;
+  right: 4%;
+  width: 15%;
+  top: 35%
+}
+
+
+
+.login-block {
+  border-radius: 50px;
+  border: solid 5px white;
+  width: auto;
+  position: relative;
+  top: 50%;
+  margin: 0 3%;
+  background-color: #4EBDD2;
+}
+
+.login-title {
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  font-size: 50px;
+  padding: 3% 0;
+}
+
+.login-email-input, .login-password-input {
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  font-size: 40px;
+  padding: 2%
+}
+
+#email, #password {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  top: -7px;
+  width: 40%;
+  border: none;
+  height: 32px;
+}
+
+.login-rememberme-input {
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  font-size: 30px;
+  padding: 2%;
+}
+
+.login-submit-button {
+  padding: 2%;
+}
