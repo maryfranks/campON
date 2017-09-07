@@ -7,7 +7,11 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:email])
+<<<<<<< HEAD
 
+=======
+    # byebug
+>>>>>>> master
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       if session[:redirect].present?
