@@ -1,45 +1,17 @@
-
-.facilities-search {
-  column-count: 4;
-  float: right;
-  position: relative;
-  top: 110px;
-  right: 5%;
-  /*right: 38px;*/
-  /*padding-right: 5%;*/
-  text-transform: capitalize;
-  text-align: left;
-  font-size: 18px;
-
-}
-
-.activities-search {
-  text-transform: capitalize;
-  display: inline-block;
-  position: relative;
-  top: 50%;
-  text-align: left;
-  font-size: 18px;
-  top: 110px;
-  left: 5%;
-}
-
 .container {
-  display: block;
-  color: white;
-  font-family: 'Cabin', sans-serif;
-  /*font-size: normal;*/
-  padding-bottom: 5px;
-  position: relative;
+width: 100%;
+position: relative;
+display: block;
 }
 
 .box-filter {
-  position: relative;
+  background-image: url("banner-index.png");
+  column-count: 5;
+  text-transform: capitalize;
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  padding: 10%;
   font-size: 20px;
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  bottom: 500px;
 }
 
 .activity-title {
@@ -51,34 +23,28 @@
   text-decoration: underline;
   font-size: 25px;
 }
+.activity_checkbox, .facility_checkbox {
 
-.activities-search {
-  /*margin-left: 56px;*/
-  text-align: left;
 }
 
 .instructions {
-  position: relative;
+  position: absolute;
+  display: block;
   text-align: center;
-  font-size: 30px;
-  padding: 5px
-  bottom: 35px;
+  left: 32%;
+  top: 60px;
+  font-size: 40px;
+  padding: 5px;
+  font-family: 'Cabin', sans-serif;
+  color: white;
 }
-
-.parks-img > img {
-  width: 100%;
-  position: relative;
-  /*background-size: cover;*/
-
-}
-
-
 
 .activity-checkbox {
   padding: 2px
 }
 
 .camponparks {
+  margin-top: 10%;
   background-color: #4EBDD2;
   display: block;
   text-align: center;
@@ -100,11 +66,12 @@
   color: black;
   font-family: 'Cabin', sans-serif;
   display: block;
-  position: relative;
+  position: absolute;
   text-align: center;
   text-decoration: underline;
   font-size: 30px;
-  top: -150px;
+  top: 165%;
+  left: 43%;
 
 }
 

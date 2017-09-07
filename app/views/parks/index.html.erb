@@ -1,33 +1,32 @@
 
 
 <div class="container">
-  <div class="parks-img">
+  <!-- <div class="parks-img">
     <%= image_tag "banner-index.png" %>
-  </div>
+  </div> -->
 
-    <p class="instructions">Filter Parks by Activity or Facility</p>
 
+<p class="instructions">Filter Parks by Activity or Facility</p>
   <section class="box-filter">
 
-    <div class="activities-search">
+    <!-- <div class="activities-search"> -->
           <h1 class="activity-title">Activities</h1> <br>
-      <div class="activities-filter-block">
-          <form class="activities-filter-form" action="">
+      <!-- <div class="activities-filter-block"> -->
 
+          <form class="activities-filter-form" action="">
             <% Park.activity_list.each do |activity| %>
               <div class="activity_checkbox">
-                <label> <input name= 'data[<%= activity.split(' ').join('_') %>]' class='activity' type="checkbox" rel='<%= activity %>' value="true" /><%= activity %>
-                </label>
+                <label> <input name= 'data[<%= activity.split(' ').join('_') %>]' class='activity' type="checkbox" rel='<%= activity %>' value="true" /><%= activity %></label>
               </div>
             <% end %>
           </form>
-        </div>
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
 
-      <div class="facilities-search">
+      <!-- <div class="facilities-search"> -->
         <h1 class="facility-title">Facilities</h1>
 <br>
-        <div class="facilities-filter-block">
+        <!-- <div class="facilities-filter-block"> -->
 
             <% Park.facilities_view.each do |facilities| %>
               <div class="facilities_checkbox">
@@ -35,11 +34,13 @@
               </label>
             </div>
             <% end %>
-          </form>
-        </div>
-      </div>
+          <!-- </form> -->
+        <!-- </div> -->
+      <!-- </div> -->
   </section>
 </div>
+<br>
+<br>
 
  <div id="parkPartialList">
      <%= render partial: 'parkList' %>
