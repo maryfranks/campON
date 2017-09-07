@@ -2,6 +2,8 @@ require 'test_helper'
 
 class TripsControllerTest < ActionDispatch::IntegrationTest
 
+  include SignInHelper
+
   setup do
     @trip = trips(:one)
   end
@@ -30,23 +32,23 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy trip" do
-    skip
-    # sign_in_as users(:martine)
-    # assert_difference('Trip.count', -1) do
-    # delete trip_url(@trip)
-    # end
-    # assert_redirected_to user_path
+
+    sign_in_as users(:martine)
+    assert_difference('Trip.count', -1) do
+    delete trip_url(@trip)
+    end
+    assert_redirected_to user_path
   # WON'T REDIRECT TO USER SHOW
   end
 
   test "should create trip" do
-    skip
-  #   assert_difference('Trip.count') do
-  #     post trips_url, params: { trip: { name: 'Really Fun Trip!' } }
-  #     users(:martine) >> JOIN TABLE!!!
-  #   end
-  #
-  #   assert_redirected_to trip_path(Trip.last)
+    # skip
+    assert_difference('Trip.count') do
+      sign_in_as users(:martine)
+      post trips_url, params: { trip: { name: 'Really Fun Trip!' } }
+    end
+
+    assert_redirected_to user_path
   end
 
 end
