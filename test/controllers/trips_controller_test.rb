@@ -21,12 +21,20 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should update trip" do
+    patch trip_url(@trip), params: { trip: { name: "updated" } }
+
+    assert_redirected_to trip_path(@trip)
+    @trip.reload
+    assert_equal "updated", @trip.name
+  end
+
   # test "should destroy trip" do
   #   assert_difference('Trip.count', -1) do
   #   delete trip_url(@trip)
   #   end
   #   user = users(:martine)
-  #   assert_redirected_to user_path(user)
+  #   assert_redirected_to user_path(user) WON'T REDIRECT TO USER SHOW
   # end
 
   # test "should create trip" do
@@ -38,13 +46,4 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   #   assert_redirected_to trip_path(Trip.last)
   # end
 
-
-#######-----------------------------
-
-  #
-  # test "should update post" do
-  #   patch :update, id: @post, post: { body: @post.body, title: @post.title }
-  #   assert_redirected_to post_path(assigns(:post))
-  # end
-  #
 end
