@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+before_action :authorize
 
   def new
     @trip = Trip.new
@@ -45,7 +46,6 @@ class TripsController < ApplicationController
     UserInviteMailer.invite_email(@trip, @guest_name , @email).deliver_now
     redirect_to trip_path(@trip.id)
   end
-
 
   def edit
     @trip = Trip.find(params[:id])
