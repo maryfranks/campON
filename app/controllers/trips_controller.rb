@@ -16,15 +16,13 @@ before_action :authorize
   end
 
   def show
-
-    #check if they are trip user
-    #if not
-    #check if they have and invite
-    #if so
-    #shovel into trip user
-    #else redirect to user show
-
     @trip =Trip.find(params[:id])
+    if @trip.users.include?(current_user)
+    elsif Invitation.find_by(email: current_user.email, trip_id: @trip.id)
+      @trip.users << current_user
+    else
+      redirect_to user_path
+    end
     @messages = Message.where(trip_id: @trip.id)
     @message = Message.new
     @todo = Todo.new
@@ -47,8 +45,10 @@ before_action :authorize
     @trip         = Trip.find(params[:trip_id])
     @guest_name   = params["name"]
     @email        = params["email"]
+    @invitations = Invitation.new(trip: @trip ,email: @email)
+    if @invitations.save
     UserInviteMailer.invite_email(@trip, @guest_name , @email).deliver_now
-
+    end
     redirect_to trip_path(@trip.id)
   end
 

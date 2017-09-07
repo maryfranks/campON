@@ -9,8 +9,4 @@ class Trip < ApplicationRecord
 
   validates :name, presence: true
 
-
-    def self.
-    end
-
 end

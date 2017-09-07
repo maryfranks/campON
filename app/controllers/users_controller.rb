@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-before_action :authorize
+before_action :authorize, except: [:new, :create]
   def new
     @user = User.new
   end
@@ -7,7 +7,7 @@ before_action :authorize
   def create
     @user = User.new(user_params)
     if @user.save
-      auto_login(@user )
+      # auto_login(@user)
     flash.now[:notice] = 'Account successfully created!'
     redirect_to user_path
     else
