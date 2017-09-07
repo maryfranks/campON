@@ -25,6 +25,7 @@ before_action :authorize, except: [:new, :create]
     @trips = @user.trips
   end
 
+
   private
 
   def user_params

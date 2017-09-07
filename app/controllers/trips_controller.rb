@@ -27,6 +27,7 @@ before_action :authorize
     @message = Message.new
     @todo = Todo.new
     @todos = Todo.where(trip_id: @trip.id)
+    @user = @trip.users
   end
 
   def update
