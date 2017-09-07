@@ -13,8 +13,7 @@ class SessionsController < ApplicationController
       if session[:redirect].present?
         redirect_to session[:redirect]
       else
-
-      redirect_to trip_path, notice: "Logged in!"
+      redirect_to user_path, notice: "Logged in!"
       end
     else
       render "new"
