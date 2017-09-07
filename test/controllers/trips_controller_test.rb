@@ -16,6 +16,19 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get edit" do
+    get edit_trip_url(@trip)
+    assert_response :success
+  end
+
+  # test "should destroy trip" do
+  #   assert_difference('Trip.count', -1) do
+  #   delete trip_url(@trip)
+  #   end
+  #   user = users(:martine)
+  #   assert_redirected_to user_path(user)
+  # end
+
   # test "should create trip" do
   #   assert_difference('Trip.count') do
   #     post trips_url, params: { trip: { name: 'Really Fun Trip!' } }
@@ -29,30 +42,9 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
 #######-----------------------------
 
   #
-  # test "should create post" do
-  #   assert_difference('Post.count') do
-  #     post :create, post: { body: @post.body, title: @post.title }
-  #   end
-  #
-  #   assert_redirected_to post_path(assigns(:post))
-  # end
-  #
-  #
-  # test "should get edit" do
-  #   get :edit, id: @post
-  #   assert_response :success
-  # end
-  #
   # test "should update post" do
   #   patch :update, id: @post, post: { body: @post.body, title: @post.title }
   #   assert_redirected_to post_path(assigns(:post))
   # end
   #
-  # test "should destroy post" do
-  #   assert_difference('Post.count', -1) do
-  #     delete :destroy, id: @post
-  #   end
-  #
-  #   assert_redirected_to posts_path
-  # end
 end
