@@ -1,7 +1,57 @@
-<h1> <%= @parks.name %></h1>
 
-    <% @parks.attributes.each do |k, v| %>
-      <%if v == true %>
-        <p><%=k%></p>
-      <% end %>
+
+<div class="header-parks-show">
+  <div class="parks_show_header">
+    <h1 class="park_name"> <%= @parks.name %></h1>
+    <%= image_tag "light-forest-trees.png" %>
+  </div>
+
+  <div class="google-maps-placeholder-img">
+    <%= image_tag "google-maps-placeholder-img.png" %>
+  </div>
+</div>
+
+<div class="attributes-display">
+  <div class="activities-tag">
+
+
+  <% @parks.activities.each do |k| %>
+    <% if k == "canoeing" %>
+      <%= image_tag "canoeing-icon.png" %>
+
+    <% elsif k == "biking" %>
+      <%= image_tag "biking-icon.png" %>
+
+    <% elsif k == "birding" %>
+      <%= image_tag "birding-icon.png" %>
+
+    <% elsif  k == "boating" %>
+      <%= image_tag "boating-icon.png" %>
+
+    <% elsif k == "fishing" %>
+      <%= image_tag "fishing-icon.png" %>
+
+    <% elsif k == "hiking" %>
+      <%= image_tag "hiking-icon.png" %>
+
+    <% elsif k == "hunting" %>
+      <%= image_tag "hunting-icon.png" %>
+
+    <% else k == "swimming" %>
+      <%= image_tag "swimming-icon.png" %>
+
     <% end %>
+  <% end %>
+</div>
+  </div>
+
+<div class="facilities-display">
+  <h3 class="park_facilities_heading">Park Facilities</h3>
+  <% @parks.facilities.each do |k| %>
+    <p class="facilities-tag"> <%=k.capitalize%> </p>
+    <%end%>
+</div>
+
+<div class="plan_trip_button_from_park">
+  <%= link_to "Plan Your Trip to #{@parks.name}", new_trip_path %>
+</div>
