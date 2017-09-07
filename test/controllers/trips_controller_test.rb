@@ -5,7 +5,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @trip = trips(:one)
   end
-
+# tests routes (no index for trips)
   test "should get show" do
     get trip_url(@trip)
     assert_response :success
