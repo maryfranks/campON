@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
       displayMessage.appendChild(name);
 
       displayForm.reset()
+      document.querySelector("#new_message input[type='submit']").disabled = false
 
       });
     });}
@@ -49,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         displayToDo.appendChild(newTodo);
         displayToDoForm.reset();
+        document.querySelector("#new_todo input[type='submit']").disabled = false
       });
     });
 
