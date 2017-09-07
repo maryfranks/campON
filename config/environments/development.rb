@@ -56,7 +56,7 @@ Rails.application.configure do
 
   config.action_mailer.smtp_settings = {
 
-    address: "smtp.gmail.com",
+    address: "smtp.sendgrid.net",
     port: 2525,
     domain: "localhost:3000",
     authentication: "plain",
