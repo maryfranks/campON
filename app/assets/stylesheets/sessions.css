@@ -67,7 +67,8 @@ background-size: auto;
 }
 
 #login-submit {
-  padding: 2%;
+  padding: 3%;
+  width: 27%;
   margin: 30px auto;
   display: block;
   margin-bottom: 30px;
