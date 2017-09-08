@@ -38,7 +38,7 @@ display: block;
 }
 
 .activity-checkbox {
-  padding: 2px
+  padding: 2px;
 }
 
 .camponparks {
@@ -87,7 +87,7 @@ display: block;
   border-style: solid;
   border-color: white;
   border-width: thin;
-  font-size: 22px
+  font-size: 22px;
 }
 
 .parks {
@@ -100,7 +100,7 @@ display: block;
   display: block;
   float: left;
   position: relative;
-  background-color: grey
+  background-color: grey;
 }
 .parks_show_header > img {
   width: 100%;
@@ -130,7 +130,7 @@ display: block;
   display: inline-block;
   /*float: left;*/
   position: relative;
-  margin: 50px 0
+  margin: 50px 0;
 }
 
 .activities-tag {
@@ -146,7 +146,7 @@ display: block;
    display: inline-block;
   border:3px solid #F78D2A;
   border-radius: 50%;
-  margin: 10px 15px
+  margin: 10px 15px;
  }
 
  .facilities-display {
@@ -166,7 +166,7 @@ display: block;
    padding: 4px;
    display: inline-block;
    width: 43%;
-   padding: 2%
+   padding: 2%;
 
  }
 
@@ -174,7 +174,7 @@ display: block;
    text-align: center;
    font-size: 60px;
    margin: auto;
-   margin-bottom: 20px
+   margin-bottom: 20px;
  }
 
  .plan_trip_button_from_park {
