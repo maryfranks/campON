@@ -33,7 +33,7 @@
     <div class="trip-booked">
       <p class="haveyoubooked">Have You Booked?</p>
         <p class="reservationlink">If not visit <a href="https://reservations.ontarioparks.com/"> The Ontario Parks Website</a> and then, come back!</p>
-      <%= f.check_box :booked %>
+      <input type="checkbox" value="1" name="trip[booked]" id="trip_booked">
 
       <input id="trip-submit-button" type="submit" name="commit" value="Create Trip" data-disable-with="Create Trip">
     </div>
