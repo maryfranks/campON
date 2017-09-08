@@ -15,11 +15,8 @@ class MessagesController < ApplicationController
     @message.trip_id = params[:trip_id]
     # @message.message = params[:message][:message]
     if @message.save
-      #  && !request.xhr?
+
       redirect_to "/trips/#{params[:trip_id]}"
-    # elsif @message.save && request.xhr?
-    #   render json:
-      # {message: @message.message, user: current_user.name}
     else
       render "trips/show"
     end
