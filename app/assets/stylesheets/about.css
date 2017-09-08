@@ -1,0 +1,21 @@
+.about-background-page {
+  background-color: #4EBDD2;
+  width: 100%;
+  display: inline-block;
+}
+
+.about-background-page > h1 {
+  font-family: "Cabin";
+  font-size: 80px;
+  text-align: center;
+  color: white;
+  padding-top: 5%;
+}
+
+.about-background-page > p {
+  font-family: "Cabin";
+  font-size: 50px;
+  text-align: center;
+  color: grey;
+  padding: 5% 10%;
+}
