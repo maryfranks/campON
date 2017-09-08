@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         url: '/trips/' + tripId + '/messages',
         method: 'post',
         data: $(displayForm).serialize(),
-        dataType: 'html',
+        dataType: 'json',
       }).done(function(data) {
 
       var message = document.createElement('p');
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         url: '/trips/' + tripId + '/todos',
         method: 'post',
         data: $(displayToDoForm).serialize(),
-        dataType: 'html',
+        dataType: 'json',
       }).done(function(data) {
         var newTodo = document.createElement('p');
         newTodo.innerHTML = data.text;

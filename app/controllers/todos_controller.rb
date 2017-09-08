@@ -32,7 +32,7 @@ class TodosController < ApplicationController
     if @todo.save
       redirect_to "/trips/#{params[:trip_id]}"
     else
-      redirect_to "/trips/#{params[:trip_id]}"
+      render "trips/show"
     end
   end
 
