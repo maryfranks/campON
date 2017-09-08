@@ -20,9 +20,7 @@
   font-size: 40px;
   margin-top: 20px;
   color: black;
-
 }
-
 
 .trip-edit-and-delete {
   font-size: 15px;
@@ -32,6 +30,7 @@
 .top-trips-container {
   position: relative;
   display: block;
+  clear: both;
 }
 
 .trip-members {
@@ -40,6 +39,7 @@ width: 45%;
 position: relative;
 display: inline-block;
 border-radius: 50px;
+margin: 10px;
 }
 
 .precise-trip-info {
@@ -53,8 +53,9 @@ border-radius: 50px;
   color: white;
   font-size: 30px;
   border-radius: 50px;
-  margin-top: 30px;
+  margin: 10px;
   display: inline-block;
+  float:left;
 }
 
 .trip-member-header {
@@ -63,7 +64,6 @@ border-radius: 50px;
   font-family: 'Cabin', sans-serif;
   margin: 3% 0;
   font-size: 20px;
-
 }
 
 .member-user-name {
@@ -89,33 +89,51 @@ border-radius: 50px;
 
 #invite-friend-button {
   background-color: orange;
-border: solid 3px white;
-color: white;
-padding: 1% 1%;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 12px;
-border-radius: 50px;
+  border: solid 3px white;
+  color: white;
+  padding: 1% 1%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 50px;
+  text-align: center;
+  margin: 10px 180px;
 }
 
 .bottom-trips-container {
   position: relative;
   display: block;
+  clear:both;
 }
 
 .trip-messages {
-background-color: red;
-width: 45%;
-position: relative;
-display: inline-block;
+  font-family: 'Cabin', sans-serif;
+  background-color: red;
+  text-align: center;
+  width: 40%;
+  color: white;
+  font-size: 30px;
+  border-radius: 50px;
+  margin: 10px;
+  display: inline-block;
+  position: relative;
+  float:left;
 }
 
 .trip-todo-list {
-background-color: green;
-width: 40%;
-display: inline-block;
-position: relative;
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+  font-size: 30px;
+  color: white;
+  background-color: green;
+  width: 40%;
+  display: inline-block;
+  position: relative;
+  float:left;
+  width: 40%;
+  border-radius: 50px;
+  margin: 10px;
 }
 
 .trip-todo-header {
@@ -148,4 +166,39 @@ position: relative;
   margin: 0 10px;
   display: inline-block;
   position: relative;
+}
+
+.trip-messages > h3 {
+  text-align: center;
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  margin: 3% 0;
+  font-size: 20px;
+}
+
+#trip-id {
+  color: white;
+}
+
+.field > label {
+  color: white;
+  font-family: 'Cabin', sans-serif;
+}
+
+#todo_text {
+  width: 33%;
+}
+
+.todo-form > input {
+  background-color: green;
+  border: solid 3px white;
+  color: white;
+  padding: 1% 1%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 50px;
+  text-align: center;
+  margin: 10px 180px;
 }
