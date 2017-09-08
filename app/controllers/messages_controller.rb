@@ -13,10 +13,9 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.user_id = current_user.id
     @message.trip_id = params[:trip_id]
-    # @message.message = params[:message][:message]
+    @message.message = params[:message][:message]
     if @message.save
-
-      redirect_to "/trips/#{params[:trip_id]}"
+      render partial: 'message_display'
     else
       render "trips/show"
     end

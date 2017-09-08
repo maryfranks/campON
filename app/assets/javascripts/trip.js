@@ -1,59 +1,46 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var displayMessage = document.querySelector('.display_message');
-  var displayForm = document.querySelector('.message_form');
 
-  if (displayForm){
+// trip id
+  var tripId          = document.querySelector('#trip-id').innerHTML
+// variables for message js
+  var message_form    = document.querySelector('#new_message')
+  var message         = document.querySelector("#message_message")
+  var display_message = document.querySelector("#display_message")
+// variables for todo js
+  var todo_form     = document.querySelector('#new_todo')
+  var todo_text     = document.querySelector('#todo_text')
+  var display_todo  = document.querySelector('.todo_results')
 
-    var tripId = document.querySelector('#trip-id').innerHTML
-    displayForm.addEventListener('submit', function(event){
+
+    message_form.addEventListener('submit', function (event) {
       event.preventDefault()
       $.ajax({
-        url: '/trips/' + tripId + '/messages',
-        method: 'post',
-        data: $(displayForm).serialize(),
-        dataType: 'html',
+        url: tripId + '/messages',
+        method:'post',
+        data: $(message).serialize(),
+        dataType:'html',
       }).done(function(data) {
+        console.log(data);
+        display_message.innerHTML = data
+      })
+      message_form.reset();
+  })
 
-      var message = document.createElement('p');
-      message.innerHTML = data.message;
-
-      var name = document.createElement('p');
-      name.innerHTML = data.user;
-
-      displayMessage.appendChild(message);
-      displayMessage.appendChild(name);
-
-      displayForm.reset()
-      document.querySelector("#new_message input[type='submit']").disabled = false
-
-      });
-    });}
-
-  var displayToDo = document.querySelector('.display-todos');
-  var displayToDoForm = document.querySelector('.todo_form');
-
-  if (displayToDoForm){
-
-    var tripId = document.querySelector('#trip-id').innerHTML
-
-    displayToDoForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-      $.ajax({
-        url: '/trips/' + tripId + '/todos',
-        method: 'post',
-        data: $(displayToDoForm).serialize(),
-        dataType: 'html',
-      }).done(function(data) {
-        var newTodo = document.createElement('p');
-        newTodo.innerHTML = data.text;
-        console.log(newTodo.innerHTML);
-
-        displayToDo.appendChild(newTodo);
-        displayToDoForm.reset();
-        document.querySelector("#new_todo input[type='submit']").disabled = false
-      });
-    });
-
-  }
+  todo_form.addEventListener('submit', function (event) {
+    event.preventDefault()
+    $.ajax({
+      url: tripId + '/todos',
+      method:'post',
+      data: $(todo_text).serialize(),
+      dataType:'html',
+    }).done(function(data) {
+      console.log(data);
+      display_todo.innerHTML = data
+    })
+    message_form.reset();
+  })
 
 });
+
+
+// document.querySelector("#new_todo input[type='submit']").disabled = false

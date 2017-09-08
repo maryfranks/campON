@@ -22,7 +22,10 @@
 <h3>Add a To-Do<h3>
 <%= render 'todos/todo_partial', todo: @todo, trip: @trip %>
 
-<h3>Trip ToDos</h3>
-<%= render 'todos/todo_display', todos: @trip.todos, trip: @trip %>
+<h<div class="todo_results">
+  <!-- results will do here -->
+  <h3>Trip ToDos</h3>
+  <%= render 'todos/todo_display', todos: @trip.todos, trip: @trip %>
+</div>
 
 <p id="trip-id"><%= @trip.id %></p>

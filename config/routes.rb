@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'static_pageshome/about'
 
   post 'trips/:trip_id/invite' => 'trips#invite_user', :as => 'invite_user'
-  
+
   get 'trips/:trip_id/messages/:id/edit' => 'messages#edit'
   get 'trips/:trip_id/messages/:id' => 'messages#destroy'
 
