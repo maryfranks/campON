@@ -109,9 +109,9 @@ margin: 10px;
 
 .trip-messages {
   font-family: 'Cabin', sans-serif;
-  background-color: red;
+  background-color: #4EBDD2;
   text-align: center;
-  width: 40%;
+  width: 45%;
   color: white;
   font-size: 30px;
   border-radius: 50px;
@@ -126,12 +126,11 @@ margin: 10px;
   font-family: 'Cabin', sans-serif;
   font-size: 30px;
   color: white;
-  background-color: green;
-  width: 40%;
+  background-color: orange;
   display: inline-block;
   position: relative;
   float:left;
-  width: 40%;
+  width: 45%;
   border-radius: 50px;
   margin: 10px;
 }
@@ -150,7 +149,7 @@ margin: 10px;
   height: 20px;
   margin: 10px;
   text-align: center;
-  background-color: green;
+  background-color: orange;
   color: white;
   border: solid 3px white;
 }
@@ -159,7 +158,7 @@ margin: 10px;
   width: 20%;
   height: 30px;
   margin: 10;
-  background-color: green;
+  background-color: orange;
   color: white;
   border: solid 3px white;
   font-size: 12px;
@@ -183,6 +182,7 @@ margin: 10px;
 .field > label {
   color: white;
   font-family: 'Cabin', sans-serif;
+  font-size: 20px;
 }
 
 #todo_text {
@@ -201,4 +201,16 @@ margin: 10px;
   border-radius: 50px;
   text-align: center;
   margin: 10px 180px;
+}
+
+.message_bubble {
+  border-radius: 50px;
+  background-color: white;
+  padding: 15px;
+  color: grey;
+}
+
+.trip-messages > h3 {
+  font-size: 15px;
+  margin: 3px;
 }
