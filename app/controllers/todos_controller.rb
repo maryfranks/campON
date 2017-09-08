@@ -5,14 +5,15 @@ class TodosController < ApplicationController
   end
 
   def create
+    @trip = Trip.find(params[:trip_id])
     @todo = Todo.new
     @todo.trip_id = params[:trip_id]
     @todo.text = params[:todo][:text]
 
     if @todo.save && !request.xhr?
-      redirect_to "/trips/#{params[:trip_id]}"
-    elsif @todo.save && request.xhr?
-      render json: {text: @todo.text}
+      redirect_to trip_path(@trip)
+    elsif @todo.save
+      render partial: "todo_display", locals: {todos: [@todo], trip: @trip}
     else
       render "trips/show"
     end

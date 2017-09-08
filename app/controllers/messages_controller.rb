@@ -13,20 +13,16 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.user_id = current_user.id
     @message.trip_id = params[:trip_id]
-    # @message.message = params[:message][:message]
+    @message.message = params[:message][:message]
+    
     if @message.save && !request.xhr?
-      redirect_to "/trips/#{params[:trip_id]}"
-    elsif @message.save && request.xhr?
-      render json: {message: @message.message, user: current_user.name}
+      redirect_to trip_path(@trip)
+    elsif @message.save
+      render partial: 'message_display', locals: {messages: [@message], trip: @trip}
     else
       render "trips/show"
     end
   end
-
-    def search
-      @messages = Message.where(search_params)
-      render partial: 'message_display'
-    end
 
     def edit
       @trip =Trip.find(params[:trip_id])
