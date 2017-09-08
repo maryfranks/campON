@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         url: '/trips/' + tripId + '/todos',
         method: 'post',
         data: $(displayToDoForm).serialize(),
-        dataType: 'json',
+        dataType: 'html',
       }).done(function(data) {
         var newTodo = document.createElement('p');
         newTodo.innerHTML = data.text;
