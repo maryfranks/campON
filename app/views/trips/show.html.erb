@@ -1,31 +1,32 @@
 <h1>Trip Planner</h1>
 
 <h2>Trip Name: <%= @trip.name %><h2>
-<%= @trip.park.name %>
-<%= @trip.booked %>
-<%= @trip.start_date %>
-<%= @trip.end_date %>
-<p><%= link_to 'Edit', edit_trip_path(@trip.id) %></p>
+  <%= @trip.park.name %>
+  <%= @trip.booked %>
+  <%= @trip.start_date %>
+  <%= @trip.end_date %>
+  <p><%= link_to 'Edit', edit_trip_path(@trip.id) %></p>
 <%= link_to 'Delete', trip_path(@trip.id), method: :delete, data: {confirm: "Are you sure you want to delete this trip?"}%>
 
 <h3>Trip Members<h3>
-<%= render 'users/trip_members', users: @trip.users, trip: @trip %>
-
-<%= render 'trips/add_friend_form' %>
-
-<%= render 'messages/new_message_form', message: @message, trip: @trip %>
+  <%= render 'users/trip_members', users: @trip.users, trip: @trip %>
+  <%= render 'trips/add_friend_form' %>
 
 
-<h3>Trip Message<h3>
-<%= render 'messages/message_display', messages: @trip.messages, trip: @trip %>
+  <h3>Trip Message<h3>
+  <%= render 'messages/new_message_form', message: @message, trip: @trip %>
+  <%= render 'messages/message_display', messages: @trip.messages, trip: @trip %>
+    <div id = "display_message">
+      <!-- results will do here -->
+    </div>
 
-<h3>Add a To-Do<h3>
-<%= render 'todos/todo_partial', todo: @todo, trip: @trip %>
 
-<h<div class="todo_results">
-  <!-- results will do here -->
-  <h3>Trip ToDos</h3>
-  <%= render 'todos/todo_display', todos: @trip.todos, trip: @trip %>
-</div>
+  <h3>Add a To-Do<h3>
+    <%= render 'todos/todo_partial', todo: @todo, trip: @trip %>
+    <h3>Trip ToDos</h3>
+    <%= render 'todos/todo_display', todos: @trip.todos, trip: @trip %>
+    <div id="todo_results">
+      <!-- results will do here -->
+    </div>
 
 <p id="trip-id"><%= @trip.id %></p>

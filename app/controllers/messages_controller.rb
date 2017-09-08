@@ -15,16 +15,12 @@ class MessagesController < ApplicationController
     @message.trip_id = params[:trip_id]
     @message.message = params[:message][:message]
     if @message.save
-      render partial: 'message_display'
+      render partial: 'message_display', locals: {messages: [@message], trip: @trip}
+
     else
       render "trips/show"
     end
   end
-
-    def search
-      @messages = Message.where(search_params)
-      render partial: 'message_display'
-    end
 
     def edit
       @trip =Trip.find(params[:trip_id])
