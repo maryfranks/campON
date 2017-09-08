@@ -26,13 +26,13 @@ class TodosController < ApplicationController
   def update
     @trip = Trip.find(params[:trip_id])
     @todo = Todo.find(params[:id])
-    @todo.trip_id = params[:trip_id]
+    @todo.user_id = params[:todo][:user_id]
+    @todo.label = params[:todo][:label]
     @todo.text = params[:todo][:text]
-
     if @todo.save
       redirect_to "/trips/#{params[:trip_id]}"
     else
-      render 'trips/show'
+      render "trips/show"
     end
   end
 

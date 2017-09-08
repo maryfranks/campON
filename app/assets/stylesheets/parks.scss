@@ -1,3 +1,196 @@
-// Place all the styles related to the Parks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+width: 100%;
+position: relative;
+display: block;
+}
+
+.box-filter {
+  background-image: image-url("banner-index.png");
+  column-count: 5;
+  text-transform: capitalize;
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  padding: 10%;
+  font-size: 20px;
+}
+
+.activity-title {
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+.facility-title {
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+.instructions {
+  position: absolute;
+  display: block;
+  text-align: center;
+  left: 32%;
+  top: 60px;
+  font-size: 40px;
+  padding: 5px;
+  font-family: 'Cabin', sans-serif;
+  color: white;
+}
+
+.activity-checkbox {
+  padding: 2px;
+}
+
+.camponparks {
+  margin-top: 10%;
+  background-color: #4EBDD2;
+  display: block;
+  text-align: center;
+  /*position: relative;*/
+  top: -120px;
+  width: 100%;
+}
+
+.parkList {
+  font-family: 'Cabin', sans-serif;
+  margin: auto 0;
+  display:inline;
+  top: 20px;
+  left: 170px;
+}
+
+
+.parks-title {
+  color: black;
+  font-family: 'Cabin', sans-serif;
+  display: block;
+  position: absolute;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 30px;
+  top: 165%;
+  left: 43%;
+
+}
+
+.park-link a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border-style: solid;
+  border-color: white;
+  border-width: thin;
+  font-size: 22px;
+}
+
+.parks {
+  display: inline-block;
+  margin: 0 15px ;
+}
+
+ .parks_show_header {
+  width: 60%;
+  display: block;
+  float: left;
+  position: relative;
+  background-color: grey;
+}
+.parks_show_header > img {
+  width: 100%;
+  position: relative;
+  opacity: 0.5;
+}
+
+.park_name {
+  position: absolute;
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+  color: white;
+  width: 100%;
+  z-index: 10;
+  font-size: 50px;
+  bottom: 50%;
+}
+
+.show-body {
+  width: 100%;
+  position: relative;
+}
+
+.attributes-display {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  /*float: left;*/
+  position: relative;
+  margin: 50px 0;
+}
+
+.activities-tag {
+  margin: 0 auto;
+  text-align: center;
+  padding: 90px 0;
+
+}
+
+ .activities-tag > img {
+   width: 10%;
+   margin: 0 auto;
+   display: inline-block;
+  border:3px solid #F78D2A;
+  border-radius: 50%;
+  margin: 10px 15px;
+ }
+
+ .facilities-display {
+   font-family: 'Cabin', sans-serif;
+   color: white;
+   background-color: #4EBDD2;
+   font-size: 30px;
+   width: 50%;
+   padding: 5%;
+   padding-top: 3%;
+   text-align: center;
+   display: inline-block;
+
+ }
+
+ .facilities-tag {
+   padding: 4px;
+   display: inline-block;
+   width: 43%;
+   padding: 2%;
+
+ }
+
+ .park_facilities_heading {
+   text-align: center;
+   font-size: 60px;
+   margin: auto;
+   margin-bottom: 20px;
+ }
+
+ .plan_trip_button_from_park {
+   text-align: center;
+   font-family: 'Cabin', sans-serif;
+   margin: 30px auto;
+   padding: 60px 20px;
+   border:3px solid #4EBDD2;
+   width: 400px;
+   border-radius: 70px;
+   font-size: 20px;
+
+ }
+ .google-maps-placeholder-img {
+  width: 100%;
+  position: relative;
+ }
+
+ .google-maps-placeholder-img > img {
+   width: 39.8%;
+   position: relative;
+   border:1px solid black;
+ }
+
+ .activities-tag > img:hover {
+   opacity: 0.4;
+ }
