@@ -28,11 +28,12 @@ display: block;
   position: absolute;
   display: block;
   text-align: center;
-  left: 32%;
+  left: 34%;
   top: 60px;
   font-size: 40px;
   padding: 5px;
   font-family: 'Cabin', sans-serif;
+  font-weight: bold;
   color: white;
 }
 
@@ -41,13 +42,14 @@ display: block;
 }
 
 .camponparks {
-  margin-top: 10%;
+  margin-top: 5%;
   background-color: #4EBDD2;
   display: block;
   text-align: center;
   /*position: relative;*/
   top: -120px;
   width: 100%;
+  padding: 3% 0;
 }
 
 .parkList {
@@ -61,15 +63,21 @@ display: block;
 
 .parks-title {
   color: black;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Pacifico', cursive;
   display: block;
   position: absolute;
   text-align: center;
-  text-decoration: underline;
-  font-size: 30px;
-  top: 165%;
-  left: 43%;
+  /*text-decoration: underline;*/
+  font-size: 60px;
+  top: 101%;
+  left: 41%;
 
+}
+
+#background-gif  {
+  background-image: url(grass-gif.gif);
+  background-size: 80px 60px;
+  max-height: 100px;
 }
 
 .park-link a {
