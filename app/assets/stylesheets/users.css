@@ -34,28 +34,31 @@
 
 .signup-fields {
   text-align: right;
-  margin-right: 20%;
+  /*margin-right: 20%;*/
   overflow: hidden;
+  margin: 20px 30px;
 }
 
-.field {
+.field  > label {
   color: #2F4F4F;
   font-family: 'Cabin', sans-serif;
   font-size: 30px;
   padding: 2%;
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
+
 }
 
 #user_name, #user_email, #user_password, #user_password_confirmation {
   text-align: center;
   position: relative;
   display: inline-block;
-  top: -7px;
+  top: 2px;
   width: 50%;
   height: 32px;
   border: solid 3px #2F4F4F;
   border-radius: 40px;
   font-size: 15px;
+  margin-bottom: 22px;
 }
 
 #signup-submit {
