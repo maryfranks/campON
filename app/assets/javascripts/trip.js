@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
     displayForm.addEventListener('submit', function(event){
       event.preventDefault()
       $.ajax({
-        url: '/trips/' + tripId + '/messages',
+        url: '/messages/search',
         method: 'post',
         data: $(displayForm).serialize(),
-        dataType: 'json',
+        dataType: 'html',
       }).done(function(data) {
 
       var message = document.createElement('p');
