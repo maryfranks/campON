@@ -1,0 +1,151 @@
+.trip-info {
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+  background-image: url('marshmallow.png');
+  width: auto;
+  height: auto;
+  padding: 13% 0;
+  font-size: 60px;
+  color: white;
+  opacity: 0.9
+}
+
+#trip-planner-name-header {
+  font-size: 40px;
+  margin-top: 60px;
+  color: black;
+}
+
+#park-name-header {
+  font-size: 40px;
+  margin-top: 20px;
+  color: black;
+
+}
+
+
+.trip-edit-and-delete {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.top-trips-container {
+  position: relative;
+  display: block;
+}
+
+.trip-members {
+background-color: orange;
+width: 45%;
+position: relative;
+display: inline-block;
+border-radius: 50px;
+}
+
+.precise-trip-info {
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+  background-color: #4EBDD2;
+  width: 40%;
+  height: auto;
+  position: relative;
+  padding: 3%;
+  color: white;
+  font-size: 30px;
+  border-radius: 50px;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.trip-member-header {
+  text-align: center;
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  margin: 3% 0;
+  font-size: 20px;
+
+}
+
+.member-user-name {
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  margin: 3% 2%;
+  text-align: center;
+}
+
+#invite-email {
+  width: 40%;
+  border-radius: 50px;
+  height: 20px;
+  margin: 10px
+}
+
+#trip-invite-name {
+  width: 30%;
+  border-radius: 50px;
+  height: 20px;
+  margin: 20px
+}
+
+#invite-friend-button {
+  background-color: orange;
+border: solid 3px white;
+color: white;
+padding: 1% 1%;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 12px;
+border-radius: 50px;
+}
+
+.bottom-trips-container {
+  position: relative;
+  display: block;
+}
+
+.trip-messages {
+background-color: red;
+width: 45%;
+position: relative;
+display: inline-block;
+}
+
+.trip-todo-list {
+background-color: green;
+width: 40%;
+display: inline-block;
+position: relative;
+}
+
+.trip-todo-header {
+  text-align: center;
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  margin: 3% 0;
+  font-size: 20px;
+}
+
+#todo_text {
+  width: 30%;
+  border-radius: 50px;
+  height: 20px;
+  margin: 10px;
+  text-align: center;
+  background-color: green;
+  color: white;
+  border: solid 3px white;
+}
+
+#todo_user_id, #todo_label {
+  width: 20%;
+  height: 30px;
+  margin: 10;
+  background-color: green;
+  color: white;
+  border: solid 3px white;
+  font-size: 12px;
+  margin: 0 10px;
+  display: inline-block;
+  position: relative;
+}
