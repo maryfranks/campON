@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     displayForm.addEventListener('submit', function(event){
       event.preventDefault()
       $.ajax({
-        url: '/messages/search',
+        url: '/trips/' + tripId + '/messages',
         method: 'post',
         data: $(displayForm).serialize(),
         dataType: 'html',
