@@ -1,7 +1,7 @@
 .trip-info {
   text-align: center;
   font-family: 'Cabin', sans-serif;
-  background-image: url('marshmallow.png');
+  background-image: image-url('marshmallow.png');
   width: auto;
   height: auto;
   padding: 13% 0;
@@ -135,6 +135,10 @@ margin: 10px;
   margin: 10px;
 }
 
+.display_todos> a {
+  font-size: 15px;
+}
+
 .trip-todo-header {
   text-align: center;
   color: white;
@@ -167,6 +171,11 @@ margin: 10px;
   position: relative;
 }
 
+.display_massage {
+  position: relative;
+  display: block;
+}
+
 .trip-messages > h3 {
   text-align: center;
   color: white;
@@ -180,7 +189,6 @@ margin: 10px;
 }
 
 .field > label {
-  color: white;
   font-family: 'Cabin', sans-serif;
   font-size: 20px;
 }
@@ -208,9 +216,32 @@ margin: 10px;
   background-color: white;
   padding: 15px;
   color: grey;
+  width: 60%;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .trip-messages > h3 {
   font-size: 15px;
   margin: 3px;
+}
+
+.message-edit-and-delete {
+  margin: 5px 0;
+}
+
+.message_username {
+  display: inline-block;
+  margin-left: 5px
+}
+
+#message_message {
+  width: 30%;
+  border-radius: 50px;
+  height: 20px;
+  margin: 10px;
+  text-align: center;
+  background-color: #4EBDD2;
+  color: white;
+  border: solid 3px white;
 }
