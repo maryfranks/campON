@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StaticPageshomeControllerTest < ActionDispatch::IntegrationTest
   test "should get contact" do
-    get static_pageshome_contact_url
+    get static_pageshome_team_url
     assert_response :success
   end
 
