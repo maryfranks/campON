@@ -10,7 +10,9 @@ class TodosController < ApplicationController
     @todo.trip_id = params[:trip_id]
     @todo.text = params[:todo][:text]
 
-    if @todo.save
+    if @todo.save && !request.xhr?
+      redirect_to trip_path(@trip)
+    elsif @todo.save
       render partial: "todo_display", locals: {todos: [@todo], trip: @trip}
     else
       render "trips/show"
@@ -31,7 +33,7 @@ class TodosController < ApplicationController
     if @todo.save
       redirect_to "/trips/#{params[:trip_id]}"
     else
-      redirect_to "/trips/#{params[:trip_id]}"
+      render "trips/show"
     end
   end
 

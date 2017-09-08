@@ -14,9 +14,11 @@ class MessagesController < ApplicationController
     @message.user_id = current_user.id
     @message.trip_id = params[:trip_id]
     @message.message = params[:message][:message]
-    if @message.save
+    
+    if @message.save && !request.xhr?
+      redirect_to trip_path(@trip)
+    elsif @message.save
       render partial: 'message_display', locals: {messages: [@message], trip: @trip}
-
     else
       render "trips/show"
     end
