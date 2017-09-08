@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'static_pageshome#landing'
 
-  get 'static_pageshome/contact'
+  get 'static_pageshome/team'
   get 'static_pageshome/about'
 
   post 'trips/:trip_id/invite' => 'trips#invite_user', :as => 'invite_user'
