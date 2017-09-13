@@ -10,9 +10,17 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
     sign_in_as users(:martine)
   end
 # tests routes (no index for trips)
-  test "should get show" do
+  test "should get show when user is signed in" do
     get trip_url(@trip)
     assert_response :success
+  end
+
+  test "should add invited user to trip" do
+    skip
+  end
+
+  test "user can only see trips when signed in" do
+    skip
   end
 
   test "should get new" do
@@ -33,6 +41,10 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
     assert_equal "updated", @trip.name
   end
 
+  test "should render trips edit when update fails" do
+    skip
+  end
+
   test "should destroy trip" do
 
     sign_in_as users(:martine)
@@ -51,6 +63,19 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to user_path
+  end
+
+  test "trip not created render new trip form" do
+    skip
+  end
+
+  test "invite user sends email" do
+    # method finds user in db and adds them to trip
+    skip
+  end
+
+  test "when invitation fails redirects to trip show" do
+    skip 
   end
 
 end
