@@ -24,7 +24,12 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "destroy" do
+    # same redirect problem exactly as messages controller destroy
     skip
+    assert_difference('Todo.count', -1) do
+      delete trip_todo_url(@todo, @trip)
+    end
+    assert_redirected_to trip_url(@trip.id)
   end
 
 end
