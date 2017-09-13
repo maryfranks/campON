@@ -13,16 +13,12 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
 
   test "create" do
     # why don't I have access to params here
-    skip 
+    skip
     assert_difference('Message.count') do
       post trips_url, params: { message: { message: 'This message works' } }
     end
 
     assert_redirected_to trip_url(@trip)
-  end
-
-  test "search" do
-    skip
   end
 
   test "edit" do
@@ -31,18 +27,19 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "update" do
+    # why don't I have access to params here
     skip
     patch trip_message_url(@message.id, @trip.id), params: { message: { message: "new message" } }
     # byebug
     assert_redirected_to trip_url(@trip.id)
-    # @trip.reload
-    # assert_equal "new message", @message.message
+    @trip.reload
+    assert_equal "new message", @message.message
   end
 
   test "destroy" do
-    skip
+    # same redirect error as above
     assert_difference('Message.count', -1) do
-      delete trip_url(@message)
+      delete trip_message_url(@message, @trip)
     end
     assert_redirected_to trip_url(@trip.id)
   end
