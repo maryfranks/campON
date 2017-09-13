@@ -12,10 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label "What needs to be done?" %><br />
+    <%= f.label "What needs to be done?" %>
     <%= f.text_field :text %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <input id='todo-button' type="submit" name="commit" value="Create Message" data-disable-with="Create Message">
   </div>
+<p id="trip-id"><%= @trip.id %></p>
 <% end %>

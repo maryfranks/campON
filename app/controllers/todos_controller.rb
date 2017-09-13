@@ -5,12 +5,17 @@ class TodosController < ApplicationController
   end
 
   def create
+    @trip = Trip.find(params[:trip_id])
     @todo = Todo.new
     @todo.trip_id = params[:trip_id]
     @todo.text = params[:todo][:text]
 
-    if @todo.save
-      redirect_to "/trips/#{params[:trip_id]}"
+    if @todo.save && !request.xhr?
+      redirect_to trip_path(@trip)
+    elsif @todo.save
+      render partial: "todo_display", locals: {todos: [@todo], trip: @trip}
+    else
+      render "trips/show"
     end
   end
 
@@ -22,13 +27,13 @@ class TodosController < ApplicationController
   def update
     @trip = Trip.find(params[:trip_id])
     @todo = Todo.find(params[:id])
-    @todo.trip_id = params[:trip_id]
+    @todo.user_id = params[:todo][:user_id]
+    @todo.label = params[:todo][:label]
     @todo.text = params[:todo][:text]
-
     if @todo.save
       redirect_to "/trips/#{params[:trip_id]}"
     else
-      render 'trips/show'
+      render "trips/show"
     end
   end
 

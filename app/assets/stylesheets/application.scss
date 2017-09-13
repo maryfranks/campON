@@ -10,8 +10,9 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require_tree .
+
  */
  /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -125,19 +126,18 @@ table {
 .discription-question {
   font-family: 'Cabin', sans-serif;
   text-align: center;
-  color: #F78D2A;
-  font-size: 20px;
-  margin-top: 50px;
+  color: grey;
+  font-size: 30px;
+  margin-top: 10px;
 }
 
 .discription {
   font-family: 'Cabin', sans-serif;
   text-align: center;
   color: black;
-  font-size: medium;
-  font-weight: normal;
-  margin: 5% ;
-  line-height: 20px
+  font-size: 30px;
+  margin: 3% 5%;
+  line-height: 40px
 }
 
 .footer-img {
@@ -217,4 +217,8 @@ table {
 
 #mug-img, #map-img, #stove-img {
   float: left;
+}
+
+.links > a:link, .footer-list-item> a:link {
+  text-decoration: none;
 }

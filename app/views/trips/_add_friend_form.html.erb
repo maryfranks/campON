@@ -1,11 +1,9 @@
 
-<p> Invite a Friend  </p>
-
   <div class="invite_form">
-    <%= form_tag(invite_path(params[:id]), method: "post") do  %>
-      <%= text_field_tag(:name) %>
-      <%= text_field_tag(:email) %>
-      <%= submit_tag("add a friend") %>
+    <%= form_tag(invite_user_path(params[:id]), method: "post") do  %>
+      <input type="text" name="name" id="trip-invite-name" placeholder="Name...">
+      <input type="text" name="email" id="invite-email" placeholder="Invite by email...">
+      <input id="invite-friend-button" type="submit" name="commit" value="Invite Friend" data-disable-with="add a friend">
     <% end %>
 
 </div>

@@ -102,6 +102,6 @@ Rails.application.configure do
     password: ENV["SENDGRID_PASSWORD"]
   }
 
-config.action_mailer.default_url_options = {host: "camp-on.herokuapp.com"}
+config.action_mailer.default_url_options = { host: "camp-on.herokuapp.com" }
 
 end
