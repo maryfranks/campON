@@ -15,7 +15,8 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "edit" do
-    skip
+    get edit_trip_todo_url(@todo.id, @trip.id)
+    assert_response :success
   end
 
   test "update" do
