@@ -1,12 +1,13 @@
 require 'test_helper'
 
 class TodosControllerTest < ActionDispatch::IntegrationTest
+
+  include SignInHelper
+
   setup do
     @todo = todos(:one)
-  end
-
-  test "new" do
-    skip
+    sign_in_as users(:martine)
+    @trip = trips(:three)
   end
 
   test "create" do
