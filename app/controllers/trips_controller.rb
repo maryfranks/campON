@@ -23,11 +23,12 @@ before_action :authorize
     else
       redirect_to user_path
     end
-    @messages = Message.where(trip_id: @trip.id)
-    @message = Message.new
-    @todo = Todo.new
-    @todos = Todo.where(trip_id: @trip.id)
-    @user = @trip.users
+    @messages   = Message.where(trip_id: @trip.id)
+    @message    = Message.new
+    @todo       = Todo.new
+    @todos      = Todo.where(trip_id: @trip.id)
+    @user       = @trip.users
+
   end
 
   def update
@@ -72,5 +73,6 @@ private
 def trip_params
   params.require(:trip).permit(:name, :park_id, :booked, :start_date, :end_date)
 end
+
 
 end

@@ -1,11 +1,11 @@
-<h1>Hello <%= @user.name %>!</h1>
+<h1 class="user-greeting">Hey <%= @user.name %>! </h3>
+  <h3 class="up-coming-trips">Here are your up-coming trips...</h3>
 
 <% @trips.each do |trip| %>
 <ul class="trip_list">
-  <li><a href="/trips/<%=trip.id%>"><%= trip.name %></a></li>
-  <li><%= trip.booked %></li>
-  <li><%= trip.park.name %></li>
-  <li><%= trip.start_date %></li>
-  <li><%= trip.end_date %></li>
+  <li class="trip-list-block"><a href="/trips/<%=trip.id%>"><%= trip.name %></a>
+       | <%= trip.park.name %> | <%= trip.start_date %> | <%= trip.end_date %> |
+       <% if trip.booked == true %><%= "Trip Booked" %><% else %><a href="https://reservations.ontarioparks.com/"><%= "Book Your Trip Here" %></a> <% end %>
+     </li>
 </ul>
   <% end %>

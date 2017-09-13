@@ -13,8 +13,6 @@ Rails.application.routes.draw do
 
   get 'parks/search'
 
-  get 'messages/search'
-
   resources :invitations
 
   resources :trips do

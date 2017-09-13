@@ -1,11 +1,14 @@
 <div class="display-todos"</div>
 
-  <% todo.each do |todo| %>
-    <% if todo.trip_id = @trip %>
-      <p><%= todo.text %></p>
-      <p><%= link_to 'Edit', edit_trip_todo_path(@trip.id, todo.id) %></p>
-      <p><%= link_to 'Delete', trip_todo_path(@trip.id, todo.id), method: :delete, data: {confirm: "Are you sure you want to delete this todo?"} %></p>
-    <% end %>
 
+  <% todos.each do |todo| %>
+      <%= form_for [trip, todo] do |f| %>
+        <p><%= f.collection_select(:user_id, trip.users, :id, :name) %></p>
+        <p><%= f.select(:label, ['Do','Buy','Bring'],:selected =>todo.label) %></p>
+        <p><%= f.text_field :text %></p>
+        <p><%= link_to 'Delete', trip_todo_path(trip.id, todo.id), method: :delete, data: {confirm: "Are you sure you want to delete this todo?"} %></p>
+        <%= f.submit %>
+      <%end%>
   <% end %>
+
 </div>
