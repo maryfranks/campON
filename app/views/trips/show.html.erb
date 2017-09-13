@@ -7,6 +7,14 @@
 
 <section class="top-trips-container">
 
+  <div class="park-map-panel">
+    <% if @trip.park %>
+    <%= render 'parks/park_map', park: @trip.park %>
+    <% else %>
+    <p>You haven't picked a park yet!</p>
+    <% end %>
+  </div>
+
   <div class="precise-trip-info">
     <p>  <% if @trip.booked == true %><%= "Your Trip is Booked" %><% else %><%="You Still Need to Book Your Trip!" %> <%end%><br> </p>
     <p> Start Date <%= @trip.start_date %><br> </p>
