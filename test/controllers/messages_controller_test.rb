@@ -8,14 +8,17 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
     @message = messages(:one)
     sign_in_as users(:martine)
     @trip = trips(:three)
-  end
-
-  test "current trip" do
-    skip
+    @trip.users << users(:martine)
   end
 
   test "create" do
-    skip
+    # why don't I have access to params here
+    skip 
+    assert_difference('Message.count') do
+      post trips_url, params: { message: { message: 'This message works' } }
+    end
+
+    assert_redirected_to trip_url(@trip)
   end
 
   test "search" do
@@ -23,16 +26,25 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "edit" do
-      get edit_trip_message_url(@message.id, @trip.id)
-      assert_response :success
+    get edit_trip_message_url(@message.id, @trip.id)
+    assert_response :success
   end
 
   test "update" do
     skip
+    patch trip_message_url(@message.id, @trip.id), params: { message: { message: "new message" } }
+    # byebug
+    assert_redirected_to trip_url(@trip.id)
+    # @trip.reload
+    # assert_equal "new message", @message.message
   end
 
   test "destroy" do
     skip
+    assert_difference('Message.count', -1) do
+      delete trip_url(@message)
+    end
+    assert_redirected_to trip_url(@trip.id)
   end
 
 end
