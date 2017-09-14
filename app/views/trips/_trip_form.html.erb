@@ -19,15 +19,15 @@
         <p class="pickapark">Pick a Park</p>
         <%= f.collection_select(:park_id, Park.all, :id, :name)  %>
       </div>
-      
+
     <div class="mid-div">
 
-      <div class="trip-start-date">
+      <div class="trip-date-lable">
         <p class="choosestartdate">Start Date</p>
         <%= f.date_field :start_date %>
       </div>
 
-      <div class="trip-start-date">
+      <div class="trip-date-lable">
         <p class="chooseenddate">End Date</p>
         <%= f.date_field :end_date %>
       </div>
@@ -36,7 +36,7 @@
 
     <div class="trip-booked">
       <p class="haveyoubooked">Have You Booked?</p>
-        <p class="reservationlink">If not visit <a href="https://reservations.ontarioparks.com/"> The Ontario Parks Website</a> and then, come back!</p>
+        <p class="reservationlink">If not visit <a class="ontario-parks-link" href="https://reservations.ontarioparks.com/"> The Ontario Parks Website</a> and then, come back!</p>
       <input type="checkbox" value="1" name="trip[booked]" id="trip_booked">
 
       <input id="trip-submit-button" type="submit" name="commit" value="Create Trip" data-disable-with="Create Trip">
