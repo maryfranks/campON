@@ -12,22 +12,26 @@
       </div>
     <% end %>
 
-    <div class="trips-title">
-      <p class="trip-name">Trip Name</p>
-      <%= f.text_field :name %>
+      <div class="trips-title">
+        <p class="trip-name">Trip Name</p>
+        <%= f.text_field :name %>
 
-      <p class="pickapark">Pick a Park</p>
-      <%= f.collection_select(:park_id, Park.all, :id, :name)  %>
-    </div>
+        <p class="pickapark">Pick a Park</p>
+        <%= f.collection_select(:park_id, Park.all, :id, :name)  %>
+      </div>
+      
+    <div class="mid-div">
 
-    <div class="trip-start-date">
-      <p class="choosestartdate">Start Date</p>
-      <%= f.date_field :start_date %>
-    </div>
+      <div class="trip-start-date">
+        <p class="choosestartdate">Start Date</p>
+        <%= f.date_field :start_date %>
+      </div>
 
-    <div class="trip-start-date">
-      <p class="chooseenddate">End Date</p>
-      <%= f.date_field :end_date %>
+      <div class="trip-start-date">
+        <p class="chooseenddate">End Date</p>
+        <%= f.date_field :end_date %>
+      </div>
+
     </div>
 
     <div class="trip-booked">
