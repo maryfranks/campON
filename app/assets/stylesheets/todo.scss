@@ -2,24 +2,27 @@
   text-align: center;
   font-family: 'Cabin', sans-serif;
   background-image: image-url('marshmallow.png');
-  width: auto;
-  height: auto;
-  padding: 13% 0;
+  width: 100%;
+  height: 45px;
+  padding: 10% 0;
+  opacity: 0.9
+}
+
+.trip-planner-header {
   font-size: 60px;
   color: white;
-  opacity: 0.9
 }
 
 #trip-planner-name-header {
   font-size: 40px;
-  margin-top: 60px;
-  color: black;
+  color: white;
+  margin: 10px 0;
 }
 
 #park-name-header {
-  font-size: 40px;
-  margin-top: 20px;
-  color: black;
+  font-size: 30px;
+  color: white;
+  margin: 10px 0;
 }
 
 .trip-edit-and-delete {
