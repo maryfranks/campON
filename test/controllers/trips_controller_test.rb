@@ -39,6 +39,8 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to trip_path(@trip)
     @trip.reload
     assert_equal "updated", @trip.name
+    assert_equal 'Trip successfully updated!', flash[:notice]
+
   end
 
   test "should render trips edit when update fails" do
@@ -46,23 +48,21 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy trip" do
-
-    sign_in_as users(:martine)
     assert_difference('Trip.count', -1) do
     delete trip_url(@trip)
     end
     assert_redirected_to user_path
-  # WON'T REDIRECT TO USER SHOW
+    assert_equal 'Trip has been successfully deleted!', flash[:notice]
+
   end
 
   test "should create trip" do
-    # skip
     assert_difference('Trip.count') do
-      sign_in_as users(:martine)
       post trips_url, params: { trip: { name: 'Really Fun Trip!' } }
     end
 
     assert_redirected_to user_path
+    assert_equal 'You have successfully created a new trip!', flash[:notice]
   end
 
   test "trip not created render new trip form" do
@@ -75,7 +75,13 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "when invitation fails redirects to trip show" do
-    skip 
+    skip
+  end
+
+  test "invited user added to trip after sign up" do
+    # on this branch until merge with master test should fail
+    skip
+    # use assert_includes to check if something is in collection
   end
 
 end
