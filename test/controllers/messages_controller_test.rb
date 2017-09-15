@@ -44,6 +44,8 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
       delete trip_message_url(@message, @trip)
     end
     assert_redirected_to trip_url(@trip.id)
+    assert_equal 'Message has been successfully deleted!', flash[:notice]
+
   end
 
 end

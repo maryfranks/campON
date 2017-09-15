@@ -30,6 +30,8 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
       delete trip_todo_url(@todo, @trip)
     end
     assert_redirected_to trip_url(@trip.id)
+    assert_equal 'ToDo has been successfully deleted!', flash[:notice]
+
   end
 
 end
