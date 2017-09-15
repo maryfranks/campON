@@ -36,7 +36,9 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should render trips edit when update fails" do
-    skip
+    # skip
+    patch trip_url(@trip), params: { trip: { name: nil } }
+    assert_select "h1", "Edit your trip"
   end
 
   test "should destroy trip" do
@@ -58,7 +60,8 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "trip not created render new trip form" do
-    skip
+    post trips_url, params: { trip: { name: nil } }
+    assert_select "form"
   end
 
   test "invite user sends email" do
