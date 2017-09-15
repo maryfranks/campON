@@ -9,7 +9,11 @@ before_action :authorize, except: [:new, :create]
     if @user.save
       # auto_login(@user)
     flash.now[:notice] = 'Account successfully created!'
-    redirect_to user_path
+    if session[:redirect].present?
+      redirect_to session[:redirect]
+    else
+      redirect_to user_path
+    end
     else
     flash.now[:error] = 'Sorry, try again!'
     render :new

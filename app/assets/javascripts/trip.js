@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // variables for todo js
   var todo_form     = document.querySelector('#new_todo')
   var todo_button   = document.querySelector('#todo-button')
-  var todo_text     = document.querySelector('#todo_text')
+  var stuff         = document.querySelector('.new-todo')
+  var todo_text     = stuff.querySelector('#todo_text')
   var display_todo  = document.querySelector('#todo_results')
 
 
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $.ajax({
       url: tripId + '/todos',
       method:'post',
-      data: $(todo_text).serialize(),
+      data: $(todo_text),
       dataType:'html',
     }).done(function(data) {
       display_todo.innerHTML = data
