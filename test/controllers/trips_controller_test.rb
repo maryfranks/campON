@@ -15,14 +15,6 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should add invited user to trip" do
-    skip
-  end
-
-  test "user can only see trips when signed in" do
-    skip
-  end
-
   test "should get new" do
     get new_trip_url
     assert_response :success
@@ -70,7 +62,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "invite user sends email" do
-    # method finds user in db and adds them to trip
+    # tests that email works (maybe not here)
     skip
   end
 

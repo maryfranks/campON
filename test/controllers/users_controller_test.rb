@@ -38,4 +38,12 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   end
 
+  test "user can see trips when signed in" do
+    skip
+  end
+
+  test "user cannot see trips when signed out" do
+    skip
+  end
+
 end
