@@ -36,7 +36,6 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should render trips edit when update fails" do
-    # skip
     patch trip_url(@trip), params: { trip: { name: nil } }
     assert_select "h1", "Edit your trip"
   end
@@ -71,6 +70,9 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
 
   test "when invitation fails redirects to trip show" do
     skip
+    invite = Invitation.new(trip: @trip ,email: nil)
+    invite.save
+    # assert_equal FLASH MESSAGE
   end
 
   test "invited user added to trip after sign up" do
