@@ -31,4 +31,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_equal 'Account successfully created!', flash[:notice]
   end
 
+  test "test user save fail" do
+    skip
+
+    assert_equal 'Sorry, try again!!', flash[:notice]
+
+  end
+
 end
