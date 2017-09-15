@@ -12,38 +12,41 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "create" do
-    # why don't I have access to params here
-    skip
+    # url in post is the problem
+    # skip
     assert_difference('Message.count') do
-      post trips_url, params: { message: { message: 'This message works' } }
+      post trip_messages_url(@trip.id), params: { message: { message: 'This message works' } }
     end
 
     assert_redirected_to trip_url(@trip)
   end
 
   test "edit" do
-    get edit_trip_message_url(@message.id, @trip.id)
+    get edit_trip_message_url(@trip.id, @message.id)
     assert_response :success
   end
 
   test "update" do
-    # why don't I have access to params here
-    # strange redirect error
-    skip
-    patch trip_message_url(@message.id, @trip.id), params: { message: { message: "new message" } }
-    # byebug
+
+
+    # skip
+    patch trip_message_url(@trip.id, @message.id), params: { message: { message: "new message" } }
+    @message.reload
     assert_redirected_to trip_url(@trip.id)
-    @trip.reload
     assert_equal "new message", @message.message
   end
 
   test "destroy" do
     # same redirect error as above
-    skip
+    # skip
+    message = messages(:one)
+    trip = trips(:three)
+    trip.users << users(:martine)
+
     assert_difference('Message.count', -1) do
-      delete trip_message_url(@message, @trip)
+      delete trip_message_url(trip, message)
     end
-    assert_redirected_to trip_url(@trip.id)
+    assert_redirected_to trip_url(trip.id)
     assert_equal 'Message has been successfully deleted!', flash[:notice]
 
   end

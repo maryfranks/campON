@@ -22,9 +22,9 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create user" do
-    skip
+    # skip
     assert_difference('User.count') do
-      post user_url, params: { user: { email: 'user@email.com', password: "1234", password_confirmation: "1234" } }
+      post user_url, params: { user: { name: "person", email: 'user@email.com', password: "1234", password_confirmation: "1234" } }
     end
 
     assert_redirected_to user_path

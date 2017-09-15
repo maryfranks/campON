@@ -63,8 +63,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
     assert_select "form"
   end
 
-  test "invite user sends email" do
-    # tests that email works (maybe not here)
+  test "invitation is created" do
     skip
   end
 
@@ -75,10 +74,16 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
     # assert_equal FLASH MESSAGE
   end
 
-  test "invited user added to trip after sign up" do
+  test "invited user added to trip when they view show page" do
     # on this branch until merge with master test should fail
-    skip
-    # use assert_includes to check if something is in collection
+    # skip
+    user_inviting = users(:mary)
+    user = users(:martine)
+    new_trip = trips(:two)
+    invitation = Invitation.new(email: user.email, trip: new_trip)
+    invitation.save
+    get trip_url(new_trip)
+    assert_includes(new_trip.users, user)
   end
 
 end

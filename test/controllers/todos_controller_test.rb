@@ -11,7 +11,13 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "create" do
-    skip
+    # problem with post url
+    # skip
+    assert_difference('Todo.count') do
+      post trip_todos_url(@trip.id), params: { todo: { text: 'do this' } }
+    end
+
+    assert_redirected_to trip_url(@trip)
   end
 
   test "edit" do
