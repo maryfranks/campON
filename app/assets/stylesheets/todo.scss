@@ -114,14 +114,11 @@ margin: 10px;
   font-family: 'Cabin', sans-serif;
   background-color: #4EBDD2;
   text-align: center;
-  width: 45%;
+  width: 100%;
   color: white;
   font-size: 30px;
-  border-radius: 50px;
-  margin: 10px;
   display: inline-block;
   position: relative;
-  float:left;
 }
 
 .trip-todo-list {
@@ -132,10 +129,7 @@ margin: 10px;
   background-color: orange;
   display: inline-block;
   position: relative;
-  float:left;
-  width: 45%;
-  border-radius: 50px;
-  margin: 10px;
+  width: 100%;
 }
 
 .display_todos> a {
@@ -146,8 +140,7 @@ margin: 10px;
   text-align: center;
   color: white;
   font-family: 'Cabin', sans-serif;
-  margin: 3% 0;
-  font-size: 20px;
+  margin: 20px 0;
 }
 
 #todo_text {
@@ -156,9 +149,17 @@ margin: 10px;
   height: 20px;
   margin: 10px;
   text-align: center;
-  background-color: orange;
-  color: white;
+  background-color: white;
+  color: grey;
+  font-size: 20px;
   border: solid 3px white;
+}
+
+.todo-delete > a{
+  font-family: 'Cabin', sans-serif;
+  text-decoration: none;
+  color: #2F4F4F;;
+  font-size: 20px;
 }
 
 #todo_user_id, #todo_label {
@@ -191,11 +192,6 @@ margin: 10px;
  display:none;
 }
 
-.field > label {
-  font-family: 'Cabin', sans-serif;
-  font-size: 20px;
-}
-
 #todo_text {
   width: 33%;
 }
@@ -221,21 +217,33 @@ margin: 10px;
   color: grey;
   width: 60%;
   display: inline-block;
-  margin: 0 auto;
+  margin: 10px;
 }
 
 .trip-messages > h3 {
-  font-size: 15px;
-  margin: 3px;
+  font-size: 30px;
+  margin: 20px;
 }
 
-.message-edit-and-delete {
-  margin: 5px 0;
+.message-edit-and-delete > a {
+  display: inline-block;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.message-edit-and-delete > a:link {
+  color: #F78D2A;
+  display: inline-block;
+}
+
+.message-edit-and-delete > a:visited {
+  color: #F78D2A;
+  display: inline-block;
 }
 
 .message_username {
   display: inline-block;
-  margin-left: 5px
+  color: #F78D2A;
 }
 
 #message_message {
@@ -244,7 +252,6 @@ margin: 10px;
   height: 20px;
   margin: 10px;
   text-align: center;
-  background-color: #4EBDD2;
-  color: white;
+  background-color: white;
   border: solid 3px white;
 }

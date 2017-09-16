@@ -33,8 +33,8 @@
 <section class="bottom-trips-container">
   <div class="trip-todo-list">
     <h3 class="trip-todo-header">Trip To-Do's</h3>
-    <%= render 'todos/todo_display', todos: @trip.todos, trip: @trip %>
     <%= render 'todos/todo_partial', todo: @todo, trip: @trip %>
+    <%= render 'todos/todo_display', todos: @trip.todos, trip: @trip %>
     <div id="todo_results">
       <!-- results will do here -->
     </div>
@@ -42,8 +42,8 @@
 
   <div class="trip-messages">
     <h3>Trip Chat<h3>
-      <%= render 'messages/message_display', messages: @trip.messages, trip: @trip %>
       <%= render 'messages/new_message_form', message: @message, trip: @trip %>
+      <%= render 'messages/message_display', messages: @trip.messages, trip: @trip %>
       <div id = "display_message">
         <!-- results will do here -->
       </div>
