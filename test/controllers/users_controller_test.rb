@@ -30,10 +30,10 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_equal 'Account successfully created!', flash[:notice]
   end
 
-  test "test user save fail" do
+  test "user save fail" do
     post user_url, params: { user: { email: nil } }
-    assert_select "form"
-    assert_equal 'Sorry, try again!!', flash[:notice]
+    assert_select "h1", "Sign Up"
+    # assert_equal 'Sorry, try again!!', flash[:notice]
   end
 
   test "user can see trips when signed in" do
