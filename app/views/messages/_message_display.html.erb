@@ -1,6 +1,6 @@
 <div class="display_message">
   <% messages.each do |message| %>
-    <% if message.trip_id = @trip %>
+    <% if message.trip_id == @trip.id %>
           <div class ="message_username"><%= message.user.name %></div>
       <div class= "message_bubble"><%= message.message %></div>
       <p class="message-edit-and-delete"><%= link_to 'Edit', edit_trip_message_path(@trip.id, message.id) %> | <%= link_to 'Delete', trip_message_path(@trip.id, message.id), method: :delete, data: {confirm: "Are you sure you want to delete this review?"} %></p>

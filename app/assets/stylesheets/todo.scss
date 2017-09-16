@@ -37,7 +37,7 @@
 }
 
 .trip-members {
-background-color: orange;
+background-color: #F78D2A;
 width: 45%;
 position: relative;
 display: inline-block;
@@ -91,7 +91,7 @@ margin: 10px;
 }
 
 #invite-friend-button {
-  background-color: orange;
+  background-color: #F78D2A;
   border: solid 3px white;
   color: white;
   padding: 1% 1%;
@@ -126,7 +126,7 @@ margin: 10px;
   font-family: 'Cabin', sans-serif;
   font-size: 30px;
   color: white;
-  background-color: orange;
+  background-color: #F78D2A;
   display: inline-block;
   position: relative;
   width: 100%;
@@ -140,13 +140,13 @@ margin: 10px;
   text-align: center;
   color: white;
   font-family: 'Cabin', sans-serif;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 #todo_text {
-  width: 30%;
+  width: 10%;
   border-radius: 50px;
-  height: 20px;
+  height: 25px;
   margin: 10px;
   text-align: center;
   background-color: white;
@@ -155,24 +155,65 @@ margin: 10px;
   border: solid 3px white;
 }
 
-.todo-delete > a{
+.todo-delete-button {
   font-family: 'Cabin', sans-serif;
   text-decoration: none;
-  color: #2F4F4F;;
+  color: #2F4F4F;
   font-size: 20px;
+  display: inline-block;
+}
+
+.todo-delete-button > a:link {
+  font-family: 'Cabin', sans-serif;
+  text-decoration: none;
+  color: #2F4F4F;
+  font-size: 20px;
+}
+
+.todo-delete-button > a:visited {
+  font-family: 'Cabin', sans-serif;
+  text-decoration: none;
+  color: #2F4F4F;
+  font-size: 20px;
+}
+
+.update-todo-button {
+  font-family: 'Cabin', sans-serif;
+  text-decoration: none;
+  border: none;
+  background-color: #F78D2A;
+  color: #2F4F4F;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.todo-update-delete {
+  display:block;
+  margin: 10px;
 }
 
 #todo_user_id, #todo_label {
   width: 20%;
   height: 30px;
   margin: 10;
-  background-color: orange;
+  background-color: #F78D2A;
   color: white;
   border: solid 3px white;
   font-size: 12px;
   margin: 0 10px;
   display: inline-block;
   position: relative;
+}
+
+#todo-button {
+  background-color: #F78D2A;
+  text-decoration: none;
+  border: 2px solid white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  color: #2F4F4F;
+  display: inline-block;
 }
 
 .display_massage {
