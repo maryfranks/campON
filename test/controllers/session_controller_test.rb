@@ -6,7 +6,7 @@ class SessionControllerTest < ActionDispatch::IntegrationTest
     delete session_url(:dummy)
     assert_redirected_to root_url
     follow_redirect!
-    assert_select "a", "bLogin"
+    assert_select "a", "Login"
   end
 
 end

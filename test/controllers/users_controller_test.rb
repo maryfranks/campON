@@ -22,7 +22,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create user" do
-    # skip
     assert_difference('User.count') do
       post user_url, params: { user: { name: "person", email: 'user@email.com', password: "1234", password_confirmation: "1234" } }
     end
@@ -32,10 +31,9 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "test user save fail" do
-    skip
-
+    post user_url, params: { user: { email: nil } }
+    assert_select "form"
     assert_equal 'Sorry, try again!!', flash[:notice]
-
   end
 
   test "user can see trips when signed in" do

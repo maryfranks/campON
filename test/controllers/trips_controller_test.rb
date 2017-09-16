@@ -75,8 +75,6 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "invited user added to trip when they view show page" do
-    # on this branch until merge with master test should fail
-    # skip
     user_inviting = users(:mary)
     user = users(:martine)
     new_trip = trips(:two)

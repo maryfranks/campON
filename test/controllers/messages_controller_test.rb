@@ -12,8 +12,6 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "create" do
-    # url in post is the problem
-    # skip
     assert_difference('Message.count') do
       post trip_messages_url(@trip.id), params: { message: { message: 'This message works' } }
     end
@@ -27,9 +25,6 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "update" do
-
-
-    # skip
     patch trip_message_url(@trip.id, @message.id), params: { message: { message: "new message" } }
     @message.reload
     assert_redirected_to trip_url(@trip.id)
@@ -37,8 +32,6 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "destroy" do
-    # same redirect error as above
-    # skip
     message = messages(:one)
     trip = trips(:three)
     trip.users << users(:martine)
