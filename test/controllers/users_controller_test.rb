@@ -33,15 +33,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   test "user save fail" do
     post user_url, params: { user: { email: nil } }
     assert_select "h1", "Sign Up"
-    # assert_equal 'Sorry, try again!!', flash[:notice]
-  end
-
-  test "user can see trips when signed in" do
-    skip
-  end
-
-  test "user cannot see trips when signed out" do
-    skip
+    assert_equal 'Sorry, try again!', flash[:error]
   end
 
 end

@@ -42,7 +42,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
 
   test "should destroy trip" do
     assert_difference('Trip.count', -1) do
-    delete trip_url(@trip)
+      delete trip_url(@trip)
     end
     assert_redirected_to user_path
     assert_equal 'Trip has been successfully deleted!', flash[:notice]
@@ -50,6 +50,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create trip" do
+
     assert_difference('Trip.count') do
       post trips_url, params: { trip: { name: 'Really Fun Trip!' } }
     end
@@ -61,17 +62,6 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   test "trip not created render new trip form" do
     post trips_url, params: { trip: { name: nil } }
     assert_select "form"
-  end
-
-  test "invitation is created" do
-    skip
-  end
-
-  test "when invitation fails redirects to trip show" do
-    skip
-    invite = Invitation.new(trip: @trip ,email: nil)
-    invite.save
-    # assert_equal FLASH MESSAGE
   end
 
   test "invited user added to trip when they view show page" do
