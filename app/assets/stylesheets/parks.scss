@@ -45,7 +45,6 @@ display: block;
   background-color: #4EBDD2;
   display: block;
   text-align: center;
-  /*position: relative;*/
   top: -120px;
   width: 100%;
 }
@@ -69,7 +68,6 @@ display: block;
   font-size: 30px;
   top: 165%;
   left: 43%;
-
 }
 
 .park-link a {
@@ -120,7 +118,6 @@ display: block;
   width: 100%;
   position: relative;
   display: inline-block;
-  /*float: left;*/
   position: relative;
   margin: 50px 0;
 }
@@ -129,7 +126,6 @@ display: block;
   margin: 0 auto;
   text-align: center;
   padding: 90px 0;
-
 }
 
  .activities-tag > img {
@@ -151,7 +147,6 @@ display: block;
    padding-top: 3%;
    text-align: center;
    display: inline-block;
-
  }
 
  .facilities-tag {
@@ -159,7 +154,6 @@ display: block;
    display: inline-block;
    width: 43%;
    padding: 2%;
-
  }
 
  .park_facilities_heading {
@@ -178,19 +172,13 @@ display: block;
    width: 400px;
    border-radius: 70px;
    font-size: 20px;
-
- }
- .google-maps-placeholder-img {
-  width: 100%;
-  position: relative;
- }
-
- .google-maps-placeholder-img > img {
-   width: 39.8%;
-   position: relative;
-   border:1px solid black;
- }
+}
 
  .activities-tag > img:hover {
    opacity: 0.4;
  }
+
+.google-map  {
+  margin: auto;
+  text-align: center;
+}
