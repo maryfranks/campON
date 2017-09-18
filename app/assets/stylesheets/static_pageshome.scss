@@ -113,3 +113,127 @@
 .links > a:link, .footer-list-item> a:link {
   text-decoration: none;
 }
+
+// ******* Team Page ***********
+
+.team-page-background {
+  background-color: #4EBDD2;
+  position: relative;
+  display: block;
+}
+
+.team-nadia > img {
+  display:inline-block;
+  width: 25%;
+  height: 20%;
+  border-radius: 50%;
+}
+
+.team-nadia > p  {
+  width: 50%;
+  font-family: 'Cabin';
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  margin: auto;
+}
+
+.team-nadia {
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  padding: 30px 30px;
+  background-color: #4EBDD2;
+  width: 100%;
+  padding: 5% 0;
+}
+
+.team-mary > img {
+  display:inline-block;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+}
+
+.team-mary > p {
+  width: 50%;
+  font-family: 'Cabin';
+  color: #4EBDD2;
+  font-size: 20px;
+  line-height: 30px;
+  margin: auto;
+}
+
+.team-mary {
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  padding: 30px 30px;
+  background-color: white;
+  width: 100%;
+  padding: 5% 0;
+}
+
+div.team-mary > a {
+  color: #F78D2A;
+  text-decoration: none;
+}
+
+.team-abby > img {
+  display:inline-block;
+  width: 25%;
+  height: 20%;
+  border-radius: 50%;
+}
+
+.team-abby > p  {
+  width: 50%;
+  font-family: 'Cabin';
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  margin: auto;
+}
+
+.team-abby {
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  padding: 30px 30px;
+  background-color: #4EBDD2;
+  width: 100%;
+  padding: 5% 0;
+}
+
+.team-martine > img {
+  display:inline-block;
+  width: 25%;
+  height: 20%;
+  border-radius: 50%;
+  border: white;
+}
+
+.team-martine > p {
+  width: 50%;
+  font-family: 'Cabin';
+  color: #4EBDD2;
+  font-size: 20px;
+  line-height: 30px;
+  margin: auto;
+}
+
+.team-martine {
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  padding: 30px 30px;
+  background-color: white;
+  width: 100%;
+  padding: 5% 0;
+}
+
+.git-link-icons > a{
+  font-size: 25px;
+  margin-top: 3%;
+  color: black;
+}
