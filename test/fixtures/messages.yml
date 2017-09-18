@@ -6,15 +6,15 @@
 #
 one:
   message: "I'll bring the BBQ!"
-  user: one
+  user: :martine
   trip: three
 
 two:
   message: "Is there a beach?"
-  user: two
+  user: :abby
   trip: three
 
 three:
   message: "I love fishing!"
-  user: three 
+  user: :mary 
   trip: two
