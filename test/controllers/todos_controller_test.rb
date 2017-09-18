@@ -11,6 +11,7 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "create" do
+    
     assert_difference('Todo.count') do
       post trip_todos_url(@trip.id), params: { todo: { text: 'do this' } }
     end
@@ -31,9 +32,11 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "destroy" do
+
     assert_difference('Todo.count', -1) do
       delete trip_todo_url(@trip, @todo)
     end
+
     assert_redirected_to trip_url(@trip.id)
     assert_equal 'ToDo has been successfully deleted!', flash[:notice]
 
