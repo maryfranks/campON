@@ -67,11 +67,11 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   test "invited user added to trip when they view show page" do
     user_inviting = users(:mary)
     user = users(:martine)
-    new_trip = trips(:two)
-    invitation = Invitation.new(email: user.email, trip: new_trip)
+    marys_trip = trips(:marys_trip)
+    invitation = Invitation.new(email: user.email, trip: marys_trip)
     invitation.save
-    get trip_url(new_trip)
-    assert_includes(new_trip.users, user)
+    get trip_url(marys_trip)
+    assert_includes(marys_trip.users, user)
   end
 
 end
