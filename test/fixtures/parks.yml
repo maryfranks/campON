@@ -5,6 +5,15 @@
 # below each fixture, per the syntax in the comments below
 #
 
+park:
+  name: "Provincial Park"
+  url: "https://www.ontarioparks.com/"
+  hiking: true
+  birding: true
+  rentals: true
+  parking: true 
+
+
 one:
   name: "Fishing and Canoeing Park"
   url: "https://www.ontarioparks.com/"

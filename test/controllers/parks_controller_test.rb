@@ -7,7 +7,7 @@ class ParksControllerTest < ActionDispatch::IntegrationTest
     end
 
     test "should get show" do
-      park = parks(:one)
+      park = parks(:park)
       get park_url(park)
       assert_response :success
     end
