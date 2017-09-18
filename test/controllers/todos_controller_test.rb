@@ -5,12 +5,13 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
   include SignInHelper
 
   setup do
-    @todo = todos(:one)
+    @todo = todos(:fishing_trip)
     sign_in_as users(:martine)
-    @trip = trips(:three)
+    @trip = trips(:todos_trip)
   end
 
   test "create" do
+    
     assert_difference('Todo.count') do
       post trip_todos_url(@trip.id), params: { todo: { text: 'do this' } }
     end
@@ -19,7 +20,7 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "edit" do
-    get edit_trip_todo_url(@todo.id, @trip.id)
+    get edit_trip_todo_url(@trip.id, @todo.id)
     assert_response :success
   end
 
@@ -31,9 +32,11 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "destroy" do
+
     assert_difference('Todo.count', -1) do
       delete trip_todo_url(@trip, @todo)
     end
+
     assert_redirected_to trip_url(@trip.id)
     assert_equal 'ToDo has been successfully deleted!', flash[:notice]
 
