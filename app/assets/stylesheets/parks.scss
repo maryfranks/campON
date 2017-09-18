@@ -94,10 +94,9 @@
 // ----- Parks Title Bar -----
 
  .parks_show_header {
-  width: 60%;
+  width: 100%;
+  max-height: 15%;
   display: block;
-  float: left;
-  position: relative;
   background-color: grey;
 }
 .parks_show_header > img {
@@ -156,7 +155,7 @@
    color: white;
    background-color: #4EBDD2;
    font-size: 30px;
-   width: 50%;
+   width: 100%;
    padding: 5%;
    padding-top: 3%;
    text-align: center;
