@@ -8,11 +8,11 @@
 <section class="top-trips-container">
 
   <div class="park-map-panel">
-    <% if @trip.park %>
-    <%= render 'parks/park_map', park: @trip.park %>
-    <% else %>
-    <p>You haven't picked a park yet!</p>
-    <% end %>
+      <% if @trip.park %>
+      <%= render 'parks/park_map', park: @trip.park %>
+      <% else %>
+      <p>You haven't picked a park yet!</p>
+      <% end %>
   </div>
 
   <div class="precise-trip-info">
