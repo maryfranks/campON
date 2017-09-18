@@ -5,9 +5,9 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
   include SignInHelper
 
   setup do
-    @todo = todos(:one)
+    @todo = todos(:fishing_trip)
     sign_in_as users(:martine)
-    @trip = trips(:three)
+    @trip = trips(:todos_trip)
   end
 
   test "create" do
@@ -19,7 +19,7 @@ class TodosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "edit" do
-    get edit_trip_todo_url(@todo.id, @trip.id)
+    get edit_trip_todo_url(@trip.id, @todo.id)
     assert_response :success
   end
 

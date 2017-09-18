@@ -5,7 +5,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   include SignInHelper
 
   setup do
-    @trip = trips(:one)
+    @trip = trips(:messages_todos_trip)
     @trip.users << users(:martine)
     sign_in_as users(:martine)
   end
