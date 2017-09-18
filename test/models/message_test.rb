@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MessageTest < ActiveSupport::TestCase
 
-  test "message does not saves without text" do
+  test "message does not save without text" do
     message = Message.new
     message.user = users(:martine)
     message.trip = trips(:basic_trip)
