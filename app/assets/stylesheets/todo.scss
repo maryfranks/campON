@@ -43,6 +43,7 @@ position: relative;
 display: inline-block;
 border-radius: 50px;
 margin: 10px;
+margin-top: 5%;
 }
 
 .precise-trip-info {
@@ -59,6 +60,7 @@ margin: 10px;
   margin: 10px;
   display: inline-block;
   float:left;
+  margin-top: 5%;
 }
 
 .trip-member-header {
@@ -295,4 +297,9 @@ margin: 10px;
   text-align: center;
   background-color: white;
   border: solid 3px white;
+}
+
+.park-map-panel {
+  width: 50%;
+  float: left;
 }

@@ -5,8 +5,6 @@
   <h2 id="park-name-header"><%= @trip.park.name %>
 </div>
 
-<section class="top-trips-container">
-
   <div class="park-map-panel">
       <% if @trip.park %>
       <%= render 'parks/park_map', park: @trip.park %>
@@ -27,7 +25,7 @@
       <%= render 'users/trip_members', users: @trip.users, trip: @trip %>
       <%= render 'trips/add_friend_form' %>
   </div>
-</section>
+
 
 
 <section class="bottom-trips-container">
