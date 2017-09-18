@@ -12,9 +12,11 @@
  *
  *= require_self
  *= require_tree .
-
  */
- /* http://meyerweb.com/eric/tools/css/reset/
+
+ /*   ********* CSS RESET *********
+
+ http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -63,6 +65,8 @@ table {
   border-spacing: 0;
 }
 
+// ********** Header Styles **********
+
 .header {
   background-color: #F78D2A;
   position: relative;
@@ -96,6 +100,8 @@ table {
   top: 27px;
 }
 
+// ********* Footer styles *********
+
 .footer-nav-bar {
   position: relative;
   list-style: none;
@@ -108,117 +114,9 @@ table {
   margin: 0px;
 }
 
-#header-img > img {
-  width: 100%
-}
-.body-container {
-  max-width: 100%
-}
-
-.what-is-campon {
-  font-family: 'Cabin', sans-serif;
-  text-align: center;
-  color: #F78D2A;
-  font-size: -webkit-xxx-large;
-  margin-top: 40px;
-}
-
-.discription-question {
-  font-family: 'Cabin', sans-serif;
-  text-align: center;
-  color: grey;
-  font-size: 30px;
-  margin-top: 10px;
-}
-
-.discription {
-  font-family: 'Cabin', sans-serif;
-  text-align: center;
-  color: black;
-  font-size: 30px;
-  margin: 3% 5%;
-  line-height: 40px
-}
+// unknown styles
 
 .footer-img {
   right: 0px;
   bottom: 10px;
-}
-
-.landingpagefooter {
-  position: absolute;
-  clear: both;
-}
-
-#mug-img {
-  position: relative;
-  width: 33.3%;
-  height: 320px;
-}
-
-#mug-img > img {
-  position: relative;
-  width: 100%;
-  display: inline-block;
-}
-
-.parks-anchor {
-  font-family: 'Cabin', sans-serif;
-  position: absolute;
-  text-align: center;
-  top: 158px;
-  width: 100%;
-  color: white;
-  font-size: 30px
-}
-
-#map-img {
-  position: relative;
-  width: 33.3%;
-  max-height: 320px;
-}
-
-#map-img > img {
-  position: relative;
-  width: 100%;
-  display: inline-block;
-}
-
-.map-anchor {
-  font-family: 'Cabin', sans-serif;
-  position: absolute;
-  text-align: center;
-  top: 158px;
-  width: 100%;
-  color: white;
-  font-size: 30px
-}
-
-#stove-img {
-  position: relative;
-  width: 33.3%;
-}
-
-#stove-img > img {
-  position: relative;
-  width: 100%;
-  display: inline-block;
-}
-
-.stove-anchor {
-  font-family: 'Cabin', sans-serif;
-  position: absolute;
-  text-align: center;
-  top: 158px;
-  width: 100%;
-  color: white;
-  font-size: 30px
-}
-
-#mug-img, #map-img, #stove-img {
-  float: left;
-}
-
-.links > a:link, .footer-list-item> a:link {
-  text-decoration: none;
 }
