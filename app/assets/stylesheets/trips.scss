@@ -166,3 +166,33 @@ color: lightgrey;
   text-align: center;
   text-decoration: none;
 }
+
+.park-map-panel {
+  width: 680px;
+  margin: auto;
+}
+
+.trip-members {
+background-color: #F78D2A;
+width: 45%;
+position: relative;
+display: inline-block;
+border-radius: 50px;
+margin: 40px 5%;
+}
+
+.precise-trip-info {
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+  background-color: #4EBDD2;
+  width: 40%;
+  height: auto;
+  position: relative;
+  padding: 3%;
+  color: white;
+  font-size: 30px;
+  border-radius: 50px;
+  margin: 60px 5%;
+  display: inline-block;
+  float:left;
+}

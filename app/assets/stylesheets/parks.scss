@@ -1,11 +1,22 @@
+
+// *********** Parks Index styling ************
+
+// ----- Park Filters Container -----
+
 .container {
-width: 100%;
-// position: relative;
-display: block;
-background-image: image-url("banner-index.png");
-background-repeat: repeat no-repeat;
-// min-height: 500px;
-// margin-bottom: 2%;
+  width: 100%;
+  display: block;
+  background-image: image-url("banner-index.png");
+  background-repeat: repeat no-repeat;
+}
+
+.instructions {
+  display: block;
+  text-align: center;
+  font-size: 40px;
+  padding: 5px;
+  font-family: 'Cabin', sans-serif;
+  color: white;
 }
 
 .box-filter {
@@ -27,34 +38,35 @@ background-repeat: repeat no-repeat;
   font-size: 25px;
 }
 
-.instructions {
-  // position: absolute;
-  display: block;
-  text-align: center;
-  // left: 32%;
-  // top: 60px;
-  font-size: 40px;
-  padding: 5px;
-  font-family: 'Cabin', sans-serif;
-  color: white;
-}
-
 .activity-checkbox {
   padding: 2px;
 }
+
+// ----- parks list div -----
+
+.parks-title {
+  color: black;
+  font-family: 'Cabin', sans-serif;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 30px;
+  left: 43%;
+}
+
+// ----- Park List Partial -----
 
 .camponparks {
   margin-top: 2%;
   background-color: #4EBDD2;
   display: block;
   text-align: center;
-  // top: -120px;
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.parkList {
+.park-list {
   font-family: 'Cabin', sans-serif;
   margin: auto 0;
   display:inline;
@@ -62,18 +74,9 @@ background-repeat: repeat no-repeat;
   left: 170px;
 }
 
-
-.parks-title {
-  color: black;
-  font-family: 'Cabin', sans-serif;
-  display: block;
-  // position: absolute;
-  text-align: center;
-  text-decoration: underline;
-  font-size: 30px;
-  // margin-top: 3%;
-  // top: 165%;
-  left: 43%;
+.parks {
+  display: inline-block;
+  margin: 0 15px ;
 }
 
 .park-link a {
@@ -86,16 +89,14 @@ background-repeat: repeat no-repeat;
   font-size: 22px;
 }
 
-.parks {
-  display: inline-block;
-  margin: 0 15px ;
-}
+// ********* Park Show Page Styling ***********
+
+// ----- Parks Title Bar -----
 
  .parks_show_header {
-  width: 60%;
+  width: 100%;
+  max-height: 15%;
   display: block;
-  float: left;
-  position: relative;
   background-color: grey;
 }
 .parks_show_header > img {
@@ -115,10 +116,14 @@ background-repeat: repeat no-repeat;
   bottom: 50%;
 }
 
-.show-body {
-  width: 100%;
-  position: relative;
+// ----- Google Map Div -----
+
+.google-map  {
+  margin: auto;
+  text-align: center;
 }
+
+// ----- Park Attributes -----
 
 .attributes-display {
   width: 100%;
@@ -135,20 +140,22 @@ background-repeat: repeat no-repeat;
 }
 
  .activities-tag > img {
-   width: 10%;
-   margin: 0 auto;
-   display: inline-block;
+  width: 10%;
+  margin: 0 auto;
+  display: inline-block;
   border:3px solid #F78D2A;
   border-radius: 50%;
   margin: 10px 15px;
  }
+
+// ----- Park Facilities -----
 
  .facilities-display {
    font-family: 'Cabin', sans-serif;
    color: white;
    background-color: #4EBDD2;
    font-size: 30px;
-   width: 50%;
+   width: 100%;
    padding: 5%;
    padding-top: 3%;
    text-align: center;
@@ -169,6 +176,12 @@ background-repeat: repeat no-repeat;
    margin-bottom: 20px;
  }
 
+ .activities-tag > img:hover {
+   opacity: 0.4;
+ }
+
+ // ----- Plan your trip! -----
+
  .plan_trip_button_from_park {
    text-align: center;
    font-family: 'Cabin', sans-serif;
@@ -178,13 +191,4 @@ background-repeat: repeat no-repeat;
    width: 400px;
    border-radius: 70px;
    font-size: 20px;
-}
-
- .activities-tag > img:hover {
-   opacity: 0.4;
- }
-
-.google-map  {
-  margin: auto;
-  text-align: center;
 }

@@ -6,7 +6,7 @@
     <%= image_tag "light-forest-trees.png" %>
   </div>
 
-  <div class="google-maps-placeholder-img">
+  <div class="google-maps">
     <%= render 'park_map', park: @park %>
   </div>
 </div>
@@ -17,28 +17,28 @@
 
   <% @park.activities.each do |k| %>
     <% if k == "canoeing" %>
-      <%= image_tag "canoeing-icon.png" %>
+      <%= image_tag "canoeing-icon.png", title: "Canoeing" %>
 
     <% elsif k == "biking" %>
-      <%= image_tag "biking-icon.png" %>
+      <%= image_tag "biking-icon.png", title: "Biking" %>
 
     <% elsif k == "birding" %>
-      <%= image_tag "birding-icon.png" %>
+      <%= image_tag "birding-icon.png", title: "Birding" %>
 
     <% elsif  k == "boating" %>
-      <%= image_tag "boating-icon.png" %>
+      <%= image_tag "boating-icon.png", title: "Boating" %>
 
     <% elsif k == "fishing" %>
-      <%= image_tag "fishing-icon.png" %>
+      <%= image_tag "fishing-icon.png", title: "Fishing" %>
 
     <% elsif k == "hiking" %>
-      <%= image_tag "hiking-icon.png" %>
+      <%= image_tag "hiking-icon.png", title: "Hiking" %>
 
     <% elsif k == "hunting" %>
-      <%= image_tag "hunting-icon.png" %>
+      <%= image_tag "hunting-icon.png", title: "Hunting" %>
 
     <% else k == "swimming" %>
-      <%= image_tag "swimming-icon.png" %>
+      <%= image_tag "swimming-icon.png", title: "Swimming" %>
 
     <% end %>
   <% end %>

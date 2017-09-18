@@ -1,3 +1,263 @@
 // Place all the styles related to the StaticPageshome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ************ Landing Page **************
+
+#header-img > img {
+  width: 100%
+}
+.body-container {
+  max-width: 100%
+}
+
+.what-is-campon {
+  font-family: 'Cabin', sans-serif;
+  text-align: center;
+  color: #F78D2A;
+  font-size: -webkit-xxx-large;
+  margin-top: 40px;
+}
+
+.discription-question {
+  font-family: 'Cabin', sans-serif;
+  text-align: center;
+  color: grey;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.discription {
+  font-family: 'Cabin', sans-serif;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  margin: 3% 5%;
+  line-height: 40px
+}
+
+.landingpagefooter {
+  position: absolute;
+  clear: both;
+}
+
+#mug-img {
+  position: relative;
+  width: 33.3%;
+  height: 320px;
+}
+
+#mug-img > img {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.parks-anchor {
+  font-family: 'Cabin', sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 158px;
+  width: 100%;
+  color: white;
+  font-size: 30px
+}
+
+#map-img {
+  position: relative;
+  width: 33.3%;
+  max-height: 320px;
+}
+
+#map-img > img {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.map-anchor {
+  font-family: 'Cabin', sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 158px;
+  width: 100%;
+  color: white;
+  font-size: 30px
+}
+
+#stove-img {
+  position: relative;
+  width: 33.3%;
+}
+
+#stove-img > img {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.stove-anchor {
+  font-family: 'Cabin', sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 158px;
+  width: 100%;
+  color: white;
+  font-size: 30px
+}
+
+#mug-img, #map-img, #stove-img {
+  float: left;
+}
+
+.links > a:link, .footer-list-item> a:link {
+  text-decoration: none;
+}
+
+// ******* Team Page ***********
+
+.team-page-background {
+  background-color: #4EBDD2;
+  position: relative;
+  display: block;
+}
+
+.team-nadia > img {
+  display:inline-block;
+  width: 25%;
+  height: 20%;
+  border-radius: 50%;
+}
+
+.team-nadia > p  {
+  width: 50%;
+  font-family: 'Cabin';
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  margin: auto;
+}
+
+.team-nadia {
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  padding: 30px 30px;
+  background-color: #4EBDD2;
+  width: 100%;
+  padding: 5% 0;
+}
+
+.team-mary > img {
+  display:inline-block;
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+}
+
+.team-mary > p {
+  width: 50%;
+  font-family: 'Cabin';
+  color: #4EBDD2;
+  font-size: 20px;
+  line-height: 30px;
+  margin: auto;
+}
+
+.team-mary {
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  padding: 30px 30px;
+  background-color: white;
+  width: 100%;
+  padding: 5% 0;
+}
+
+div.team-mary > a {
+  color: #F78D2A;
+  text-decoration: none;
+}
+
+.team-abby > img {
+  display:inline-block;
+  width: 25%;
+  height: 20%;
+  border-radius: 50%;
+}
+
+.team-abby > p  {
+  width: 50%;
+  font-family: 'Cabin';
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  margin: auto;
+}
+
+.team-abby {
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  padding: 30px 30px;
+  background-color: #4EBDD2;
+  width: 100%;
+  padding: 5% 0;
+}
+
+.team-martine > img {
+  display:inline-block;
+  width: 25%;
+  height: 20%;
+  border-radius: 50%;
+  border: white;
+}
+
+.team-martine > p {
+  width: 50%;
+  font-family: 'Cabin';
+  color: #4EBDD2;
+  font-size: 20px;
+  line-height: 30px;
+  margin: auto;
+}
+
+.team-martine {
+  line-height: 30px;
+  text-align: center;
+  margin: auto;
+  padding: 30px 30px;
+  background-color: white;
+  width: 100%;
+  padding: 5% 0;
+}
+
+.git-link-icons > a{
+  font-size: 25px;
+  margin-top: 3%;
+  color: black;
+}
+
+// ********** About Page ************
+
+.about-background-page {
+  background-color: #4EBDD2;
+  width: 100%;
+  display: inline-block;
+}
+
+.about-background-page > h1 {
+  font-family: "Cabin";
+  font-size: 80px;
+  text-align: center;
+  color: white;
+  padding-top: 5%;
+}
+
+.about-background-page > p {
+  font-family: "Cabin";
+  font-size: 50px;
+  text-align: center;
+  color: grey;
+  padding: 5% 10%;
+}

@@ -1,8 +1,8 @@
 <section class="camponparks">
 
-  <ul class="parkList">
+  <ul class="park-list">
     <% @parks.each do |r| %>
-      <li class = 'parks'>
+      <li class="parks">
       <br>
       <p class="park-link"> <%= link_to "#{r.name}", park_path(r.id) %> </p>
       <br>
