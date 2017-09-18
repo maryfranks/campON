@@ -24,23 +24,22 @@ class TripTest < ActiveSupport::TestCase
   end
 
   test "add park to trip" do
-    trip = trips(:basic_trip)
-    trip.park = Park.first
-    assert_equal Park.first.name, trip.park.name
+    trip = Trip.new(name: "New Trip")
+    park = parks(:park)
+    trip.park = park
+    assert_equal park.name, trip.park.name
   end
 
   test "add start date to trip" do
     trip = trips(:basic_trip)
     trip.start_date = Date.today + 10
     assert trip.start_date
-
   end
 
   test "add end date to trip" do
     trip = trips(:basic_trip)
     trip.end_date = Date.today + 10
     assert trip.end_date
-
   end
 
   test "trip can have multiple users" do
