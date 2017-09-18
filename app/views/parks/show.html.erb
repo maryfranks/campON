@@ -2,12 +2,12 @@
 
 <div class="header-parks-show">
   <div class="parks_show_header">
-    <h1 class="park_name"> <%= @parks.name %></h1>
+    <h1 class="park_name"> <%= @park.name %></h1>
     <%= image_tag "light-forest-trees.png" %>
   </div>
 
   <div class="google-maps-placeholder-img">
-    <%= render 'park_map', park: @parks %>  
+    <%= render 'park_map', park: @park %>
   </div>
 </div>
 
@@ -15,7 +15,7 @@
   <div class="activities-tag">
 
 
-  <% @parks.activities.each do |k| %>
+  <% @park.activities.each do |k| %>
     <% if k == "canoeing" %>
       <%= image_tag "canoeing-icon.png" %>
 
@@ -47,11 +47,11 @@
 
 <div class="facilities-display">
   <h3 class="park_facilities_heading">Park Facilities</h3>
-  <% @parks.facilities.each do |k| %>
+  <% @park.facilities.each do |k| %>
     <p class="facilities-tag"> <%=k.capitalize%> </p>
     <%end%>
 </div>
 
 <div class="plan_trip_button_from_park">
-  <%= link_to "Plan Your Trip to #{@parks.name}", new_trip_path %>
+  <%= link_to "Plan Your Trip to #{@park.name}", new_trip_path %>
 </div>

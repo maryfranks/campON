@@ -1,16 +1,19 @@
 .container {
 width: 100%;
-position: relative;
+// position: relative;
 display: block;
+background-image: image-url("banner-index.png");
+background-repeat: repeat no-repeat;
+// min-height: 500px;
+// margin-bottom: 2%;
 }
 
 .box-filter {
-  background-image: image-url("banner-index.png");
   column-count: 5;
   text-transform: capitalize;
   color: white;
   font-family: 'Cabin', sans-serif;
-  padding: 10%;
+  padding: 5%;
   font-size: 20px;
 }
 
@@ -25,11 +28,11 @@ display: block;
 }
 
 .instructions {
-  position: absolute;
+  // position: absolute;
   display: block;
   text-align: center;
-  left: 32%;
-  top: 60px;
+  // left: 32%;
+  // top: 60px;
   font-size: 40px;
   padding: 5px;
   font-family: 'Cabin', sans-serif;
@@ -41,12 +44,14 @@ display: block;
 }
 
 .camponparks {
-  margin-top: 10%;
+  margin-top: 2%;
   background-color: #4EBDD2;
   display: block;
   text-align: center;
-  top: -120px;
+  // top: -120px;
   width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .parkList {
@@ -62,11 +67,12 @@ display: block;
   color: black;
   font-family: 'Cabin', sans-serif;
   display: block;
-  position: absolute;
+  // position: absolute;
   text-align: center;
   text-decoration: underline;
   font-size: 30px;
-  top: 165%;
+  // margin-top: 3%;
+  // top: 165%;
   left: 43%;
 }
 
