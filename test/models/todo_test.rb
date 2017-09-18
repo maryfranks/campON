@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TodoTest < ActiveSupport::TestCase
 
-  test "todo saves with only text and user" do
+  test "todo saves with only text and trip" do
     # test passes when the todo saves
     todo = Todo.new
     todo.trip = trips(:basic_trip)
@@ -14,6 +14,12 @@ class TodoTest < ActiveSupport::TestCase
     # test passes when the save fails
     todo = Todo.new
     todo.trip = trips(:basic_trip)
+    refute todo.save
+  end
+
+  test "todo does not save without trip" do
+    todo = Todo.new
+    todo.text = "Do this!"
     refute todo.save
   end
 
