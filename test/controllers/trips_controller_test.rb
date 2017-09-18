@@ -38,7 +38,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
 
   test "should render trips edit when update fails" do
     patch trip_url(@trip), params: { trip: { name: nil } }
-    assert_select "h1", "Edit your trip"
+    assert_select "h1", "Edit your trip!"
   end
 
   test "should destroy trip" do
@@ -46,7 +46,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Trip.count', -1) do
       delete trip_url(@trip)
     end
-    
+
     assert_redirected_to user_path
     assert_equal 'Trip has been successfully deleted!', flash[:notice]
 
