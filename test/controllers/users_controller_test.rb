@@ -5,7 +5,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   include SignInHelper
 
   setup do
-    @trip = trips(:one)
+    @trip = trips(:messages_todos_trip)
     @user = users(:martine)
     @trip.users << users(:martine)
     sign_in_as users(:martine)
@@ -22,12 +22,14 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create user" do
+
     assert_difference('User.count') do
       post user_url, params: { user: { name: "person", email: 'user@email.com', password: "1234", password_confirmation: "1234" } }
     end
 
     assert_redirected_to user_path
     assert_equal 'Account successfully created!', flash[:notice]
+    
   end
 
   test "user save fail" do
