@@ -17,7 +17,7 @@
     <p>  <% if @trip.booked == true %><%= "Your Trip is Booked" %><% else %><%="You Still Need to Book Your Trip!" %> <%end%><br> </p>
     <p> Start Date <%= @trip.start_date %><br> </p>
     <p>End Date <%= @trip.end_date %><br>
-    <p class="trip-edit-and-delete"><font color: 'white'><%= link_to 'Edit', edit_trip_path(@trip.id) %> | <%= link_to 'Delete', trip_path(@trip.id), method: :delete, data: {confirm: "Are you sure you want to delete this trip?"}%></font></p>
+    <p class="trip-edit-and-delete"><%= link_to 'Edit', edit_trip_path(@trip.id), {:style=>'color: white;' 'text-decoration: none', :class => "edit-trip-button"}%> | <%= link_to 'Delete', trip_path(@trip.id), method: :delete, data: {confirm: "Are you sure you want to delete this trip?"}, :style=>'color: white;' 'text-decoration: none' %></p>
   </div>
 
   <div class="trip-members">
