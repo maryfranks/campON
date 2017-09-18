@@ -14,8 +14,12 @@ class TripTest < ActiveSupport::TestCase
   end
 
   test "trip displays associated messages" do
-    trip = trips(:three)
-    assert_equal 2, trip.messages.count 
+    trip = trips(:messages_trip)
+    assert_equal 1, trip.messages.count 
+  end
+
+  test "trip displays associated todos" do
+    skip
   end
 
   test "add park to trip" do
