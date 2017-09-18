@@ -1,11 +1,9 @@
 
 <div class="trip-info">
   <h1 class="trip-planner-header">Trip Planner</h1>
-  <h2 id="trip-planner-name-header"><%= @trip.name %></h2>
+  <h2 id="trip-planner-name-header"><%= @trip.name %> going to</h2>
   <h2 id="park-name-header"><%= @trip.park.name %>
 </div>
-
-<section class="top-trips-container">
 
   <div class="park-map-panel">
       <% if @trip.park %>
@@ -19,7 +17,7 @@
     <p>  <% if @trip.booked == true %><%= "Your Trip is Booked" %><% else %><%="You Still Need to Book Your Trip!" %> <%end%><br> </p>
     <p> Start Date <%= @trip.start_date %><br> </p>
     <p>End Date <%= @trip.end_date %><br>
-    <p class="trip-edit-and-delete"><font color: 'white'><%= link_to 'Edit', edit_trip_path(@trip.id) %> | <%= link_to 'Delete', trip_path(@trip.id), method: :delete, data: {confirm: "Are you sure you want to delete this trip?"}%></font></p>
+    <p class="trip-edit-and-delete"><%= link_to 'Edit', edit_trip_path(@trip.id), {:style=>'color: white;' 'text-decoration: none', :class => "edit-trip-button"}%> | <%= link_to 'Delete', trip_path(@trip.id), method: :delete, data: {confirm: "Are you sure you want to delete this trip?"}, :style=>'color: white;' 'text-decoration: none' %></p>
   </div>
 
   <div class="trip-members">
@@ -27,14 +25,14 @@
       <%= render 'users/trip_members', users: @trip.users, trip: @trip %>
       <%= render 'trips/add_friend_form' %>
   </div>
-</section>
+
 
 
 <section class="bottom-trips-container">
   <div class="trip-todo-list">
     <h3 class="trip-todo-header">Trip To-Do's</h3>
-    <%= render 'todos/todo_display', todos: @trip.todos, trip: @trip %>
     <%= render 'todos/todo_partial', todo: @todo, trip: @trip %>
+    <%= render 'todos/todo_display', todos: @trip.todos, trip: @trip %>
     <div id="todo_results">
       <!-- results will do here -->
     </div>
@@ -42,8 +40,8 @@
 
   <div class="trip-messages">
     <h3>Trip Chat<h3>
-      <%= render 'messages/message_display', messages: @trip.messages, trip: @trip %>
       <%= render 'messages/new_message_form', message: @message, trip: @trip %>
+      <%= render 'messages/message_display', messages: @trip.messages, trip: @trip %>
       <div id = "display_message">
         <!-- results will do here -->
       </div>
