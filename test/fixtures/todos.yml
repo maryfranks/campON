@@ -12,7 +12,3 @@ fishing_trip:
 glamping_trip:
   text: "bring the big BBQ?"
   trip: messages_todos_trip
-
-three:
-  text: "Buy new lures"
-  trip: two

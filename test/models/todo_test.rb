@@ -1,9 +1,6 @@
 require 'test_helper'
 
 class TodoTest < ActiveSupport::TestCase
-  test "todo fixtures" do
-    assert_equal 3, Todo.count
-  end
 
   test "todo saves with only text and user" do
     # test passes when the todo saves

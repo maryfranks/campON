@@ -13,8 +13,3 @@ glamping_trip:
   message: "Is there a beach?"
   user: :martine
   trip: messages_todos_trip
-
-three:
-  message: "I love fishing!"
-  user: :mary
-  trip: two

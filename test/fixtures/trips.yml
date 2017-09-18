@@ -23,16 +23,4 @@ basic_trip:
 
 marys_trip:
   name: "Camping with Martine"
-  park: park 
-
-one:
-  name: "Fall Canoe Trip"
-  park: one
-
-two:
-  name: "Catch and Release Fishing Trip"
-  park: three
-
-three:
-  name: "Let's go Glamping!"
-  park: four
+  park: park

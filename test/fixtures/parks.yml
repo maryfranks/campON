@@ -11,35 +11,4 @@ park:
   hiking: true
   birding: true
   rentals: true
-  parking: true 
-
-
-one:
-  name: "Fishing and Canoeing Park"
-  url: "https://www.ontarioparks.com/"
-  birding: true
-  canoeing: true
-  fishing: true
-
-two:
-  name: "Hiking and Hunting Park"
-  url: "https://www.ontarioparks.com/"
-  birding: true
-  hiking: true
-  hunting: true
-
-three:
-  name: "Camping Park"
-  url: "https://www.ontarioparks.com/"
-  birding: true
-  backcountry_camping: true
-  car_camping: true
-  walk_in_camping: true
-
-four:
-  name: "Fancy Park"
-  url: "https://www.ontarioparks.com/"
-  birding: true
-  flush_toilets: true
-  lodge: true
-  park_store: true
+  parking: true
