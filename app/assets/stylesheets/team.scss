@@ -56,8 +56,9 @@
   padding: 5% 0;
 }
 
-#mary-email  {
+div.team-mary > a {
   color: #F78D2A;
+  text-decoration: none;
 }
 
 .team-abby > img {
@@ -116,4 +117,5 @@
 .git-link-icons > a{
   font-size: 25px;
   margin-top: 3%;
+  color: black;
 }
