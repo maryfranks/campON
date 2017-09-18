@@ -1,0 +1,52 @@
+.my-trips {
+  background-color: #4EBDD2;
+  height: 100%;
+}
+.user-greeting {
+  text-align: center;
+  color: white;
+  background-color: #4EBDD2;
+  margin: auto;
+  font-size: 60px;
+  font-family: 'Cabin', sans-serif;
+  padding: 20px;
+}
+
+.trip_list {
+  padding: 10px;
+  margin: 5% 0;
+}
+
+.up-coming-trips {
+  text-align: center;
+  background-color: #4EBDD2;
+  margin: auto;
+  display: block;
+  color: #E1E1E1;
+  font-size: 40px;
+  font-family: 'Cabin', sans-serif;
+  padding: 20px;
+}
+
+.trip-list-block {
+  background-color: white;
+  width: 80%;
+  padding: 20px 10px;
+  color: #4EBDD2;
+  font-size: 20px;
+  font-family: 'Cabin', sans-serif;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  border: white solid 2px;
+  border-radius: 5px;
+}
+
+.park-name-my-trips:link {
+  text-decoration: none;
+  color: lightgray;
+}
+
+.park-name-my-trips:visited {
+  color: #F78D2A;
+}
