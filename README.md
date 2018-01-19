@@ -64,7 +64,7 @@ to have Guard automatically run tests when files are saved.
 
 App is currently deployed on Heroku:
 
-link
+https://camp-on.herokuapp.com/
 
 ## Authors
 
