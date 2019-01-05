@@ -10,8 +10,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
  */
 
  /*   ********* CSS RESET *********
@@ -65,88 +63,7 @@ table {
   border-spacing: 0;
 }
 
-// ********* Flash Messages *********
+ /*   ********* bootstrap ********* */
 
-div.error {
-  color: red;
-  text-align: center;
-  padding: 2px;
-}
-
-div.notice {
-  color: red;
-  text-align: center;
-  padding: 2px;
-}
-
-div.signup-block > ul >li {
-
-  color: red;
-  text-align: center;
-  margin: 2px;
-}
-div#error_explanation {
-  color: red;
-  text-align: center;
-  padding: 2px;
-}
-
-// ********** Header Styles **********
-
-.header {
-  background-color: #F78D2A;
-  position: relative;
-  width: 100%;
-  margin: 0%
-}
-
-.application_footer {
-  background-color: #F78D2A;
-  position: relative;
-  clear: both;
-}
-
-.camp-on-title {
-  color: white;
-  font-family: 'Cabin', sans-serif;
-  font-size: 30px;
-  padding: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin: 0%
-}
-
-.header-nav-bar {
-  list-style: none;
-  color: white;
-  font-family: 'Cabin', sans-serif;
-  position: absolute;
-  display: block;
-  right: 20px;
-  top: 27px;
-}
-
-ul.header-nav-bar > li.links > a {
-  color: white;
-}
-
-// ********* Footer styles *********
-
-.footer-nav-bar {
-  position: relative;
-  list-style: none;
-  padding: 20px;
-  font-family: 'Cabin', sans-serif;
-  color: white;
-  right: 20px;
-  background-color: #F78D2A;
-  width: 100%;
-  margin: 0px;
-}
-
-// unknown styles
-
-.footer-img {
-  right: 0px;
-  bottom: 10px;
-}
+ // @import "bootstrap-sprockets";
+ @import "bootstrap";
