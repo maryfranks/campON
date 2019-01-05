@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 # bootstrap gems
-gem 'bootstrap', '~> 4.2.1'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'jquery-rails'
 gem 'sprockets', '~> 3.5', '>= 3.5.2'
 
